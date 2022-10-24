@@ -1,22 +1,23 @@
 3.	Characterizing the role of Bub1 and H2A-pS121 in tension-dependent re-localization of Sgo1 
 3.1.	Introduction (Bub1, H2A-pS121, Nerusheva 2014, Su 2021, spatial)
-        bub1 had pH2A importance for shugoshin localization
+        shugoshin
+        shugoshin and tension sensing -- tension-dependent relocalization of shugoshin (human, mouse, budding yeast, potentially fission yeast kawashima 2007, fly); model for shugoshin in tension sensing
+        regulation of sgo1 localization -- bub1 and pH2A importance for shugoshin localization (human, mouse, fission/budding yeast); cohesin; phosphatases
         previous models of tension-dependent re-localization and their drawbacks (HiC supports pulling model)
-        bub1 and H2A-pS121 localization
-        to resolve controversy 
-        
-        
-3.2.	Results
-3.2.1.	The distance between Bub1 and peri-centromere boarder is not correlated with tension
-3.2.2.	Bub1 is re-localized from KT by tension (imagings + timecourse)
-3.2.3.	Bub1 re-localization is earlier than Sgo1 re-localization (analysis)
-3.2.4.	Bub1 removal is sufficient to re-localize Sgo1 in the absence of tension 
-3.2.5.	Total H2A-pS121 level is independent of tension
-3.2.6.	Tension redistributes H2A-pS121 from centromere to chromosome arms
-3.2.7.	Sgo1 cannot be localized to peri-centromere in H2A phospho-mimic mutants
-3.2.8.	Tension increases long-range in cis interactions
-3.3.	Discussion
-3.3.1.	Proposed model for tension-dependent re-localization of Sgo1
-3.3.2.	Other factors might affect Sgo1 localization
-3.3.3.	Sgo1 is a signal mediator rather than the tension sensor (Bub1 removal could be key to tension sensing; tension sensing machinery might monitor intra-KT rather than inter-KT tension)
-3.3.4.	Re-distribution of H2A-pS121 is likely to link chromosome condensation to SAC silencing in Saccharomyces cerevisiae 
+        bub1 and H2A-pT120 localization does not agree human model, no H2A-pT120 in hongtaoyu paper; yeast model Bub1 overexposed and no quantification; yeast model rts1d still lose sgo1 under tension; yeast model does not have H2A-pS121 ab
+        whether cohesin is involved in yeast not known (ChIP-qPCR contradicts tension-sensing function shugoshin)
+        to resolve controversy: look at bub1 and pH2A under tension; look for phosphatases
+        controversy:
+        pH2A (human: staining under no tension is incosistent; can't do ChIP; tension data contradicts model; yeast: no data )
+        Bub1 localization (pulled away model vs delocalize model)
+        phosphatase
+        cohesin in yeast (localization vs function)
+
+
+
+Discussion
+
+cohesin is not required in frog/mouse/fly???
+Residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
+bub1 sgo1 CPC PP1 positive feedback
+H2A-pS121 is redistributed when Bub1 localization is messed up

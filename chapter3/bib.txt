@@ -1,0 +1,48 @@
+shugoshin & tension sensing
+Indjeian    2005    initial screening in budding yeast
+Jin 2013    sgo1d cannot prevent SAC silencing
+
+Liu, Jia, Yu    2013    sgo1 TD mutant has lagging chromosome
+Su  2021    tether Sgo1 to KT caused prolonged metaphase
+
+shugoshin supports CPC
+Peplowska   2014    budding yeast
+Nerusheva   2014    budding yeast
+Verziglbergen   2014 budding yeast
+Tsukahara   2010    human
+Yamagishi   2010    human
+Kawashima   2007    fission yeast
+Vanoosthuyse    2007    fission yeast
+Rivera  2012    frog
+
+shugoshin re-localization
+Kawashima   2007    fission yeast   Sgo2
+Huang   2007    mouse   Sgo2
+Gomez   2007    mouse   Sgo2
+Nerusheva   2014    budding yeast   Sgo1
+Liu, Jia, Yu    2013    human   Sgo1
+Lee 2008    human   Sgo1/Sgo2   mouse   Sgo2
+Asai    2020    human   Sgo2
+
+possible shugoshin re-localization
+Clarke  2005    fly MEI-S332
+Kawashima   2007    fission yeast   Sgo2
+
+Bub1 important for shugoshin localization
+Rivera  2012    frog
+Boyarchuk   2007    frog
+Kitajima    2005    human
+Perera  2010    human
+Tang    2004    human
+Fernius 2007    fission yeast
+Kirbuz  2005    budding yeast
+
+pH2A important for shugoshin localization
+Kawashima   2010    fission yeast   human
+Ricke   2012    mouse
+Liu, Jia, Yu    2013    human
+Nerusheva   2014    budding yeast
+
+possible pH2A important for shugoshin localization
+Lee 2004    fly (exogenous expression of MEI-S332 in human can localize to centromere)
+Brittle 2007    fly (H2A-T119 can be phosphorylated and it is enriched at centromere)
