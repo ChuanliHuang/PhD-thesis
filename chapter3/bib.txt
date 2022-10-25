@@ -44,5 +44,12 @@ Liu, Jia, Yu    2013    human
 Nerusheva   2014    budding yeast
 
 possible pH2A important for shugoshin localization
-Lee 2004    fly (exogenous expression of MEI-S332 in human can localize to centromere)
+Lee 2004    fly (ectopical expression of MEI-S332 in human can localize to centromere)
 Brittle 2007    fly (H2A-T119 can be phosphorylated and it is enriched at centromere)
+
+Bub1 localization
+London  2012    budding yeast
+Shepperd    2012    fission yeast
+Yamagishi 2012 fission yeast
+van der Waal    2012    human
+zhang   2022    review
