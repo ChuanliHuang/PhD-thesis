@@ -10,7 +10,9 @@ Peplowska   2014    budding yeast
 Nerusheva   2014    budding yeast
 Verziglbergen   2014 budding yeast
 Tsukahara   2010    human
-Yamagishi   2010    human
+Yamagishi   2010    fission yeast   human
+Hadders    2020    human
+Broad   2020    human
 Kawashima   2007    fission yeast
 Vanoosthuyse    2007    fission yeast
 Rivera  2012    frog
@@ -52,5 +54,10 @@ London  2012    budding yeast
 Shepperd    2012    fission yeast
 Yamagishi 2012 fission yeast
 van der Waal    2012    human
-zhang   2022    review
+Nerusheva  2014    budding yeast
+Roy 2019    budding yeast
+
+
+Bub1 in tension sensing
 Asai    2020    human
+Proudfoot   2019    budding yeast

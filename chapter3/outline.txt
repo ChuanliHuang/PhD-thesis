@@ -1,6 +1,8 @@
 3.	Characterizing the role of Bub1 and H2A-pS121 in tension-dependent re-localization of Sgo1 
 3.1.	Introduction (Bub1, H2A-pS121, Nerusheva 2014, Su 2021, spatial)
-        shugoshin and tension sensing -- tension-dependent relocalization of shugoshin (human, mouse, budding yeast, potentially fission yeast kawashima 2007, fly); model for shugoshin in tension sensing
+        centromere function and spatial regulation; shugoshin re-localisation as an example; what is tension; what is shugoshin; tension-dependent relocalization of shugoshin (human, mouse, budding yeast, potentially fission yeast kawashima 2007, fly)
+        shugoshin and tension sensing --; model for shugoshin in tension sensing
+        shugoshin and chromosome condensation
         regulation of sgo1 localization -- bub1 and pH2A importance for shugoshin localization (human, mouse, fission/budding yeast); cohesin; phosphatases
         previous models of tension-dependent re-localization and their drawbacks (HiC supports pulling model)
         bub1 and H2A-pT120 localization does not agree human model, no H2A-pT120 in hongtaoyu paper; yeast model Bub1 overexposed and no quantification; yeast model rts1d still lose sgo1 under tension; yeast model does not have H2A-pS121 ab
@@ -15,7 +17,7 @@
 
 
 Discussion
-
+bub1 delocalization caused shugoshin removal rather than the opposite
 cohesin is not required in frog/mouse/fly (not sure which one)
 Residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
 bub1 sgo1 CPC PP1 positive feedback
