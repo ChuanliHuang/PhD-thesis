@@ -2,6 +2,7 @@ shugoshin & tension sensing
 Indjeian    2005    initial screening in budding yeast
 Jin 2013    sgo1d cannot prevent SAC silencing
 
+
 Liu, Jia, Yu    2013    sgo1 TD mutant has lagging chromosome
 Su  2021    tether Sgo1 to KT caused prolonged metaphase
 
@@ -33,6 +34,7 @@ Kawashima   2007    fission yeast   Sgo2
 Bub1 important for shugoshin localization
 Rivera  2012    frog
 Boyarchuk   2007    frog
+Williams    2017    frog
 Kitajima    2005    human
 Perera  2010    human
 Tang    2004    human
@@ -60,4 +62,5 @@ Roy 2019    budding yeast
 
 Bub1 in tension sensing
 Asai    2020    human
+Jin 2017    budding yeast 
 Proudfoot   2019    budding yeast
