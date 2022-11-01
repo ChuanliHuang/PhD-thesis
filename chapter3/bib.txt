@@ -6,18 +6,6 @@ Jin 2013    sgo1d cannot prevent SAC silencing
 Liu, Jia, Yu    2013    sgo1 TD mutant has lagging chromosome
 Su  2021    tether Sgo1 to KT caused prolonged metaphase
 
-shugoshin supports CPC
-Peplowska   2014    budding yeast
-Nerusheva   2014    budding yeast
-Verziglbergen   2014 budding yeast
-Tsukahara   2010    human
-Yamagishi   2010    fission yeast   human
-Hadders    2020    human
-Broad   2020    human
-Kawashima   2007    fission yeast
-Vanoosthuyse    2007    fission yeast
-Rivera  2012    frog
-
 shugoshin re-localization
 Kawashima   2007    fission yeast   Sgo2
 Huang   2007    mouse   Sgo2
@@ -59,8 +47,61 @@ van der Waal    2012    human
 Nerusheva  2014    budding yeast
 Roy 2019    budding yeast
 
-
 Bub1 in tension sensing
 Asai    2020    human
 Jin 2017    budding yeast 
 Proudfoot   2019    budding yeast
+
+Sgo1 in bias geometry 
+Indjeian  2007  budding yeast
+Haase 2012  budding yeast
+Verzijlbergen 2014  budding yeast
+Peplowska 2014 budding yeast
+Yahya 2020  budding yeast
+
+Sgo1 in separase inactivation
+Rattani 2012  mouse Sgo2
+Hellmuth  2020  human Sgo2
+Orth  2011  human Sgo2 frog Sgo1
+
+Sgo1 in protecting cohesion in meiosis I
+Lister  2012  mouse
+Llano 2010  mouse
+Lee 2008  mouse
+Rattani 2012  mouse 
+Marston 2004 budding yeast
+Kitajima  2004  budding yeast fission yeast
+Katis 2004  budding yeast
+Rabistch  2004  fission yeast
+Kerrebrock  1992  fly
+Cromer  2013  Arabidopsis 
+Zamariola 2014  Arabidopsis
+Wang  2011  rice
+Hamant  2005  maize
+
+Sgo1 in protecting cohesion in mitosis
+Rivera  2009  frog
+Shintomi  2009  frog
+Huang 2007  human
+Tang  2006  human
+McGuinness  2005  human
+Kitajima  2005  human
+Salic 2004  human
+
+shugoshin supports CPC
+Peplowska   2014    budding yeast
+Nerusheva   2014    budding yeast
+Verziglbergen   2014 budding yeast
+Tsukahara   2010    human
+Yamagishi   2010    fission yeast   human
+Hadders    2020    human
+Broad   2020    human
+Kawashima   2007    fission yeast
+Vanoosthuyse    2007    fission yeast
+Rivera  2012    frog
+
+shugoshin PP2A-B56 interaction
+Xu  2009  human budding yeast
+Ueki  2021  human
+
+shugoshin MCAK
