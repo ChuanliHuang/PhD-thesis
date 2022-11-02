@@ -29,11 +29,23 @@ Tang    2004    human
 Fernius 2007    fission yeast
 Kirbuz  2005    budding yeast
 
+Bub1 independent localisation
+Kabayoshi 2019  mouse fission yeast
+Petty 2018  budding yeast GCN5 Cse4
+Buehl 2018  budding yeast H3
+Mishra  2018  budding yeast Cse4
+Buehl, Deng 2018  budding yeast H3
+Luo 2016  budding yeast H3
+
+
 pH2A important for shugoshin localization
 Kawashima   2010    fission yeast   human
 Ricke   2012    mouse
 Liu, Jia, Yu    2013    human
 Nerusheva   2014    budding yeast
+Lee 2018  human
+Ishiguro  2018  budding yeast fission yeast
+Williams    2017    frog
 
 possible pH2A important for shugoshin localization
 Lee 2004    fly (ectopical expression of MEI-S332 in human can localize to centromere)
@@ -57,7 +69,7 @@ Indjeian  2007  budding yeast
 Haase 2012  budding yeast
 Verzijlbergen 2014  budding yeast
 Peplowska 2014 budding yeast
-Yahya 2020  budding yeast
+Sane  2021  weird yeast
 
 Sgo1 in separase inactivation
 Rattani 2012  mouse Sgo2
@@ -73,6 +85,8 @@ Marston 2004 budding yeast
 Kitajima  2004  budding yeast fission yeast
 Katis 2004  budding yeast
 Rabistch  2004  fission yeast
+Miyazaki  2017  fission yeast
+Ma  2021  fission yeast
 Kerrebrock  1992  fly
 Cromer  2013  Arabidopsis 
 Zamariola 2014  Arabidopsis
@@ -87,6 +101,7 @@ Tang  2006  human
 McGuinness  2005  human
 Kitajima  2005  human
 Salic 2004  human
+Liang 2019  human
 
 shugoshin supports CPC
 Peplowska   2014    budding yeast
@@ -94,6 +109,7 @@ Nerusheva   2014    budding yeast
 Verziglbergen   2014 budding yeast
 Tsukahara   2010    human
 Yamagishi   2010    fission yeast   human
+Meppelink 2015  human
 Hadders    2020    human
 Broad   2020    human
 Kawashima   2007    fission yeast
@@ -104,4 +120,22 @@ shugoshin PP2A-B56 interaction
 Xu  2009  human budding yeast
 Ueki  2021  human
 
-shugoshin MCAK
+shugoshin MCAK interaction
+Rivera  2012    frog
+Tanno 2010  human
+
+shugoshin CPC interaction
+Abad  2022  human
+
+shugoshin condensin
+Verzijlbergen 2014  budding yeast
+Yahya 2020  budding yeast
+
+shugoshin cohesin interaction
+Hara  2013  human
+Liu 2013  human
+
+evidence supporting bub1 pulled away model
+Verzijlbergen 2014  budding yeast
+Deng  2018  budding yeast
+Paldi 2020  budding yeast

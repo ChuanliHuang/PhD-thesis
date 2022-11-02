@@ -20,6 +20,6 @@ Discussion
 bub1 delocalization caused shugoshin removal rather than the opposite
 cohesin is not required in frog/mouse/fly (not sure which one)
 Residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
-bub1 sgo1 CPC PP1 positive feedback
+bub1 sgo1 CPC PP1 positive feedback (explain the fast removal of shugoshin)
 H2A-pS121 is redistributed when Bub1 localization is messed up
 Re-distribution of H2A-pS121 and chromosome condensation (condensin-Sgo1 interaction; condensin-Top2 interplay; Top2 H2A-pS121 interaction) Piskadlo, Raquel A. Oliveira 2016; Wolfram Antonin Heinz Neumann, 2016
