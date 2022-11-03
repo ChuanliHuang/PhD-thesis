@@ -32,10 +32,21 @@ Kirbuz  2005    budding yeast
 Bub1 independent localisation
 Kabayoshi 2019  mouse fission yeast
 Petty 2018  budding yeast GCN5 Cse4
-Buehl 2018  budding yeast H3
+Eot-Houllier  2018  human pCENP-A
 Mishra  2018  budding yeast Cse4
 Buehl, Deng 2018  budding yeast H3
 Luo 2016  budding yeast H3
+Huang 2007  human CPC
+Tanno 2010  human CPC
+Rivera  2012  frog  CPC
+Kawashima 2007  fission yeast human CPC
+Boyarchuk  2007  frog  CPC
+Resnick 2006  fly CPC
+Clarke  2005  fly POLO
+Qu  2019  human SET
+Krishnan  2017  mouse SET
+Tang  2006  human PP2A
+Nerusheva 2014  budding yeast PP2A
 
 
 pH2A important for shugoshin localization
@@ -121,6 +132,7 @@ Xu  2009  human budding yeast
 Ueki  2021  human
 
 shugoshin MCAK interaction
+Huang 2007  human
 Rivera  2012    frog
 Tanno 2010  human
 
