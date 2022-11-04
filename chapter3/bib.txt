@@ -47,6 +47,9 @@ Qu  2019  human SET
 Krishnan  2017  mouse SET
 Tang  2006  human PP2A
 Nerusheva 2014  budding yeast PP2A
+Yamagishi 2008  fission yeast HP1
+Kang  2011  human HP1
+Perera  2010  human
 
 
 pH2A important for shugoshin localization
