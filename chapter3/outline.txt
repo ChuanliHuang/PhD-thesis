@@ -9,7 +9,7 @@
         whether cohesin is involved in yeast not known (ChIP-qPCR contradicts tension-sensing function shugoshin)
         to resolve controversy: look at bub1 and pH2A under tension; look for phosphatases
         controversy:
-        pH2A (human: staining under no tension is incosistent; can't do ChIP; tension data contradicts model; yeast: no data )
+        pH2A (human: staining under no tension is inconsistent; can't do ChIP; tension data contradicts model; yeast: no data )
         Bub1 localization (pulled away model vs delocalize model)
         phosphatase
         cohesin in yeast (ChIP-qPCR contradicts tension-sensing function shugoshin)
@@ -17,10 +17,12 @@
 
 
 Discussion
-bub1 delocalization caused shugoshin removal rather than the opposite
 cohesin is not required in frog/mouse/fly (not sure which one)
-Residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
-bub1 sgo1 CPC PP1 positive feedback (explain the fast removal of shugoshin)
+Decresed Bub1, pH2A, Sgo1 upon tension; residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
+
+'In human cells, SET is hypothesised to physically compete with cohesin for Sgo1 binding upon tension, resulting in its moving from cohesin at inner centromere to H2A-pT120 at the kinetochore. This model implies kinetochore H2A-pT120 remains unchanged regardless of whether tension is established. However, it is challenged by the finding that the kinetochore localisation of H2A-pT120 and Bub1 is inversely correlated with inter-kinetochore distance. To be noted, in this study, centromeric Sgo2 is reported to decrease in a kinetochore distance-dependent manner. It is not known whether Sgo1 localisation is also reduced. Moreover, the exact localisation of H2A-pT120 from immunostaining is inconsistent in the literature, with reports arguing it covers the whole inner centromere or it is mainly at kinetochore proximity.'
+
+bub1 sgo1 CPC PP1 positive feedback (explain the fast removal of shugoshin, important to test whether Sgo1 localisation is also upstream Bub1)
 H2A-pS121 is redistributed when Bub1 localization is messed up
 Re-distribution of H2A-pS121 and chromosome condensation (condensin-Sgo1 interaction; condensin-Top2 interplay; Top2 H2A-pS121 interaction) Piskadlo, Raquel A. Oliveira 2016; Wolfram Antonin Heinz Neumann, 2016
 to prove the final model: 1. tension has an effect on each step; 2. each step depends on last step 

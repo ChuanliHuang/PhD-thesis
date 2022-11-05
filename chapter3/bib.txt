@@ -154,3 +154,7 @@ evidence supporting bub1 pulled away model
 Verzijlbergen 2014  budding yeast
 Deng  2018  budding yeast
 Paldi 2020  budding yeast
+
+intra-KT tension responsible for tension sensing
+McVey 2021  review
+Uchida  2009  human
