@@ -775,6 +775,8 @@
 
 %%%% OTHER STUFF
 
+%% units
+\DeclareSIUnit\Molar{\textsc{m}}
 %% Define new counter so you can have the equation
 %% number 4.2.1a for example, this a gift from J.F.Blowey
 %% Usage \eqlabon to start a,b numbering and \eqlaboff
