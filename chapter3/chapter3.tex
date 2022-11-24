@@ -80,12 +80,25 @@ The experiments above suggest that Bub1 is re-localised from the kinetochore upo
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Bub1-mNG pMET-SCC1.pdf}
-  \caption[Tension is required for Bub1 re-localisation from the kinetochore]{Tension is required for Bub1 re-localisation from the kinetochore. (A) Schematics of experimental procedures. (B) Montage of representative time-lapse imaging. Cartoons on the left indicate the status of sister chromatids. (C) N=30 cells were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Left panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Right panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. The wild type is shown in blue and pMET-SCC1 is shown in orange. (D)  Western blotting with anti-HA antibody to detect Bub1 protein. Kar2 was used as the loading control. }
+  \caption[Tension is required for Bub1 re-localisation from the kinetochore]{Tension is required for Bub1 re-localisation from the kinetochore. (A) Schematics of experimental procedures. (B) Montage of representative time-lapse imaging. Cartoons on the left indicate the status of sister chromatids. (C) N=30 cells were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Left panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Right panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. The wild type is shown in blue and pMET-SCC1 is shown in orange. (D) Western blotting with anti-HA antibody to detect Bub1 protein. Kar2 was used as the loading control. }
   \label{fig:bub1metscc1}
 \end{figure} 
 
-\subsection{Bub1 re-localisation is earlier than Sgo1 re-localisation }
-The data so far have suggested a model where Bub1 and Sgo1 re-localise sequentially. If this is true, we would expect a difference in the timing of their removal. To test it, ideally, a strain with the two proteins tagged with fluorescence proteins of different colours should be used. However, none of Bub1 or Sgo1 tagged with various types of RFPs gave good enough signals under our microscope. Instead, I could only image Bub1-mNG and Sgo1-EGFP in two different strains and use the inter-kinetochore distance measured from Mtw1-tdTomato as the internal control for timing. Standard G1 to metaphase live-cell imaging was carried out (Figure~\ref{fig:bub1sgo1}A). 
+\subsection{Bub1 removal is sufficient for the rapid de-localisation of Sgo1}
+\cite{Nerusheva2014} have shown with ChIP-qPCR that Bub1 depletion abolishes Sgo1 localisation at the peri-centromere in the absence of tension, suggesting Bub1 removal triggers Sgo1 de-localisation. However, the 1 \si{\hour} time resolution of the experiment was not enough to explain the fast kinetics of Sgo1 de-localisation, where the transition from focused to diffused signal happens within 15 \si{\minute}. To verify this result with an independent method as well as to improve the time resolution, I sought to repeat this experiment with microscopy. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Bub1-3V5-AID.pdf}
+  \caption[Sgo1 is de-localised promptly upon Bub1 depletion in the absence of tension]{Sgo1 is de-localised promptly upon Bub1 depletion in the absence of tension. }
+  \label{fig:bub1aid}
+\end{figure} 
+
+
+\subsection{Bub1 re-localisation is earlier than Sgo1 re-localisation}
+The data so far have suggested a model where Bub1 and Sgo1 re-localise sequentially. If this is true, there could be a difference in the timing of their removal. To test it, a strain with the two proteins tagged with fluorescence proteins of different colours should be used in the ideal situation. However, none of Bub1 or Sgo1 tagged with various RFPs gave good enough signals under our microscope, possibly due to a combination of low abundance and cell-cycle-dependent expression of the two proteins. For example, Sgo1 tagged with the brightest RFP in the lab tdTomato is visible as dots in cells arrested with nocodazole but not in an unperturbed cell cycle because tdTomato has a maturation time beyond the time Sgo1 can be detected in a mitotic time course \citep{Indjeian2005a}. Instead, I could only image Bub1-mNG and Sgo1-EGFP in separate strains and use the inter-kinetochore distance measured from Mtw1-tdTomato as the internal control for timing. Standard G1 to metaphase live-cell imaging was carried out (Figure~\ref{fig:bub1sgo1}A). The inter-kinetochore distances are indistinguishable between the two strains (Figure~\ref{fig:bub1sgo1}B), suggesting a similar progress of tension establishment. Kinetochore Bub1-mNG fluorescence intensity was quantified as in the previous experiments. Due to the fact that Sgo1-EGFP is close to but does not co-localise with the kinetochore, it was not able to define the ROI to quantify fluorescence intensity. Therefore, Sgo1-EGFP was only scored for whether the signal can be counted as focused or not. Consistent with the speculation, the dynamics of Sgo1-EGFP and Bub1-mNG were similar except for a 15 \si{\minute} delay of Sgo1-EGFP in both the increase and decrease (Figure~\ref{fig:bub1sgo1}B), supporting the idea that Bub1 removal from the kinetochore triggers the de-localisation of Sgo1. 
+
+\nomenclature{ROI}{Region Of Interest}
 
 \begin{figure}[htbp]
   \centering
