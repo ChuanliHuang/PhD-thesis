@@ -124,7 +124,7 @@ Our naive model argues that the phosphorylation status of the key substrate(s) d
   \label{fig:abtest}
 \end{figure} 
 
-To test whether H2A is indeed de-phosphorylated at S121 upon Bub1 depletion, I conducted western blotting on samples from the experiment of Figure~\ref{fig:bub1aid} (Figure~\ref{fig:ph2abub1aid}A). The specific band is maintained within the scope of the experiment in -NAA samples whereas it is reduced in +NAA samples in spite of the increase in the intensity of the non-specific band above (Figure~\ref{fig:ph2abub1aid}C), suggesting that H2A-pS121 is being de-phosphorylated due to Bub1 depletion. Hence, the continued presence of Bub1 is required to maintain H2A-pS121, which is in favour of the naive model and the idea that H2A-pS121 is the key substrate. Due to the non-ideal specificity of the antibody over unphosphorylated H2A-S121, it is difficult to interpret the kinetics of the de-phosphorylation. 
+To test whether H2A is indeed de-phosphorylated at S121 upon Bub1 depletion, I conducted western blotting on samples from the experiment of Figure~\ref{fig:bub1aid} (Figure~\ref{fig:ph2abub1aid}A). The specific band is maintained within the scope of the experiment in -NAA samples. In contrast, it is reduced in +NAA samples in spite of the increase in the intensity of the non-specific band above (Figure~\ref{fig:ph2abub1aid}C), suggesting that H2A-pS121 is being de-phosphorylated due to Bub1 depletion. Hence, the continued presence of Bub1 is required to maintain H2A-pS121, favouring the naive model and the idea that H2A-pS121 is the key substrate. Due to the non-ideal specificity of the antibody over unphosphorylated H2A-S121, it is difficult to interpret the kinetics of the de-phosphorylation. 
 
 \begin{figure}[htbp]
   \centering
@@ -135,12 +135,16 @@ To test whether H2A is indeed de-phosphorylated at S121 upon Bub1 depletion, I c
 
 \subsection{Total cellular H2A-pS121 level is independent of tension}
 
+Since tension de-localises Bub1 from the kinetochore, physically separating it from its substrate H2A at the peri-centromere, I hypothesised that the phosphorylation of H2A-S121 would be lost or at least reduced by tension. Therefore, I arrested wild type strain, the control strain used for imaging and the negative control \textit{bub1$\Delta$K} in the presence or absence of tension (Figure~\ref{fig:ph2atension}A). Western blotting against H2A-pS121 was conducted as before. Surprisingly, tension did not decrease the intensity of the specific band for both wild type and the imaging strain (Figure~\ref{fig:ph2atension}B), indicating the level of total cellular H2A-pS121 is independent of tension. It seems that tension even increased the specific band intensity for the imaging strain. However, I believe it is due to the variation in the blotting process, as the intensity of the non-specific band is also reduced in the no tension sample compared to the tension sample. 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A tension.pdf}
   \caption[Total cellular H2A-pS121 level is independent of tension]{Total cellular H2A-pS121 level is independent of tension.(A) Schematics of experimental procedures. (B) Western blotting with anti-H2A-pS121 antibody to detect the phosphorylation status of H2A. Pgk1 was used as the loading control. The asterisk represents the non-specific band.}
   \label{fig:ph2atension}
 \end{figure}
+
+To validate this unexpected result, I turned to a different approach where H2A-pS121 were monitored over the entire cell cycle. Cells bearing \textit{PDS1-HA} were synchronised in G1 and released into rich media as described in the previous synchronised mitotic time course experiment (Figure~\ref{fig:ph2atimecourse}A). Tubulin IF indicated that most cells were in metaphase at 75 \si{\minute} after G1 release while in anaphase at 90 and 105 \si{\minute} (Figure~\ref{fig:ph2atimecourse}B). Western blotting with anti-HA and anti-H2A-pS121 was then performed on the time course samples. The securin Pds1 peaked at 75 \si{\minute} and became barely visible at 90 \si{\minute}, consistent with the cell cycle stages information from the tubulin IF. The H2A-pS121 band was comparable from 60 to 90 \si{\minute}, with a sharp reduction at 105 \si{\minute}, suggesting the level of H2A-pS121 is maintained during the metaphase-anaphase transition, therefore verifying the previous result. Interestingly, the pattern of H2A-pS121 level over the cell cycle is qualitatively similar to the Bub1 protein expression level (Figure~\ref{fig:bub1timecourse}). 
 
 \begin{figure}[htbp]
   \centering
@@ -173,9 +177,9 @@ FRET Sample
 Collect 5 images
 
 Acceptor Only using Acceptor filter set
-Acceptor Only using FRET filter set
-Donor Only using Donor filter set
-Donor Only using FRET filter set
+Acceptor Only using the FRET filter set
+Donor Only using the Donor filter set
+Donor Only using the FRET filter set
 FRET Specimen Only using FRET filter set
 
 reference \citep{Gordon1998QuantitativeMicroscopy}
@@ -196,4 +200,5 @@ Cells bearing P$_{MET}$\textit{-CDC20} from patches on -MET plates were inoculat
 \subsubsection{Western blotting}
 normal protein
 H2A-pS121
+\subsubsection{Western blotting with big gel}
 \subsection{Generation of phospho-specific antibody for H2A-pS121}
