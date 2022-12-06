@@ -1,46 +1,50 @@
-\chapter{Collocation Method at the Wake Edges}
-\label{append:collocation}
+\chapter{Yeast Strains}
+\label{append:yeaststrain}
 
-\setcounter{equation}{0}
+\begin{table}[htb]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{\textit{Saccharomyces cerevisiae} strains}
+\label{tab:cerevisiaetable}
+\begin{tabular}{p{0.2\textwidth}p{0.7\textwidth}}
+\hline
+\textbf{Strain number} & \textbf{Genotype}
+\\
+\hline
+AMy1176       & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+}                                                                                                                                                       \\
+AMy1282       & \textit{MATalpha, his1 MATING TYPE   TESTER STRAIN}                                                                                                                                                                                  \\
+AMy1290       & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, PDS1-HA -LEU2::pds1}                                                                                                                                  \\
+AMy2594       & \textit{MATa, his1 MATING TYPE TESTER   STRAIN}                                                                                                                                                                                      \\
+AMy31020      & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, BUB1-mNeonGreen::KanMX6, MTW1-tdTomato::NAT,p MET-CDC20::URA3}                                                                                        \\
+AMy31069      & \textit{MATa, ade2-1, leu2-3, ura3,   trp1-1, his3-11,15, can1-100, GAL, psi+, BUB1-mNeonGreen::KanMX6,   HTB1-mCherry::NAT, pMET-CDC20::URA3}                                                                                       \\
+AMy31282      & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, leu2::tetR-tdTomato::LEU2, tetOx224-URA3 (tetOs $\sim$8kb to right of CEN1),   BUB1-mNeonGreen::KanMX6, pMET-CDC20::URA3}                             \\
+AMy31333      & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, BUB1-mNeonGreen::KanMX6, MTW1-tdTomato::NAT, pMET-CDC20::URA3,   scc1::pMET-SCC1myc18::TRP1 (also URA3+)}                                             \\
+AMy31495      & \textit{MATa, ade2-1, leu2-3, ura3,   trp1-1, his3-11,15, can1-100, GAL, psi+, ura3::pADH1-OsTIR1-9MYC::URA3,   BUB1-3V5-AID::hphMX, SGO1-yeGFP::KanMX6, MTW1-tdTomato::NAT, glc7::LEU2,   trp1-1::glc7-12::TRP1, pMET-CDC20::URA3} \\
+AMy31535      & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, ura3::pADH1-OsTIR1-9MYC::URA3, BUB1-3V5-AID::hphMX, SGO1-yeGFP::KanMX6,   MTW1-tdTomato::NAT, pMET-CDC20::URA3}                                       \\
+AMy31779      & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, BUB1-6HA::TRP1, scc1::pMET-SCC1myc18::TRP1 (also URA3+) ,   pMET-CDC20::URA3}                                                                         \\
+AMy7344       & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, BUB1-6HA::TRP1}                                                                                                                                       \\
+AMy9233       & \textit{MATa, ade2-1, leu2-3, ura3, trp1-1, his3-11,15, can1-100, GAL,   psi+, SGO1-yeGFP::KanMX6, MTW1-tdTomato::NAT, pMET-CDC20::URA3} 
+\\
+\hline                                                             
 
-A collocation based gradient method is formulated in \citet[sec. 5]{Gray:2004:SJoSC}. In that
-paper it is proved that the method, although applicable to a general Laplace problem, is not
-applicable to the crack problem. The difficulty arises from an additional constant in the shape
-functions for the most singular point. However, the zero value of 
+\end{tabular}
+\end{table}
 
-% To finalise the applicability of this method, prior to its derivation, and in respect to the
-% necessity of an internal and external domain, it is proposed that the method does not suffer the
-% same difficulties at an edge as the Galerkin method.
-% 
-% To prove this consider a general point of interest lying on either the top and bottom
-% surfaces of the wake, $S^{+}$ and $S^{-}$. Once more, the average of the velocities of the top and
-% bottom are saught. This is written as
-% \begin{multline}
-% \frac{1}{2} \left( \pdif{\phi^{+}}{E_{k}} + \pdif{\phi^{-}}{E_{k}} \right) = \left\{ \lim_{\pint
-% \rightarrow P} - \lim_{\pext \rightarrow P}
-% \right\} \int_{S} \phi \frac{\partial^{2}G}{\partial\E_{k}\partial\n} \: dS \\
-% = \left\{ \lim_{\pint \rightarrow P} - \lim_{\pext \rightarrow P}
-% \right\} \int_{S^{+}} \phi^{+} \frac{\partial^{2}G}{\partial\E_{k}\partial\n^{+}}
-% \: dS + \int_{S^{-}} \phi^{-} \frac{\partial^{2}G}{\partial\E_{k}\partial\n^{-}}
-% \: dS
-% \end{multline}
-% Moving on to considering a point lying on the division between $S^{+}$ and $S^{-}$, the above
-% becomes
-% \begin{equation}\label{eq:edge_collocation}
-% \pdif{\phi}{E_{k}} = \left\{ \lim_{\pint \rightarrow P} - \lim_{\pext \rightarrow P}
-% \right\}
-% \int_{S^{+}} \phi^{+} \frac{\partial^{2}G}{\partial\E_{k}\partial\n^{+}} \: dS +
-% \int_{S^{-}} \phi^{-} \frac{\partial^{2}G}{\partial\E_{k}\partial\n^{-}} \: dS
-% \end{equation}
-% given that $\phi^{+} + \phi^{-} = \phi$. The difference between the internal and external limits
-% will cancel all of the non-singular integrals, hence the remaining integrals are just the singular
-% ones in $S^{+}$ and $S^{-}$. The right hand side of equation~\eqref{eq:edge_collocation} can
-% easily be combined into a single surface by
+\begin{table}[htb]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{\textit{Schizosaccharomyces pombe} strains}
+\label{tab:pombetable}
+\begin{tabular}{p{0.2\textwidth}p{0.7\textwidth}}
+\hline
+\textbf{Strain number} & \textbf{Genotype}
+\\
+\hline
 
-The development of the collocation method is very similar to that of the edge adjacent integral,
-expect that only one polar transformation is available. To begid
-effect of
-differ
+\\
+\hline                                                             
 
+\end{tabular}
+\end{table}
 
 % END OF CHAPTER
