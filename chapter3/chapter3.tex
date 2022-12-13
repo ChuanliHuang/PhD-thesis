@@ -162,7 +162,7 @@ First, I carried out a test ChIP-qPCR to determine whether the antibody can be u
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/test_qPCR.pdf}
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A test ChIP-qPCR.pdf}
   \caption[The H2A-pS121 phospho-specific antibody can be used for ChIP]{The H2A-pS121 phospho-specific antibody can be used for ChIP. Wild type and \textit{bub1$\Delta$K} cells arrested in metaphase without tension were fixed for 10, 20, 30 and 60 minutes, respectively, and subjected to H2A-pS121 ChIP-qPCR at 4 different loci, with two at the centromere, one at chromosome arm and one at the peri-centromere of chromosome IV. }
   \label{fig:ph2atestchipqpcr}
 \end{figure}
@@ -172,7 +172,7 @@ Next, I conducted a formal H2A-pS121 ChIP-seq experiment. To be able to compare 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/checking.pdf}
-  \caption[Quality control of calibrated H2A-pS121 ChIP-seq]{Quality control of calibrated H2A-pS121 ChIP-seq. (A) Schematics of experimental procedures. (B) Spindle morphology count. (C) Western blotting with anti-H2A-pS121 antibody to detect the phosphorylation status of H2A. Pgk1 was used as the loading control. (D) H2A-pS121 ChIP-qPCR at the chromosome IV centromere, chromosome arm and peri-centromere of \textit{S.cerevisiae}. (E) H2A-pS121 ChIP-qPCR at chromosome I centromere core and outer repeat of \textit{S.pombe}. }
+  \caption[Quality control of calibrated H2A-pS121 ChIP-seq]{Quality control of calibrated H2A-pS121 ChIP-seq. (A) Schematics of experimental procedures. (B) Spindle morphology count by tubulin IF. (C) Western blotting with anti-H2A-pS121 antibody to detect the phosphorylation status of H2A. Pgk1 was used as the loading control. (D) H2A-pS121 ChIP-qPCR at the chromosome IV centromere, chromosome arm and peri-centromere of \textit{S.cerevisiae}. (E) H2A-pS121 ChIP-qPCR at chromosome I centromere core and outer repeat of \textit{S.pombe}. }
   \label{fig:ph2achipseqchecking}
 \end{figure}
 
@@ -190,9 +190,34 @@ With quality control conducted, I proceeded with the ChIP samples and set up seq
   \label{fig:ph2achipseq2nd}
 \end{figure}
 
-\subsection{Sgo1 cannot be localized to the peri-centromere in H2A phospho-mimic mutants}
+\subsection{Sgo1 cannot be concentrated at the peri-centromere in H2A phospho-mimic mutant}
 
+The re-distribution of H2A-pS121 upon tension points to a possibility that it triggers Sgo1 re-localisation. If it is true, The H2A phospho-mimic mutant whose mark for Sgo1 localisation spreads along the entire chromosome, and thus mimicking the tension situation, should lose its Sgo1 enrichment at peri-centromere in the absence of tension. However, \cite{Nerusheva2014} reported an opposite result and, combined with other results, eventually reached the conclusion that Bub1 has substrates other than H2A important for Sgo1 localisation. Due to a lack of supporting evidence from other species and the difficulty of making H2A mutants in budding yeast, I decided to verify the results by first sequencing the original strains used in the research. Surprisingly, The H2A phospho-mimic mutants turned out to be wild type for the HTA1 locus (Figure~\ref{fig:h2as121dseq}), consistent with the observation that strains with H2A-S121D mutations always show the same phenotype as wild type in the paper. 
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{chapter3/figures/nerusheva_sequencing.pdf}
+  \caption[H2A phopho-mimic mutants used in \citep{Nerusheva2014} bear wild type sequence]{Phopho-mimic mutants used in \citep{Nerusheva2014} bear wild type sequence. The red circle indicates the expected mutation site.}
+  \label{fig:h2as121dseq}
+\end{figure}
+
+To test whether Sgo1 localisation is altered in H2A phospho-mimic mutants, I re-constructed the strain and repeated the Sgo1-6HA ChIP-qPCR experiment by \cite{Nerusheva2014}. The standard cell harvesting procedure comparing tension with no tension conditions was performed on no tag, wild type, H2A-S121A, as a negative control, and H2A-S121D (Figure~\ref{fig:sgo1chiph2amutants}A). Tubulin IF indicated synchronised metaphase arrest in the tension samples and an absence of spindle in the no tension samples (Figure~\ref{fig:sgo1chiph2amutants}B). Western blotting showed comparable Sgo1 expression in wild type, H2A-S121A and H2A-S121D but not in no tag (Figure~\ref{fig:sgo1chiph2amutants}C). Samples then underwent ChIP processing and qPCR was used to determine the enrichment at the chromosome arm, peri-centromere and centromere of chromosome IV (Figure~\ref{fig:sgo1chiph2amutants}D). As expected, Sgo1 exhibited increased association with chromatin at the centromeric/ peri-centromeric region but not on the arm upon tension in wild type. However, this increase was abolished in H2A-S121A or H2A-S121D, suggesting Sgo1 cannot be enriched at peri-centromere even in the absence of tension, supporting the idea that the phospho-mimic mutant resembles the scenario with established tension regarding Sgo1 localisation (Figure~\ref{fig:sgo1chiph2amutants}E). 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 in H2A mutants ChIP.pdf}
+  \caption[Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant]{Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. (B) Spindle morphology count by tubulin IF. (C) Western blotting with anti-HA antibody to detect the expression level of Sgo1-6HA. Pgk1 was used as the loading control. (D) Schematics showing the locations of loci used for the ChIP-qPCR experiment. (E) Sgo1-6HA ChIP-qPCR on the chromosome arm, the peri-centromere and the core centromere of chromosome IV. The mean of 3 experimental repeats is shown, with the error bar representing standard error. The two-tailed t-test is used to calculate statistical significance. (*) P<0.05; (NS) not significant.}
+  \label{fig:sgo1chiph2amutants}
+\end{figure}
+
+Due to the apparent contradiction with the previous result, I sought to validate the result with microscopy. Therefore, I constructed H2A mutants bearing genetic constructs for imaging, \textit{SGO1-EGFP MTW1-tdTomato}. Cells were imaged following the standard approach of synchronised G1 to metaphase live-cell imaging (Figure~\ref{fig:sgo1imagingh2amutants}A). Unlike wild type, where Sgo1-EGFP appeared as foci at least once in the cell cycle, both of the H2A phospho-mutants could only show Sgo1-EGFP as a 'cloud' signal (Figure~\ref{fig:sgo1imagingh2amutants}B and C). Again, this 'cloud' signal resembles what it looks like in wild type after the establishment of tension, judged by the separation of kinetochore foci. Western blotting showed similar Sgo1 expression levels in the three strains used, ruling out the possibility that the loss of Sgo1-EGFP foci is because of reduced protein abundance (Figure~\ref{fig:sgo1imagingh2amutants}D). Therefore, I concluded that Sgo1 cannot be concentrated at the peri-centromere in H2A phospho-mimic mutant. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 in H2A mutants imaging.pdf}
+  \caption[Sgo1-EGFP foci is abolished in H2A phospho-mimic mutant]{Sgo1-EGFP foci is abolished in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1 foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Pgk1 was used as the loading control.}
+  \label{fig:sgo1imagingh2amutants}
+\end{figure}
 
 \subsection{Cohesin is not required to concentrate Sgo1 at the peri-centromere}
 
@@ -213,6 +238,8 @@ In the absence of tension, the association of Sgo1 with chromatin shows three ma
 
 \section{Discussion}
 \section{Materials and methods}
+\subsection{budding yeast methods}
+\subsubsection{Strain construction}
 \subsection{Microscopy methods}
 \subsubsection{FRET}
 The FRET experiment was performed on a Nikon Ti2 inverted microscope equipped with a 100x Plan ApoChromat NA 1.45 oil lens and Prime 95B CMOS (sCMOS) camera. Fluorophores were excited with GFP and emission in the mCherry channel was recorded. Subsequently, standard GFP-GFP and mCherry-mCherry excitation and emission were performed. 
@@ -265,7 +292,7 @@ for seq
 \subsection{DNA methods}
 \subsubsection{qPCR}
 
-\begin{table}[htb]
+\begin{table}[htbp]
 \centering
 \renewcommand{\arraystretch}{1.5}
 \caption{qPCR primers}
@@ -296,3 +323,6 @@ for seq
 \nomenclature{OTR}{OuTer Repeat}
 
 \subsubsection{Library preparation for Illumina sequencing}
+\subsection{Computational methods}
+\subsubsection{ChIP-seq data analysis}
+\subsubsection{Code availability}
