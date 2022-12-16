@@ -158,3 +158,12 @@ Paldi 2020  budding yeast
 intra-KT tension responsible for tension sensing
 McVey 2021  review
 Uchida  2009  human
+
+PP1 important for checkpoint silencing
+Pinsky  2006  budding yeast
+Pinsky  2009  budding yeast
+Cannon  2010  budding yeast
+
+PP1 important for Bub1 localisation
+London  2012  budding yeast
+Roy 2019  budding yeast
