@@ -159,11 +159,27 @@ intra-KT tension responsible for tension sensing
 McVey 2021  review
 Uchida  2009  human
 
-PP1 important for checkpoint silencing
+PP1 important for checkpoint silencing and tension sensing
 Pinsky  2006  budding yeast
 Pinsky  2009  budding yeast
 Cannon  2010  budding yeast
+London  2012  budding yeast
+Meadows 2011  fission yeast
+Nijenhuis 2014  human
+Rosenberg 2011  budding yeast
+Liu 2010  human
+Posch 2010  human
 
 PP1 important for Bub1 localisation
 London  2012  budding yeast
 Roy 2019  budding yeast
+
+PP1 localisation affected by tension
+Bajaj 2018  human
+Roscioli  2020  human
+
+Bub1 kinase has other functions than localising Sgo1
+Tang  2004  human Cdc20
+Zhang 2020  human TOP2A
+Nyati 2015  mouse TGF-β
+Li 2018 human telomere
