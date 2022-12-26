@@ -215,7 +215,7 @@ Due to the apparent contradiction with the previous result, I sought to validate
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 in H2A mutants imaging.pdf}
-  \caption[Sgo1-EGFP foci is abolished in H2A phospho-mimic mutant]{Sgo1-EGFP foci is abolished in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1 foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Pgk1 was used as the loading control.}
+  \caption[Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant]{Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1 foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Pgk1 was used as the loading control.}
   \label{fig:sgo1imagingh2amutants}
 \end{figure}
 
@@ -240,51 +240,58 @@ To verify this result, I wanted to test if \textit{bub1$\Delta$K} mutant, which 
 
 With the results from the spot assay, I wanted to study the localisation of Sgo1 upon Glc7 inactivation to test whether PP1 is required for Sgo1 removal from the peri-centromere. I first constructed the strain with genetic constructs for Sgo1 imaging (\textit{SGO1-EGFP MTW1-tdTomato pMET-CDC20}) and \textit{glc7-12}, whose restrictive temperature is lower than \textit{glc7-10} and thus might be more compatible with live-cell imaging. the standard G1 to metaphase arrest with tension imaging was conducted except that cells were shifted to 34 \si{\celsius} immediately after G1 release to inactivate PP1 (Figure~\ref{fig:sgo1glc712}A). 
 
-In terms of the inter-kinetochore distance, wild type was similar as in the previous experiments, albeit escaped the arrest induced by Cdc20 depletion near the end of imaging, possibly due to the elevated temperature. Whereas in \textit{glc7-12}, it was stabilised at a much shorter distance, around 0.5 \si{\micro\metre}, over time (Figure~\ref{fig:sgo1glc712}B and C), consistent with the previous report that \textit{glc7-12} cells were arrested in metaphase with short spindles \citep{MacKelvie1995ThePhosphatase}. Interestingly, similar to some of other \textit{GLC7} mutants \citep{Black1995A1, Andrews2000TypeCerevisiae}, many \textit{glc7-12} cells showed elongated bud morphology. The elevated temperature reduced the imaging quality yet the Sgo1-EGFP foci remained distinguishable from the background. Strikingly, in contrast to wild type, Sgo1-EGFP is retained as foci till the end of the experiment in \textit{glc7-12}. Quantification showed that the percentage of \textit{glc7-12} having Sgo1-EGFP foci increased over time and reached nearly 100\% (Figure~\ref{fig:sgo1glc712}B and C), suggesting that Sgo1 cannot be de-localised from the peri-centromere without functional PP1. 
+In terms of the inter-kinetochore distance, wild type was similar as in the previous experiments, albeit escaped the arrest induced by Cdc20 depletion near the end of imaging, possibly due to the elevated temperature. Whereas in \textit{glc7-12}, it was stabilised at a much shorter distance, around 0.5 \si{\micro\metre}, over time (Figure~\ref{fig:sgo1glc712}B and C), consistent with the previous report that \textit{glc7-12} cells were arrested in metaphase with short spindles \citep{MacKelvie1995ThePhosphatase}. Interestingly, similar to some of other \textit{GLC7} mutants \citep{Black1995A1, Andrews2000TypeCerevisiae}, many \textit{glc7-12} cells showed elongated bud morphology. The elevated temperature reduced the imaging quality yet the Sgo1-EGFP foci remained distinguishable from the background. Strikingly, in contrast to wild type, Sgo1-EGFP was retained as foci till the end of the experiment in \textit{glc7-12}. Quantification showed that the percentage of \textit{glc7-12} having Sgo1-EGFP foci increased over time and reached nearly 100\% (Figure~\ref{fig:sgo1glc712}B and C), suggesting that Sgo1 cannot be de-localised from the peri-centromere without functional PP1. 
 
 The shortened inter-kinetochore distance in \textit{glc7-12} raised the possibility that Sgo1 is not re-localised because of reduced tension. To test if enough tension was generated in \textit{glc7-12}, I sought to compare the inter-kinetochore distance at which Sgo1 is removed in wild type and the maximum that \textit{glc7-12} could reach. Technically, for individual wild type cell, I identified the first frame that Sgo1-EGFP foci disappeared and recorded its distance between Mtw1-tdTomato foci, which I referred to as wild type$_{removal}$; while for individual \textit{glc7-12} cell, I followed it over time and selected the longest distance its Mtw1-tdTomato foci ever separated, which I named as \textit{glc7-12}$_{maximum}$. As shown in Figure~\ref{fig:sgo1glc712}D, \textit{glc7-12}$_{maximum}$ was slightly larger than wild type$_{removal}$, indicating that \textit{glc7-12} had reached inter-kinetochore distances where Sgo1 is supposed to be de-localised. Therefore, I concluded that the retention of Sgo1 in \textit{glc7-12} cannot be simply explained by the reduced tension. Western blotting further confirmed that this retention is not due to an altered Sgo1-EGFP expression in \textit{glc7-12} (Figure~\ref{fig:sgo1glc712}E). 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 glc7-12.pdf}
-  \caption[Sgo1-EGFP remains as foci in \textit{glc7-12} at restrictive temperature]{Sgo1-EGFP remains as foci in \textit{glc7-12} at restrictive temperature. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=100 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1 foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) Comparison between the inter-kinetochore distance at which Sgo1 is removed in wild type (wild type$_{removal}$) and the maximum that \textit{glc7-12} could reach (\textit{glc7-12}$_{maximum}$). The two-tailed independent t-test was used to calculate statistical significance. (*) P<0.05 (E) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Kar2 was used as the loading control.}
+  \caption[Sgo1 is not de-localised from peri-centromere in \textit{glc7-12} at restrictive temperature]{Sgo1 is not de-localised from peri-centromere in \textit{glc7-12} at restrictive temperature. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=100 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1 foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) Comparison between the inter-kinetochore distance at which Sgo1 is removed in wild type (wild type$_{removal}$) and the maximum that \textit{glc7-12} could reach (\textit{glc7-12}$_{maximum}$). The two-tailed independent t-test was used to calculate statistical significance. (*) P<0.05 (E) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Kar2 was used as the loading control.}
   \label{fig:sgo1glc712}
 \end{figure}
 
-To verify the result, I repeated the experiment in \textit{glc7-10} background (Figure~\ref{fig:sgo1glc710}A). Consistently, Sgo1-EGFP was maintained as foci within the scope of the experiment (Figure~\ref{fig:sgo1glc710}B), supporting the conclusion that PP1 is required for Sgo1 re-localisation. Notably, the imaging quality was better in this experiment compared to the one for \textit{glc7-12}. This is unexpected as it was conducted at an even higher temperature. I suspect it might be related to the fact there is optimised immersion oil for imaging at 37 \si{\celsius} but not 34 \si{\celsius}. 
+To verify the result, I repeated the experiment in \textit{glc7-10} background (Figure~\ref{fig:sgo1glc710}A). Consistently, Sgo1-EGFP was maintained as foci within the scope of the experiment (Figure~\ref{fig:sgo1glc710}B), supporting the conclusion that PP1 is required for Sgo1 re-localisation. Notably, this experiment's imaging quality was better compared to the one for \textit{glc7-12}. This is unexpected as it was conducted at an even higher temperature. I suspect it might be related to the fact there is immersion oil optimised for imaging at 37 \si{\celsius} but not 34 \si{\celsius}. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 glc7-10.pdf}
-  \caption[Sgo1-EGFP remains as foci in \textit{glc7-10} at restrictive temperature]{Sgo1-EGFP remains as foci in \textit{glc7-10} at restrictive temperature. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (B) Montages of representative time-lapse imaging.}
+  \caption[Sgo1 is not de-localised from peri-centromere in \textit{glc7-10} at restrictive temperature]{Sgo1 is not de-localised from peri-centromere in \textit{glc7-10} at restrictive temperature. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging.}
   \label{fig:sgo1glc710}
-\end{figure}
-
-\subsection{Putative PP1 binding motifs of Sgo1 are not required for Sgo1 re-localization}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 putative PP1 binding mutants.pdf}
-  \caption[]{}
-  \label{fig:sgo1phosphomutant}
 \end{figure}
 
 \subsection{PP1-inactivation-caused retention of Sgo1 depends on Bub1}
 
+Next, we wondered whether PP1 is the phosphatase counteracting Bub1 in terms of localising Sgo1. If so, we expected that Sgo1 localisation should be maintained in the absence of both Bub1 and PP1 (Figure~\ref{fig:bub1aidglc712}B). To test this idea, I repeated the 
+Bub1 depletion experiment of Figure~\ref{fig:bub1aid} but in the \textit{glc7-12} genetic background. Cells were synchronised in G1 at RT and released to media containing methionine and nocodazole at the restrictive temperature for a metaphase arrest with inactivated PP1 and no tension. NAA was then added to deplete Bub1. Microscopy was used to monitor the localisation of Sgo1 (Figure~\ref{fig:bub1aidglc712}A). Cells showed abnormal bud morphology, indicating successful inactivation of PP1. Unlike the control, Sgo1-EGFP quickly lost its foci signal in the +NAA group with similar dynamics to the previous experiment in Figure~\ref{fig:bub1aid} (Figure~\ref{fig:bub1aidglc712}C and D), suggesting PP1 does not directly counteract Bub1 to de-localise Sgo1. The depletion of Bub1 was not checked in this experiment because Sgo1 peri-centromere localisation was abolished when NAA was added, indicating that Bub1 was depleted as expected. 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Bub1-AID glc7-12.pdf}
-  \caption[]{}
+  \caption[PP1 inactivation does not rescue the prompt de-localisation of Sgo1 upon Bub1 depletion in the absence of tension.]{PP1 inactivation does not rescue the prompt de-localisation of Sgo1 upon Bub1 depletion in the absence of tension. (A) Schematics of experimental procedures. (B) Schematics of experimental concept. (C) Montages of representative time-lapse imaging. (D) Survival analysis of the duration of focused Sgo1-EGFP signal. N=30 cells for each strain were followed over time and quantified for the duration of the Sgo1-EGFP signal being focused. Solid lines are Kaplan-Meier survival estimates. The shaded area in the same colour is the 95\% confidence limit of the estimate.}
   \label{fig:bub1aidglc712}
 \end{figure}
 
 \subsection{PP1 is required for Bub1 re-localization}
 
+ It has been reported in budding yeast that PP1 could de-phosphorylate the MELT motifs of Spc105, the ortholog of human KNL1, which are important for Bub1 kinetochore localisation \citep{London2012, Roy2019}. We reasoned that the observation that Sgo1 cannot be de-localised upon PP1 inactivation could be due to the retention of Bub1 at the kinetochore in the same condition. To verify this idea, I wanted to study the localisation of Bub1 when PP1 is inactivated. A synchronised G1 to metaphase live-cell imaging at the restrictive temperature of \textit{glc7-12} was performed (Figure~\ref{fig:bub1glc712}A). In wild type, the dynamics of kinetochore-localised Bub1-mNG was as previously described, which was largely reduced at 75 \si{\minute} after G1 release, corresponding to the separation of Mtw1-tdTomato foci. As expected, the drop was not observed in \textit{glc7-12} (Figure~\ref{fig:bub1glc712}B and C), indicating Bub1 de-localisation from the kinetochore upon tension is impaired when PP1 is inactivated. Consistent with the previous experiment, the stabilised inter-kinetochore distance in \textit{glc7-12} was about 0.5 \si{\micro\metre}. Western blotting indicated reduced Bub1 expression in \textit{glc7-12} compared to wild type, probably due to cell death and poorer cell cycle synchronisation. However, it still ruled out the possibility that the increased kinetochore Bub1-mNG fluorescence intensity was because of elevated Bub1 protein level in \textit{glc7-12}. Therefore, combined with the result in the previous section, I concluded that PP1 is required for Sgo1 re-localization due to its role in de-localising Bub1 from the kinetochore. 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Bub1 glc7-12.pdf}
-  \caption[]{}
+  \caption[Kinetochore-localised Bub1 is maintained upon PP1 inactivation]{Kinetochore-localised Bub1 is maintained upon PP1 inactivation. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Top panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Bottom panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) Western blotting on cells arrested in metaphase without tension using anti-HA antibody to detect the expression level of Bub1-6HA. Kar2 was used as the loading control.}
   \label{fig:bub1glc712}
+\end{figure}
+
+\subsection{Putative PP1 binding motifs of Sgo1 are not required for Sgo1 re-localization}
+
+Interestingly, the budding yeast Sgo1 protein sequence contains the consensus PP1 recognition motif RxVxF and the assisting motif SILK, making it a possible regulatory subunit of PP1 (Figure~\ref{fig:sgo1phosphomutant}A). Given the necessity of PP1 in re-localising Sgo1, we hypothesised that the putative interaction between Sgo1 and PP1 could be the key. To test it, we mutated each or both of the motifs and conducted our standard synchronised G1 to metaphase live-cell imaging (Figure~\ref{fig:sgo1phosphomutant}B). Unexpectedly, in all three mutants, the time Sgo1-EGFP spent as foci were not significantly different from wild type (Figure~\ref{fig:sgo1phosphomutant}C), suggesting these motifs are not required for Sgo1 re-localisation. I further tested the functionality of Sgo1 in the mutants by measuring their benomyl sensitivity. In budding yeast, abnormality in SAC or chromosome segregation does not lead to severe growth defects in an undisturbed cell cycle. However, when challenged by the microtubule de-polymerising drug benomyl, it dramatically reduces the viability. As shown in Figure~\ref{fig:sgo1phosphomutant}D, the negative control \textit{sgo1$\Delta$} showed increased sensitivity to benomyl compared to wild type, representing the loss of Sgo1 functions in mitotic chromosome segregation. On the contrary, the mutants did not show an observable reduction in viability in the presence of benomyl, suggesting Sgo1 functions are intact in those strains. Due to the fact that all the mutants' Sgo1 was tagged by EGFP, I added an additional control \textit{SGO1-EGFP} to test if tagging EGFP itself can cause any change in Sgo1 functions. The similar sensitivity to benomyl between \textit{SGO1-EGFP} and wild type suggested a negative answer to the question. Therefore, I concluded that neither timely re-localisation nor the function of Sgo1 requires its putative PP1 binding sites. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 putative PP1 binding mutants.pdf}
+  \caption[Neither timely re-localisation nor the function of Sgo1 requires its putative PP1 binding sites]{Neither timely re-localisation nor the function of Sgo1 requires its putative PP1 binding sites. (A) Linear schematics of budding yeast Sgo1 protein. Putative PP1 binding motifs SILK and RSVSF are located at amino acid positions 59-62 and 556-560, respectively. (B) Schematics of the imaging experiment. (C) Quantification of the time of Sgo1-EGFP signal being visualised as foci. The two-tailed independent t-test was used to calculate statistical significance. (*) P<0.05; (ns) not significant. (D) Spot assay testing the benomyl sensitivity of the strains. Serial dilutions of indicated strains spotted on rich medium with 0 or 10 \si{\micro\gram/\micro\litre} benomyl.}
+  \label{fig:sgo1phosphomutant}
 \end{figure}
 
 \subsection{PP2A-Rts1 might regulate Sgo1 phosphorylation}
@@ -322,8 +329,6 @@ Sgo1 PTM introduction
 
 In the absence of tension, the association of Sgo1 with chromatin shows three major peaks, at the core centromere and the two peri-centromere borders \citep{Verzijlbergen2014, Paldi2020ConvergentPericentromeres}. Intriguingly, this is different from H2A-pS121, whose distribution profile is rather bell-shaped (Figure~\ref{fig:sgo1comparison}). Given its necessary role in localising Sgo1, this result is quite surprising and it suggests that there might be other factors determining Sgo1 localisation. It has been shown in humans that interaction with cohesin is key to Sgo1 localisation at the inner centromere \citep{Liu2013a}. Also, in budding yeast, cohesin depletion results in a reduction in the ChIP signal at the centromeric region \citep{Verzijlbergen2014}. Therefore, we hypothesised that cohesin might be the other factor involved in defining the distribution of Sgo1 here. 
 
-\subsection{Sgo1 acetylation is not required for Sgo1 re-localization}
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 comparison.pdf}
@@ -334,6 +339,7 @@ In the absence of tension, the association of Sgo1 with chromatin shows three ma
 \nomenclature{qPCR}{quantitative Polymerase Chain Reaction}
 \nomenclature{RPM}{Reads Per Million}
 
+\subsection{Sgo1 acetylation is not required for Sgo1 re-localization}
 
 \section{Discussion}
 \section{Materials and methods}
