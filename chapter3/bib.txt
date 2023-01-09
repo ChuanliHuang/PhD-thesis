@@ -183,3 +183,41 @@ Tang  2004  human Cdc20
 Zhang 2020  human TOP2A
 Nyati 2015  mouse TGF-β
 Li 2018 human telomere
+
+Sgo1 PP2A-B56 interaction
+Xu  2009  human
+Ueki  2021  human
+
+Sgo1-PP2A in cohesion protection in meiosis I 
+Marston 2004 budding yeast
+Kitajima 2004 budding yeast fission yeast
+Katis 2004 budding yeast
+Rabitsch 2004 fission yeast
+Rattani 2013 mouse
+Llano 2008 mouse
+Lee 2008 mouse
+
+Sgo1-PP2A in cohesion protection during mitosis
+Shintomi 2009 frog
+Rivera 2009 frog
+Orth 2001 human
+Huang 2007 human
+Tang 2006 human
+Tanno 2010 human
+McGuinness 2005 human
+Kitajima 2005 human
+Salic 2004 human
+
+for Sgo1-PP2A in bi-orientation
+Peplowska 2014 budding yeast
+Rivera 2012 frog
+
+against Sgo1-PP2A in bi-orientation
+Eshleman 2014 budding yeast
+Verzijlbergen 2014 budding yeast
+
+possible explanation for the contradiction
+Ueki  2021 human
+
+Sgo1-PP2A in spindle checkpoint silencing
+Rattani 2013 mouse
