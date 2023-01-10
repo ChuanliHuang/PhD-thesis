@@ -200,7 +200,7 @@ Lee 2008 mouse
 Sgo1-PP2A in cohesion protection during mitosis
 Shintomi 2009 frog
 Rivera 2009 frog
-Orth 2001 human
+Orth 2011 human
 Huang 2007 human
 Tang 2006 human
 Tanno 2010 human
@@ -221,3 +221,16 @@ Ueki  2021 human
 
 Sgo1-PP2A in spindle checkpoint silencing
 Rattani 2013 mouse
+
+Sgo1 phosphorylation important for its localisation
+Resnick 2006  frog
+Nogueira  2014  frog
+Pinto 2017  frog
+
+H2A-pS121 is redistributed when Bub1 localization is messed up
+Asghar  2015  human
+Wang  2022  human
+
+Sgo1 is redistributed when CPC localisation is messed up 
+Pouwels 2007  human
+Lee 2014  human 
