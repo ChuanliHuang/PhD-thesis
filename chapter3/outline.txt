@@ -17,6 +17,7 @@
 
 
 Discussion
+Sgo1 phosphorylation status in rts1d could be explained in various ways.
 cohesin is not required in frog/mouse/fly (not sure which one)
 Decresed Bub1, pH2A, Sgo1 upon tension; residual Bub1 and pH2A on KT, residual Sgo1, potentially unified model across species
 
