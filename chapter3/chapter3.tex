@@ -176,7 +176,7 @@ Next, I conducted a formal H2A-pS121 ChIP-seq experiment. To be able to compare 
   \label{fig:ph2achipseqchecking}
 \end{figure}
 
-With quality control conducted, I proceeded with the ChIP samples and set up sequencing. The enrichment profile of a representative chromosome, chromosome IV, is shown in Figure~\ref{fig:ph2achipseq2nd}A. H2A-pS121 has a bell-shaped distribution at the centromere in both the tension and no tension sample. However, quantitatively, consistent with the result from qPCR, the signals were massively reduced in the tension sample. In contrast, on the chromosome arm, the signals were higher for the tension sample, supporting the hypothesis. This is confirmed by piling up all 16 chromosomes. At centromeres, the signals of the tension sample were about a quarter of that of the no tension sample, whereas, on the arms, the former showed a roughly one-fold increase from the latter (Figure~\ref{fig:ph2achipseq2nd}B). To provide a more quantitative view, I categorised sequencing reads as either at centromeres or on the chromosome arms. Although the total number was similar, only 18\% of reads were assigned to the centromeres in the tension sample while the number is 63\% in the no tension sample (Figure~\ref{fig:ph2achipseq2nd}C). Hence, we concluded that the establishment of tension caused a re-distribution of H2A-pS121 from the centromere to the chromosome arm. 
+With quality control conducted, I proceeded with the ChIP samples and set up sequencing. The enrichment profile of a representative chromosome, chromosome IV, is shown in Figure~\ref{fig:ph2achipseq2nd}A. H2A-pS121 has a bell-shaped distribution at the centromere in both the tension and no tension sample. However, quantitatively, consistent with the result from qPCR, the signals were massively reduced in the tension sample. In contrast, on the chromosome arm, the signals were higher for the tension sample, supporting the hypothesis. This is confirmed by the pile-up of all 16 chromosomes. At centromeres, the signals of the tension sample were about a quarter of that of the no tension sample, whereas, on the arms, the former showed a roughly one-fold increase from the latter (Figure~\ref{fig:ph2achipseq2nd}B). To provide a more quantitative view, I categorised sequencing reads as either at centromeres or on the chromosome arms. Although the total number was similar, only 18\% of reads were assigned to the centromeres in the tension sample while the number is 63\% in the no tension sample (Figure~\ref{fig:ph2achipseq2nd}C). Hence, we concluded that the establishment of tension caused a re-distribution of H2A-pS121 from the centromere to the chromosome arm. 
 
 \begin{figure}[htbp]
   \centering
@@ -343,9 +343,21 @@ As mentioned before, Sgo1 association with the peri-centromere chromatin was inc
   \label{fig:sgo1rts1mutants}
 \end{figure}
 \subsection{Tension increases long-range \textit{in cis} interactions}
+
+Chromosome condensation is an anaphase phenomenon. 
+
+some more introduction
+
+Sgo1 chromosome condensation
+Sgo1 condensin interaction
+H2A-pT120 and TOP2A
+
+
+The re-distribution of H2A-pS121 raised the possibility that chromosome condensation is induced upon the establishment of tension or the SAC silencing without the requirement of the biochemical environment of anaphase. 
+
 \subsection{Cohesin is not required for the concentration of Sgo1 at centromere-proximal location}
 
-In the absence of tension, the association of Sgo1 with chromatin shows three major peaks, at the core centromere and the two peri-centromere borders \citep{Verzijlbergen2014, Paldi2020ConvergentPericentromeres}. Intriguingly, this is different from H2A-pS121, whose distribution profile is rather bell-shaped (Figure~\ref{fig:sgo1comparison}). Given its necessary role in localising Sgo1, this result is quite surprising and it suggests that there might be other factors determining Sgo1 localisation. It has been shown in humans that interaction with cohesin is key to Sgo1 localisation at the inner centromere \citep{Liu2013a}. Also, in budding yeast, cohesin depletion results in a reduction in the ChIP signal at the centromeric region \citep{Verzijlbergen2014}. Therefore, we hypothesised that cohesin might be the other factor involved in defining the distribution of Sgo1 here. 
+In the absence of tension, the association of Sgo1 with chromatin shows three major peaks, at the core centromere and the two peri-centromere borders \citep{Verzijlbergen2014, Paldi2020ConvergentPericentromeres}. Intriguingly, this is different from H2A-pS121, whose distribution profile is rather bell-shaped (Figure~\ref{fig:sgo1comparison}). Given its necessary role in localising Sgo1, this result is quite surprising and it suggests that there might be other factors determining Sgo1 localisation. It has been shown in humans that interaction with cohesin is key to Sgo1 localisation to the inner centromere \citep{Liu2013a}. Also, in budding yeast, cohesin depletion results in a reduction in the ChIP signal at the centromeric region \citep{Verzijlbergen2014}. These results supported the notion that cohesin could be the factor mentioned above. However, this is in contradiction with the experiment used to demonstrate shugoshin's function in tension sensing, where Sgo1 is shown to be required for delaying cell cycle progression upon cohesin depletion \citep{Indjeian2005a}. As kinetochore-microtubule attachment is undisturbed, this experiment implies that Sgo1 should be localised at the peri-centromere to maintain CPC localisation for error correction. 
 
 \begin{figure}[htbp]
   \centering
@@ -353,6 +365,13 @@ In the absence of tension, the association of Sgo1 with chromatin shows three ma
   \caption[H2A-pS121 ChIP-seq profile is qualitatively different from Sgo1]{H2A-pS121 ChIP-seq profile is qualitatively different from Sgo1. ChIP-seq profiles of H2A-pS121 and Sgo1 \citep{Paldi2020ConvergentPericentromeres} at the 50kb regions of chromosome IV and VII centromeres. Convergent genes at the peri-centromere borders are marked as arrows. }
   \label{fig:sgo1comparison}
 \end{figure}
+
+To solve the enigma, we sought to investigate the localisation of Sgo1 upon cohesin depletion by microscopy method. Cells used for Sgo1-EGFP imaging that additionally bear \textit{pMET-SCC1} were used and the experimental procedure was the same as the one in Figure~\ref{fig:bub1metscc1} (Figure~\ref{fig:sgo1metscc1}A). Surprisingly, unlike the wild type, Sgo1-EGFP remained its foci signal till the end of the experiment(Figure~\ref{fig:sgo1metscc1}B and C). This result is against the human model \citep{Liu2013a} and the budding yeast ChIP data \citep{Verzijlbergen2014} but in favour of the classic genetics experiment \citep{Indjeian2005a}. It might again reflect the fundamental difference in methodology principles between ChIP and fluorescence microscopy as in Figure~\ref{fig:sgo1rts1mutants}. Furthermore, the fact that Sgo1 localisation resembles Bub1 upon cohesin depletion (Figure~\ref{fig:bub1metscc1}) supports the notion from previous experiments that the localisation of Bub1 and H2A-pS121 is the determining factor of Sgo1 localisation. 
+
+To ensure the efficacy of cohesin, I further conducted a mitotic time-course experiment using the \textit{pMET-SCC1} strain in the presence and absence of methionine, followed by western blotting to measure the expression level of Scc1. Spindle IF was used to determine the stages of the cell cycle (Figure~\ref{fig:sgo1metscc1}D). Albeit the non-optimal synchronisation, it can still be seen that cells went through metaphase and anaphase in the absence of methionine. Whereas they were arrested in metaphase when methionine was added. As expected, without methionine, Scc1 accumulated since the G1 release but started to decrease upon anaphase onset, accompanied by the emergence of the band at lower molecular weight, which represents the cleaved products \citep{Alexandru2001PhosphorylationYeast}. At the same exposure time, the Scc1 signal is largely reduced but still remained visible when in the presence of methionine, suggesting an incomplete depletion. The lack of the band representing cleaved products agreed with the metaphase arrest indicated by the spindle IF (Figure~\ref{fig:sgo1metscc1}E). Therefore, we could not rule out the possibility that residual cohesin is sufficient to support the concentration of Sgo1-EGFP at centromere proximity. 
+
+font !!!
+western !!!
 
 \begin{figure}[htbp]
   \centering
@@ -363,8 +382,6 @@ In the absence of tension, the association of Sgo1 with chromatin shows three ma
 
 \nomenclature{qPCR}{quantitative Polymerase Chain Reaction}
 \nomenclature{RPM}{Reads Per Million}
-
-\subsection{Sgo1 acetylation is not required for Sgo1 re-localization}
 
 \section{Discussion}
 \section{Materials and methods}
