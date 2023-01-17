@@ -342,22 +342,52 @@ As mentioned before, Sgo1 association with the peri-centromere chromatin was inc
   \caption[PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere]{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. (A) Schematics of the imaging experiment. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1-EGFP foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) N=10 cells for the wild type and \textit{rts1$\Delta$} were quantified for the highest fluorescence intensities of Sgo1-EGFP foci among all frames. (ns) not significant.}
   \label{fig:sgo1rts1mutants}
 \end{figure}
-\subsection{Tension increases long-range \textit{in cis} interactions}
+\subsection{Tension induces mild chromosome condensation}
 
 Chromosome condensation is an anaphase phenomenon. 
 
 some more introduction
 
 Sgo1 chromosome condensation
+Sgo1 CPC
 Sgo1 condensin interaction
 H2A-pT120 and TOP2A
 
+all three shit are linked to the re-localisation of Bub1 from the kinetochore, SAC silencing hallmark
+
+connect SAC to chromosome condensation
 
 The re-distribution of H2A-pS121 raised the possibility that chromosome condensation is induced upon the establishment of tension or the SAC silencing without the requirement of the biochemical environment of anaphase. 
 
+
+Besides centromere drama,
+increased inter-centromere interaction
+decreased short range 
+increased long range
+
+also checked difference
+
+<20kb decrease
+20-150kb increase
+>150kb increase
+
+qualitatively mimic human and fission yeast
+
+distance in quantitative agreement with budding yeast data interphase vs mitosis
+but extent very mild
+
+can also be seen from the slope plot
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/+-tension Hi-C.pdf}
+  \caption[Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension]{Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension. (A-C) Analyses of Hi-C of cells arrested in metaphase with or without tension from \cite{Paldi2020ConvergentPericentromeres}. (A) Hi-C ratio map of chromosome III, IV and V. Black dots represent the coordinates of the core centromeres. (B) Hi-C difference map of chromosome III, IV and V (no tension - tension). Black dots represent the coordinates of the core centromeres. (C) Top: median contact probability as a function of genomic distance, excluding contacts across the 50kb regions flanking the core centromeres. Bottom: The slopes of the curves above.}
+  \label{fig:sgo1comparison}
+\end{figure}
+
 \subsection{Cohesin is not required for the concentration of Sgo1 at centromere-proximal location}
 
-In the absence of tension, the association of Sgo1 with chromatin shows three major peaks, at the core centromere and the two peri-centromere borders \citep{Verzijlbergen2014, Paldi2020ConvergentPericentromeres}. Intriguingly, this is different from H2A-pS121, whose distribution profile is rather bell-shaped (Figure~\ref{fig:sgo1comparison}). Given its necessary role in localising Sgo1, this result is quite surprising and it suggests that there might be other factors determining Sgo1 localisation. It has been shown in humans that interaction with cohesin is key to Sgo1 localisation to the inner centromere \citep{Liu2013a}. Also, in budding yeast, cohesin depletion results in a reduction in the ChIP signal at the centromeric region \citep{Verzijlbergen2014}. These results supported the notion that cohesin could be the factor mentioned above. However, this is in contradiction with the experiment used to demonstrate shugoshin's function in tension sensing, where Sgo1 is shown to be required for delaying cell cycle progression upon cohesin depletion \citep{Indjeian2005a}. As kinetochore-microtubule attachment is undisturbed, this experiment implies that Sgo1 should be localised at the peri-centromere to maintain CPC localisation for error correction. 
+In the absence of tension, the association of Sgo1 with chromatin shows three major peaks, at the core centromere and the two peri-centromeric borders \citep{Verzijlbergen2014, Paldi2020ConvergentPericentromeres}. Intriguingly, this is different from H2A-pS121, whose distribution profile is rather bell-shaped (Figure~\ref{fig:sgo1comparison}). Given its necessary role in localising Sgo1, this result is quite surprising and it suggests that there might be other factors determining Sgo1 localisation. It has been shown in humans that interaction with cohesin is key to Sgo1 localisation to the inner centromere \citep{Liu2013a}. Also, in budding yeast, cohesin depletion results in a reduction in the ChIP signal at the centromeric region \citep{Verzijlbergen2014}. These results supported the idea that cohesin could be the factor mentioned above. However, this is in contradiction with the experiment used to demonstrate shugoshin's function in tension sensing, where Sgo1 is shown to be required for delaying cell cycle progression upon cohesin depletion \citep{Indjeian2005a}. As kinetochore-microtubule attachment is undisturbed, this experiment implies that Sgo1 should be localised at the peri-centromere to maintain CPC localisation for error correction. 
 
 \begin{figure}[htbp]
   \centering
@@ -366,17 +396,14 @@ In the absence of tension, the association of Sgo1 with chromatin shows three ma
   \label{fig:sgo1comparison}
 \end{figure}
 
-To solve the enigma, we sought to investigate the localisation of Sgo1 upon cohesin depletion by microscopy method. Cells used for Sgo1-EGFP imaging that additionally bear \textit{pMET-SCC1} were used and the experimental procedure was the same as the one in Figure~\ref{fig:bub1metscc1} (Figure~\ref{fig:sgo1metscc1}A). Surprisingly, unlike the wild type, Sgo1-EGFP remained its foci signal till the end of the experiment(Figure~\ref{fig:sgo1metscc1}B and C). This result is against the human model \citep{Liu2013a} and the budding yeast ChIP data \citep{Verzijlbergen2014} but in favour of the classic genetics experiment \citep{Indjeian2005a}. It might again reflect the fundamental difference in methodology principles between ChIP and fluorescence microscopy as in Figure~\ref{fig:sgo1rts1mutants}. Furthermore, the fact that Sgo1 localisation resembles Bub1 upon cohesin depletion (Figure~\ref{fig:bub1metscc1}) supports the notion from previous experiments that the localisation of Bub1 and H2A-pS121 is the determining factor of Sgo1 localisation. 
+To solve the enigma, we sought to investigate the localisation of Sgo1 upon cohesin depletion by microscopy method. Cells used for Sgo1-EGFP imaging that additionally bear \textit{pMET-SCC1} were used and the experimental procedure was the same as the one in Figure~\ref{fig:bub1metscc1} (Figure~\ref{fig:sgo1metscc1}A). Surprisingly, unlike the wild type, Sgo1-EGFP remained its foci signal till the end of the experiment in \textit{pMET-SCC1} (Figure~\ref{fig:sgo1metscc1}B and C). This result is in favour of the classic genetics experiment \citep{Indjeian2005a} but is against the ChIP-qPCR results \citep{Verzijlbergen2014}. It might again reflect the fundamental difference in methodology principles between ChIP and fluorescence microscopy as in Figure~\ref{fig:sgo1rts1mutants}. Another possible explanation is that cohesin is not required for the recruitment of Sgo1 to the centromeric region but for its subtle localisation to a more confined sub-region as in humans \citep{Liu2013a}. Furthermore, the fact that Sgo1 localisation resembles Bub1 upon cohesin depletion (Figure~\ref{fig:bub1metscc1}) supports the notion from previous experiments that the localisation of Bub1 and H2A-pS121 is the determining factor of Sgo1 localisation. 
 
-To ensure the efficacy of cohesin, I further conducted a mitotic time-course experiment using the \textit{pMET-SCC1} strain in the presence and absence of methionine, followed by western blotting to measure the expression level of Scc1. Spindle IF was used to determine the stages of the cell cycle (Figure~\ref{fig:sgo1metscc1}D). Albeit the non-optimal synchronisation, it can still be seen that cells went through metaphase and anaphase in the absence of methionine. Whereas they were arrested in metaphase when methionine was added. As expected, without methionine, Scc1 accumulated since the G1 release but started to decrease upon anaphase onset, accompanied by the emergence of the band at lower molecular weight, which represents the cleaved products \citep{Alexandru2001PhosphorylationYeast}. At the same exposure time, the Scc1 signal is largely reduced but still remained visible when in the presence of methionine, suggesting an incomplete depletion. The lack of the band representing cleaved products agreed with the metaphase arrest indicated by the spindle IF (Figure~\ref{fig:sgo1metscc1}E). Therefore, we could not rule out the possibility that residual cohesin is sufficient to support the concentration of Sgo1-EGFP at centromere proximity. 
-
-font !!!
-western !!!
+To ensure the efficacy of cohesin, I further conducted a mitotic time-course experiment using the \textit{pMET-SCC1} strain in the presence and absence of methionine, followed by western blotting to measure the expression level of Scc1. Spindle IF was used to determine the stages of the cell cycle (Figure~\ref{fig:sgo1metscc1}D). Albeit the sub-optimal synchronisation (Figure~\ref{fig:sgo1metscc1}E), it can still be seen that cells went through metaphase and anaphase in the absence of methionine, whereas they were arrested in metaphase when methionine was added. As expected, without methionine, Scc1 accumulated since the G1 release but started to decrease upon anaphase onset, accompanied by the emergence of the band at lower molecular weight, which represents the cleaved products \citep{Alexandru2001PhosphorylationYeast}. In the presence of methionine, the lack of the band representing cleaved products agreed with the metaphase arrest indicated by the spindle IF (Figure~\ref{fig:sgo1metscc1}E). Importantly, at the same exposure time, the Scc1 signal is largely reduced compared to no Scc1 depletion but still remained visible, suggesting an incomplete depletion (Figure~\ref{fig:sgo1metscc1}D). Therefore, we could not rule out the possibility that residual cohesin is sufficient to support the concentration of Sgo1-EGFP at centromere proximity. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 pMET-SCC1.pdf}
-  \caption[Sgo1 remains concentrated proximal to the centromere upon cohesin depletion]{Sgo1 remains concentrated proximal to the centromere upon cohesin depletion. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. }
+  \caption[Sgo1 remains concentrated proximal to the centromere upon cohesin depletion]{Sgo1 remains concentrated proximal to the centromere upon cohesin depletion. (A) Schematics of experimental procedures. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-myc antibody to detect the expression level of Scc1-myc18. Pgk1 was used as the loading control. (E) The proportion of cells with metaphase or anaphase spindle over time by tubulin IF.}
   \label{fig:sgo1metscc1}
 \end{figure}
 
@@ -487,7 +514,15 @@ mass spec
 
 \subsubsection{Library preparation for Illumina sequencing}
 \subsection{Computational methods}
+\subsubsection{Image analysis}
+ImageJ
 \subsubsection{ChIP-seq data analysis}
+sparK
 \subsubsection{MS data analysis}
+Maxquant
 \subsubsection{phospho-peptide analysis}
+Skyline
+\subsubsection{Hi-C data analysis}
+HicExplorer 
+cooltools
 \subsubsection{Code availability}

@@ -234,3 +234,15 @@ Wang  2022  human
 Sgo1 is redistributed when CPC localisation is messed up 
 Pouwels 2007  human
 Lee 2014  human 
+
+chromosome condensation hi-c
+Kakui 2018 budding yeast
+Kakui 2017  fission yeast
+Schalbetter 2017  budding yeast
+Lazar-Stefanita 2017  budding yeast
+
+chromosome condensation review
+Takahashi 2019
+Beseda  2020
+Piskadlo  2016
+Antonin 2016
