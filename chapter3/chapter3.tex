@@ -342,47 +342,18 @@ As mentioned before, Sgo1 association with the peri-centromere chromatin was inc
   \caption[PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere]{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. (A) Schematics of the imaging experiment. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1-EGFP foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) N=10 cells for the wild type and \textit{rts1$\Delta$} were quantified for the highest fluorescence intensities of Sgo1-EGFP foci among all frames. (ns) not significant.}
   \label{fig:sgo1rts1mutants}
 \end{figure}
+
 \subsection{Tension induces mild chromosome condensation}
 
-Chromosome condensation is an anaphase phenomenon. 
+Interphase chromosomes have to be condensed during mitosis to reduce space occupied, remove sister chromatids catenation, provide physical properties able to withstand forces during movement and therefore facilitate faithful chromosome segregation \citep{Antonin2016ChromosomeMitosis, Piskadlo2016NovelCondensation, Beseda2020MitoticVariability, Takahashi2019FoldingChromosomes}. The current model of chromosome condensation recognises it to be driven by the condensin-mediated compaction pathway and histone-mediated contraction pathway in parallel \citep{Wilkins2014, Kruitwagen2015}. Interestingly, key players from both pathways have been reported to interact with shugoshin or the H2A phosphorylation enabling Sgo1 chromatin association, including Topoisomerase II \citep{Zhang2020FunctioningMitosis} and condensin itself \citep{Verzijlbergen2014, Yahya2020} from the condensin-mediated pathway and CPC \citep{Abad2022MechanisticCPC} from the histone-mediated pathway. This makes Sgo1 and H2A phosphorylation potentially important in chromosome condensation. Indeed, in budding yeast, both compaction and contraction were impaired in the absence of Sgo1 \citep{Kruitwagen2018}. 
 
-some more introduction
-
-Sgo1 chromosome condensation
-Sgo1 CPC
-Sgo1 condensin interaction
-H2A-pT120 and TOP2A
-
-all three shit are linked to the re-localisation of Bub1 from the kinetochore, SAC silencing hallmark
-
-connect SAC to chromosome condensation
-
-The re-distribution of H2A-pS121 raised the possibility that chromosome condensation is induced upon the establishment of tension or the SAC silencing without the requirement of the biochemical environment of anaphase. 
-
-
-Besides centromere drama,
-increased inter-centromere interaction
-decreased short range 
-increased long range
-
-also checked difference
-
-<20kb decrease
-20-150kb increase
->150kb increase
-
-qualitatively mimic human and fission yeast
-
-distance in quantitative agreement with budding yeast data interphase vs mitosis
-but extent very mild
-
-can also be seen from the slope plot
+Our previous finding that H2A-pS121 and possibly Sgo1 re-distribute from the centromere to the whole genome by tension provides a potential molecular explanation for the model proposed by \cite{Kruitwagen2018}, where SAC silencing is required for further chromosome condensation. If it is true, we would expect increased chromosome condensation upon the establishment of tension. Hi-C has been used to investigate chromosome condensation in various species \citep{Kakui2017Condensin-mediatedYeast, Schalbetter2017SMCContext, Lazar-Stefanita2017CohesinsCellcycle, Naumova2013OrganizationChromosome}. To test the hypothesis, I took advantage of Hi-C experiments conducted by \cite{Paldi2020ConvergentPericentromeres} and compared data from metaphase cells with and without tension. The Hi-C ratio map revealed the conformational changes in peri-centromere chromatin by tension, indicated by the red cross around the core centromeres, as reported in the paper (Figure~\ref{fig:Hi-C+-tension}A). Besides, the tension sample showed increased inter-centromere contact (the blue dots at the intersection of centromeres of different chromosomes) and increased inter-arm contact (the blue 'wings' extending diagonally from the centromeres). Importantly, It indicated a mild increase in long-range \textit{in cis} contact (the two light blue lines beside the diagonal) and a mild decrease in short-range contact (the light red line along the diagonal), both of which are the characteristics of chromosome condensation described by \cite{Kakui2018SMCLandscape}. As an alternative to the ratio map, I also visualised the Hi-C difference map, where the contact probability at each coordinate of one sample is simply subtracted by that of the other one (Figure~\ref{fig:Hi-C+-tension}B). Consistently, it also revealed the mild increase in long-range \textit{in cis} contact and the decrease in short-range contact. The Hi-C difference further showed blue dots along the diagonal, which might represent increased loop formation in the tension sample. To obtain a more quantitative view, the contact probabilities of the genome excluding the centromeres were plotted as a function of distance (Figure~\ref{fig:Hi-C+-tension}C). Albeit to a mild extent, the difference between curves of tension and no tension sample did mimic the difference between interphase and mitosis in different species \citep{Kakui2018SMCLandscape}. The contact probabilities of the tension sample showed a reduction in the distances less than 20 kb, an increase in 20 to around 150 kb and another decrease in distances greater, which can also be inferred from the slope plot below. This is in good quantitative agreement with other chromosome condensation research using budding yeast, where the interval of increased contact probability was observed between 10 to 100 kb \citep{Kakui2018SMCLandscape, Schalbetter2017SMCContext, Lazar-Stefanita2017CohesinsCellcycle}. Notably, the increase in long-range interaction was stronger at chromosomal regions further away from the centromeres, a phenomenon that has been reported in budding yeast chromosome condensation \citep{Neurohr2011ALength}. Visualisation of individual chromosomes identified a strong increase in long-range interaction at chrXII, where rDNA was located, further supporting that the difference observed here is due to genuine chromosome condensation rather than artefacts from data analysis. Therefore, I concluded that a mild chromosome condensation is induced upon the establishment of tension. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/+-tension Hi-C.pdf}
-  \caption[Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension]{Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension. (A-C) Analyses of Hi-C of cells arrested in metaphase with or without tension from \cite{Paldi2020ConvergentPericentromeres}. (A) Hi-C ratio map of chromosome III, IV and V. Black dots represent the coordinates of the core centromeres. (B) Hi-C difference map of chromosome III, IV and V (no tension - tension). Black dots represent the coordinates of the core centromeres. (C) Top: median contact probability as a function of genomic distance, excluding contacts across the 50kb regions flanking the core centromeres. Bottom: The slopes of the curves above.}
-  \label{fig:sgo1comparison}
+  \caption[Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension]{Long-range \textit{in cis} interactions are mildly increased upon the establishment of tension. (A-C) Analyses of Hi-C of cells arrested in metaphase with or without tension from \cite{Paldi2020ConvergentPericentromeres}. (A) Hi-C ratio map (5kb binning) of chromosome III, IV and V. Black dots represent the coordinates of the core centromeres. (B) Hi-C difference map (5kb binning) of chromosome III, IV and V (no tension - tension). Black dots represent the coordinates of the core centromeres. (C) Top: median contact probability as a function of genomic distance, excluding contacts across the 50kb regions flanking the core centromeres. Bottom: The slopes of the curves above.}
+  \label{fig:Hi-C+-tension}
 \end{figure}
 
 \subsection{Cohesin is not required for the concentration of Sgo1 at centromere-proximal location}

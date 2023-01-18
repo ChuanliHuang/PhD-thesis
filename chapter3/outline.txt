@@ -26,5 +26,8 @@ Decreased Bub1, pH2A, Sgo1 upon tension; residual Bub1 and pH2A on KT, residual 
 
 bub1 sgo1 CPC PP1 positive feedback (explain the fast removal of shugoshin, important to test whether Sgo1 localisation is also upstream Bub1)
 H2A-pS121 is redistributed when Bub1 localization is messed up
-Re-distribution of H2A-pS121 and chromosome condensation (condensin-Sgo1 interaction; condensin-Top2 interplay; Top2 H2A-pS121 interaction) Piskadlo, Raquel A. Oliveira 2016; Wolfram Antonin Heinz Neumann, 2016
+Re-distribution of H2A-pS121 and chromosome condensation (condensin-Sgo1 interaction; condensin-Top2 interplay; Top2 H2A-pS121 interaction) 
+chromosome condensation metaphase or anaphase?
+all three shit are linked to the re-localisation of Bub1 from the kinetochore, SAC silencing hallmark
+
 to prove the final model: 1. tension has an effect on each step; 2. each step depends on last step 
