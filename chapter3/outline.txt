@@ -17,6 +17,79 @@
 
 
 Discussion
+Model for tension-dependent re-localisation of Sgo1
+A
+How Bub1 activity in a particular area is regulated by tension 
+Whether H2A-pS121 is the key
+which phosphatase
+the model
+W
+couldn't rule out spatial hypothesis
+bub1 met-scc1 complicated by error correction
+couldn't image Sgo1 Bub1 in one cell
+H2A-pS121 homemade
+PP1 inactivation on H2A-pS121
+I
+bub1 result compare to nerusheva and others
+importance of H2A-pS121 compare to nerusheva and others
+H2A-pS121 is redistributed when Bub1 localization is messed up
+PP1 results consistent with the literature
+compare to human shugoshin localisation, potential unifying model because of residual Sgo1 on kinetochore (yeast: there is residual Bub1 by imaging; there is residual H2A-pS121 and Sgo1 by ChIP-seq; human: residual Bub1, H2A-pT120, Sgo2 after tension)
+the sole dependence of Sgo1 localisation on Bub1 localisation makes Sgo1 unlikely to be the tension sensor
+what role Sgo1 plays in tension sensing? bub1 sgo1 CPC PP1 positive feedback
+how is tension sensed then? joglekar model; jackknife 
+F
+strengthen weaknesses
+find the phosphatase
+study how Bub1 is removed
+test positive feedback
+quantify human localised shugoshin +/- tension
+
+Role of cohesin in Sgo1 localisation
+A
+not required for coarse localisation
+W
+fine localisation remain to be dissected
+I
+Hongtao Yu might still be right
+F
+Sgo1 ChIP-seq in met-SCC1 (Could be tricky)
+structural data and make mutants specifically abolish Sgo1 cohesin interaction and then ChIP-seq
+
+The regulation of Bub1 localisation potentially links chromosome condensation to SAC status
+A
+Why was Bub1 and Sgo1 indicated in chromosome condensation
+W
+preliminary data only
+to be verified
+I
+model agrees well with literature
+chromosome condensation metaphase or anaphase?
+all three shit are linked to the re-localisation of Bub1 from the kinetochore, SAC silencing hallmark
+why after SAC
+autonomous or not
+F
+sgo1d Hi-C
+H2A A mutant Hi-C
+condensin ChIP-seq
+Top2 ChIP-seq
+CPC/H3-S10 ChIP-seq
+Hi-C all mutants
+all +/- tension
+A mutants better have both subtypes  mutated  
+
+PP2A could regulate Sgo1 functions
+A
+whether PP2A regulate Sgo1 phosphorylation
+W
+not yet verified
+I
+Sgo1 phosphorylation has many functions
+results can be interpreted in different ways
+F
+in vitro study (ask what are other methods to verify a phosphatase) 
+functional characterisation of Sgo1 A mutants
+
 Sgo1 phosphorylation status in rts1d could be explained in various ways.
 cohesin is not required in frog/mouse/fly (not sure which one)
 cohesin is required for the subtle localisation of Sgo1. To be tested by ChIP-seq in pMET-SCC1 but the interpretation might be tricky. 
@@ -29,5 +102,7 @@ H2A-pS121 is redistributed when Bub1 localization is messed up
 Re-distribution of H2A-pS121 and chromosome condensation (condensin-Sgo1 interaction; condensin-Top2 interplay; Top2 H2A-pS121 interaction) 
 chromosome condensation metaphase or anaphase?
 all three shit are linked to the re-localisation of Bub1 from the kinetochore, SAC silencing hallmark
+autonomous or not
+why after SAC
 
 to prove the final model: 1. tension has an effect on each step; 2. each step depends on last step 
