@@ -30,20 +30,27 @@ couldn't image Sgo1 Bub1 in one cell
 H2A-pS121 homemade
 PP1 inactivation on H2A-pS121
 I
-bub1 result compare to nerusheva and others
-importance of H2A-pS121 compare to nerusheva and others
-H2A-pS121 is redistributed when Bub1 localization is messed up
-PP1 results consistent with the literature
-compare to human shugoshin localisation, potential unifying model because of residual Sgo1 on kinetochore (yeast: there is residual Bub1 by imaging; there is residual H2A-pS121 and Sgo1 by ChIP-seq; human: residual Bub1, H2A-pT120, Sgo2 after tension)
+compare to nerusheva model
+    bub1 localisation
+    substrate 
+    phosphatase
+compare to human model
+    different 
+    but key supported by hints
+    might actually be unifying
+drawbacks of the model
+    Sgo1 on chromatin can't see by ChIP but overexpression in Clift 2009 is a good sign
+    couldn't find the phosphatase
+    phosphatase inhibitors drama
 the sole dependence of Sgo1 localisation on Bub1 localisation makes Sgo1 unlikely to be the tension sensor
 what role Sgo1 plays in tension sensing? bub1 sgo1 CPC PP1 positive feedback
 how is tension sensed then? joglekar model; jackknife 
 F
 strengthen weaknesses
-find the phosphatase
-study how Bub1 is removed
-test positive feedback
+    H2A-pS121 western in glc7 mutants
+    find the phosphatase
 quantify human localised shugoshin +/- tension
+repeat ChIP-seq in other species
 
 Role of cohesin in Sgo1 localisation
 A
