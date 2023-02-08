@@ -486,26 +486,23 @@ Working concentration: 100 \si{\micro\gram/\milli\litre}
 For long-term storage, the overnight-grown liquid culture of cells with 20 \% w/v glycerol was stored in a cryovial at -80 \si{\celsius}. For short-term storage, cells could be placed on plates at 4 \si{\celsius} for up to 2 weeks. 
 
 \subsubsection{Chemically competent DH5$\alpha$ \textit{E.coli} transformation}
-\underline{Preparing rubidium chloride competent cell} \\
-
-TFB1 \\
+\underline{TFB}1 \\
 100 \si{\milli\Molar} RbCl \\
 50 \si{\milli\Molar} MnCl$_{2}$ \\ 
 30 \si{\milli\Molar} potassium acetate\\
 10 \si{\milli\Molar} CaCl$_{2}$\\
-15 \% glycerol\\
+15 \% w/v glycerol\\
 pH to 5.8 with 1.75 \si{\Molar} Acetic Acid\\
 
-TFB2 \\
+\underline{TFB2} \\
 10 \si{\milli\Molar} MOPS\\
 10 \si{\milli\Molar} RbCl\\
 75 \si{\milli\Molar} CaCl$_{2}$\\
-15 \% glycerol\\
+15 \% w/v glycerol\\
 pH slowly to 6.5 with 2 \si{\Molar} KOH 2-4 \si{\milli\litre}\\
 
 Revived DH5$\alpha$ \textit{E.coli} strain was inoculated into LB liquid media and grown at 37 \si{\celsius} overnight. In the following morning, the culture was diluted 1:200 with pre-warmed LB media supplemented with 20 \si{\milli\Molar} MgSO$_{4}$. After reaching $OD_{600}$=0.48, cells were incubated for 10 \si{minute} on ice and harvested by centrifuging for 5 \si{\minute} at 5000 rpm at 4 \si{\celsius}. They were then washed with TFB1 and resuspened in TFB2 at 10$^{9}$ CFU/\si{\milli\litre}. Chemically competent cells were later stored at -80 \si{\celsius}. 
 
-\underline{Transformation by heat shock} \\
 50 \si{\micro\litre} aliquot of competent cells was thawed on ice and mixed with 3 \si{\micro\litre} of plasmid DNA, from Gibson assembly or plasmid preparation using lab protocol, by gently flicking. After incubating for 30 \si{\minute} on ice, \textit{E.coli} cells were heat-shocked at 42 \si{\celsius} for 30 \si{\second} and placed on ice for 5 \si{\minute}. Next, 450 \si{\micro\litre} of pre-heated SOC media was added. The cell culture was then incubated at 37 \si{\celsius} with shaking at 200 rpm for 1 \si{\hour} for the recovery of \textit{E.coli}. Afterwards, 100 and 400 \si{\micro\litre} of cell culture were plated on solid LB media to grow for single colonies. 
 
 \nomenclature{MOPS}{3-(N-Morpholino)PropaneSulfonic acid}
@@ -619,7 +616,7 @@ yeast cells were heat-shocked at 42 \si{\celsius} for 15 \si{\minute}. Finally, 
 \nomenclature{PEG}{PolyEthylene Glycol}
 \nomenclature{EDTA}{EthyleneDiamineTetraacetic Acid}
 
-\subsubsection{Budding yeast crossing}
+\subsubsection{Crossing haploid budding yeast}
 
 w303 haploids of opposite mating types were mixed on appropriate plates and incubated for over 8 \si{\hour} at 30 \si{\celsius}, with MAT$\alpha$ in small quantity while MATa in large quantity. The mix was then streaked to single colonies and incubated at 30 \si{\celsius}. To select for diploids. 40 \si{\micro\litre} of 5 \si{\milli\gram/\milli\litre} $\alpha$ factor was used to prevent the growth of haploid MATa cells. If applicable, the selection marker present in MATa but not in MAT$\alpha$ strain could be used to prevent the growth of haploid MAT$\alpha$ cells. After colonies were formed, usually around 48 \si{\hour}, cells from single colonies were patched onto YPDA plates and incubated at 30 \si{\celsius} overnight. Patches were then transferred onto SPO plates and incubated at 30 \si{\celsius} for over 48 \si{\hour} to induce sporulation for dissection. 
 
@@ -636,35 +633,32 @@ A small amount of sporulated diploid cells was added to 20 \si{\micro\litre} of 
 Lab Bunsen burner was used for sterilisation. For a 1:5 serial dilution, 160 \si{\micro\litre} of distilled water was added to each well of a 96-well plate by a multi-channel pipette. An additional 40 \si{\micro\litre} of distilled water was added to the first column. Revived budding yeast cells were then added to the wells of the first column. The 1:5 serial dilution was performed using the multi-channel pipette. A replica plater, sterilised by burning ethanol using the Bunsen Burner, was used to dip cell cultures in the 96-well plates and transferred them to the appropriate plates. The plates were then incubated at temperatures according to the experiment design. A scanner was used to acquire photos of the plates. 
 
 \subsection{Microscopy methods}
-\subsubsection{FRET}
-The FRET experiment was performed on a Nikon Ti2 inverted microscope equipped with a 100x Plan ApoChromat NA 1.45 oil lens and Prime 95B CMOS (sCMOS) camera. Fluorophores were excited with GFP and emission in the mCherry channel was recorded. Subsequently, standard GFP-GFP and mCherry-mCherry excitation and emission were performed. 
+\subsubsection{Sensitised Emission FRET}
+Sensitised Emission FRET experiments were performed on a Nikon Ti2 inverted microscope equipped with a 100x Plan ApoChromat NA 1.45 oil lens and a Prime 95B CMOS (sCMOS) camera. The protocol was modified from \cite{Gordon1998QuantitativeMicroscopy}. Three strains, acceptor only, donor only and FRET (contains both acceptor and donor), were constructed and prepared for imaging. To correct for the bleed-through from acceptor and donor to the FRET channel, the following co-efficiencies were calculated in advance using the acceptor only or donor only strain:
+\begin{align*}
+    \text{co-efficient A}& =\frac{\text{Mean intensity}_\text{Acceptor in FRET channel}}{\text{Mean intensity}_\text{Acceptor in Acceptor channel}}\\
+    &\\
+    \text{co-efficient B}& =\frac{\text{Mean intensity}_\text{Donor in FRET channel}}{\text{Mean intensity}_\text{Donor in Donor channel}}
+\end{align*}
 
-bleed-through from both fluorophores to the FRET channel are subtracted in ImageJ using the following formula: 
-Acceptor in FRET channel (Co-efficient A) =	Mean intensity of Acceptor using FRET set/ Mean intensity of Acceptor using acceptor set
+For the FRET sample, the FRET channel was recorded first. The donor and acceptor channels were subsequently applied. The FRET signal of each pixel was corrected in imageJ using the following formula: 
 
-Donor in FRET channel (Co-efficient B) = Mean intensity of Donor only using FRET filter set/ Mean intensity of Donor only using Donor filter set
-
-FRET Specimen - (A * FRET Specimen using Acceptor filter set) - (B * FRET Specimen using Donor filter set)
-
-Protocol
-
-Use 3 samples
-
-Acceptor Only
-Donor Only
-FRET Sample
-Collect 5 images
-
-Acceptor Only using Acceptor filter set
-Acceptor Only using the FRET filter set
-Donor Only using the Donor filter set
-Donor Only using the FRET filter set
-FRET Specimen Only using FRET filter set
-
-reference \citep{Gordon1998QuantitativeMicroscopy}
+\begin{align*}
+    \text{corrected FRET intensity} &= \text{Intensity}_\text{FRET channel}\\& - \text{co-efficient A} \times \text{Intensity}_\text{Acceptor channel}\\& - \text{co-efficient B} \times \text{Intensity}_\text{Donor channel}
+\end{align*}
 
 \subsubsection{Live-cell imaging using 8-well Ibidi dishes on the Zeiss microscope}
-Cells bearing \textit{pMET-CDC20} from patches on -MET plates were inoculated in 10 \si{\milli\litre} of CSM -MET media and incubated at RT with shaking at 250 rpm overnight. Cells were diluted to $OD_{600}$=0.2 in 10 \si{\milli\litre} of CSM -MET in the morning, incubating at RT with shaking at 250 rpm for over 1 \si{\hour}, allowing cells to enter the exponential phase. Then, cells were re-diluted to $OD_{600}$=0.2 in 10 \si{\milli\litre} of CSM -MET and 10 \si{\micro\litre} of 5 \si{\milli\gram/\milli\litre} $\alpha$ factor was added for G1 synchronization. After 1.5 \si{\hour}, another 5 \si{\micro\litre} of 5 \si{\milli\gram/\milli\litre} $\alpha$ factor was added. 1.5 \si{\hour} later, shmoo morphology was checked by a light microscope to ensure G1 arrest. 1 \si{\milli\litre} of cell culture was transferred to a 1.5 \si{\milli\litre} Eppendorf tube and concentrated by centrifuging at 3000 rpm for 3 \si{\minute} then removing 700 \si{\micro\litre} of supernatant. 250 \si{\micro\litre} of concentrated cell culture was loaded onto an 8-well Ibidi dish pre-treated with concanavalin A (preparation see separate protocol) and incubated at RT on bench for 15 \si{\minute} to allow cells to bind the bottom of the dish. The supernatant was removed using a bench aspirator and cells were washed twice with 250 \si{\micro\litre} of SC media. After the final wash, 250 \si{\micro\litre} of SC media was added to each well for imaging. 
+
+\underline{Concanavalin A solution}\\
+5 \si{\milli\gram/\milli\litre} Concanavalin A \\
+50 \si{\milli\Molar} CaCl$_{2}$ \\
+50 \si{\milli\Molar} MnCl$_{2}$ 
+
+Cells bearing \textit{pMET-CDC20} from patches on -MET plates were inoculated in 10 \si{\milli\litre} of CSM -MET media and incubated at RT with shaking at 250 rpm overnight. Cells were diluted to $OD_{600}$=0.2 in 10 \si{\milli\litre} of CSM -MET in the morning, incubating at RT with shaking at 250 rpm for over 1 \si{\hour}, allowing cells to enter the exponential phase. Then, cells were re-diluted to $OD_{600}$=0.2 in 10 \si{\milli\litre} of CSM -MET and 10 \si{\micro\litre} of 5 \si{\milli\gram/\milli\litre} $\alpha$ factor was added for G1 synchronization. After 1.5 \si{\hour}, another 5 \si{\micro\litre} of 5 \si{\milli\gram/\milli\litre} $\alpha$ factor was added. 1.5 \si{\hour} later, shmoo morphology was checked by a light microscope to ensure G1 arrest. 1 \si{\milli\litre} of cell culture was transferred to a 1.5 \si{\milli\litre} Eppendorf tube and concentrated by centrifuging at 3000 rpm for 3 \si{\minute} then removing 700 \si{\micro\litre} of supernatant. 250 \si{\micro\litre} of concentrated cell culture was loaded onto an 8-well Ibidi dish pre-treated with concanavalin A and incubated at RT on bench for 15 \si{\minute} to allow cells to bind the bottom of the dish. The supernatant was removed using a bench aspirator and cells were washed twice with 250 \si{\micro\litre} of SC media. After the final wash, 250 \si{\micro\litre} of SC media was added to each well for imaging. 
+
+Live-cell imaging experiments were performed on a Zeiss Axio Observer inverted microscope equipped with a 100x alpha-Plan ApoChromat NA 1.46 oil lens and a Hamamatsu Orca Flash 4 V2 camera. Experimental settings varied according to the requirements of different experiments. A representative example is provided for strains carrying \textit{SGO1-EGFP} \textit{MTW1-tdTomato}. The imaging was carried out at 25 \si{\celsius} for 3 \si{\hour}, with an imaging interval of 15 \si{\minute}. 5 fields were imaged for each strain with 13 0.5-\si{\micro\metre} Z slices. For the GFP channel, 10 \% 469/38 \si{\nano\metre} LED Light Source was used to excite Sgo1-EGFP and the emission was received at 525/50 \si{\nano\metre} with an exposure time of 150 \si{\milli\second}. For the tdTomato channel, 5 \% 555/30 \si{\nano\metre} LED Light Source was used to excite Sgo1-EGFP and the emission was received at 605/70 \si{\nano\metre} with an exposure time of 150 \si{\milli\second}. 
+
+The AID system can be used for inducible protein degradation in live-cell imaging. But the concentration of NAA should be kept as low as 100 \si{\micro\Molar} because blue light, the exciting light for the GFP channel, accelerates the oxidative de-carboxylation of auxin, which causes cytotoxicity to budding yeast \citep{Papagiannakis2017QuantitativeCells}. 
 
 \nomenclature{MET}{METhionine}
 \nomenclature{RT}{Room Temperature}
@@ -672,8 +666,51 @@ Cells bearing \textit{pMET-CDC20} from patches on -MET plates were inoculated in
 \nomenclature{SC}{Synthetic Complete}
 \nomenclature{CSM}{Complete Supplement Mixture}
 
-\subsubsection{Using AID system in live-cell imaging}
-\subsubsection{Immuno-fluorescence}
+\subsubsection{Immunofluorescence}
+
+\underline{0.1 \si{\Molar} Potassium phosphate buffer pH 6.4}\\
+27.8 \si{\milli\Molar} K$_{2}$HPO$_{4}$ \\
+72.2 \si{\milli\Molar} KH$_{2}$PO$_{4}$ \\
+
+\underline{3.7 \% Formaldehyde solution}\\
+10 \% v/v 37 \% w/v Formaldehyde\\
+90 \% v/v 0.1 \si{\Molar} potassium phosphate buffer pH 6.4\\
+
+\underline{1.2 \si{\Molar} sorbitol-citrate}\\
+36 \si{\milli\Molar} Citric acid\\
+0.1 \si{\Molar} K$_{2}$HPO$_{4}$\\
+1.2 \si{\Molar} Sorbitol\\
+
+\underline{Digestion solution}\\
+1:20 Perkin-Elmer Glusulase \\
+273 \si{\micro\gram/\milli\litre} Zymolyase\\
+1.2 \si{\Molar} Sorbitol\\
+
+\underline{PBS/ BSA}\\
+1 \% w/v BSA\\
+40 \si{\milli\Molar} K$_{2}$HPO$_{4}$\\
+10 \si{\milli\Molar} KH$_{2}$PO$_{4}$\\
+150 \si{\milli\Molar} NaCl\\
+0.1 \% w/v NaN$_{3}$\\
+
+\underline{Primary antibody}\\
+1 \si{\milli\gram/\milli\litre} Rat $\alpha$-tubulin\\
+
+\underline{Secondary antibody}\\
+1.25 \si{\milli\gram/\milli\litre} Donkey $\alpha$-rat-FITC\\
+
+\underline{DAPI-Mount}\\
+1 \si{\milli\gram/\milli\litre} p-phenylenediamine\\
+0.05 \si{\micro\gram/\milli\litre} DAPI\\
+40 \si{\milli\Molar} K$_{2}$HPO$_{4}$\\
+10 \si{\milli\Molar} KH$_{2}$PO$_{4}$\\
+150 \si{\milli\Molar} NaCl\\
+0.1 \% w/v NaN$_{3}$\\
+90 \% w/v glycerol\\
+
+To collect samples, 1 \si{\milli\litre} of cell culture was centrifuged at 13000 rpm for 1 \si{\minute} and removed for supernatant. Fixation was carried out by adding 1 \si{\milli\litre} of freshly prepared 3.7 \% formaldehyde solution to the cells and incubating at 4 \si{\celsius} overnight. Next, cells were washed with 0.1 \si{\Molar} potassium phosphate buffer pH 6.4 for three times and with 1.2 \si{\Molar} sorbitol-citrate once. The cell wall was then digested by resuspending cells in 222 \si{\micro\litre} of digestion solution at 30 \si{\celsius}. When cells turned black and had jagged edges under a phase-contrast microscope, cells were washed and resuspended with 1.2 \si{\Molar} sorbitol-citrate. Note that for digested cells, the centrifuge should be set at 3000 rpm for 2 \si{\minute}. Cells were then loaded onto a 0.1-\%-polylysine-treated 30-well microscopy slide and left at RT for 10 \si{\minute}. After the excess liquid was removed by a vacuum aspirator, loaded cells were treated with 100 \% methanol for 3 \si{\minute} and then 100 \% acetone for 10 \si{\second}. The primary antibody diluted 1:50 in PBS\ BSA was applied to each well and the slide was incubated at 30 \si{\celsius} for 1-2 \si{\hour}. Primary-antibody-conjugated cells were then washed with PBS/ BSA five times. Next, the secondary antibody diluted 1:100 in PBS\ BSA was incubated with the cells at 30 \si{\celsius} for 1-2 \si{\hour}. Afterwards, secondary-antibody-conjugated cells were then washed with PBS/ BSA five times. Finally, DAPI-MOUNT was applied to cells for DNA visualisation. 
+
+\nomenclature{DAPI}{4',6-diamidine-2-phenylindole dihydrochloride}
 
 \subsection{Protein methods}
 \subsubsection{Total protein extraction with TCA-acetone}
@@ -710,12 +747,39 @@ mass spec
 
 \subsection{DNA methods}
 \subsubsection{Plasmid isolation from \textit{E.coli}}
+
+\underline{GTE buffer}\\
+50 \si{\milli\Molar} Glucose \\
+10 \si{\milli\Molar} EDTA pH 7.5 \\
+25 \si{\milli\Molar} Tris-HCl pH 7.5 \\
+
+\underline{Alkaline SDS}\\
+ 1 \% v/v SDS
+200 \si{\milli\Molar} NaOH\\
+
+\underline{High Salt Buffer}\\
+2.5 \si{\Molar} C$_{2}$H$_{3}$KO$_{2}$ \\
+Adjusted to pH 4.8 using glacial acetic acid\\
+
+\underline{TE}\\
+10 \si{\milli\Molar} Tris-HCl pH 7.5\\
+1 \si{\milli\Molar} EDTA pH 7.5\\
+
+\underline{mini-prep}\\
+
+\underline{midi-prep}\\
+
 \subsubsection{Genomic DNA extraction from budding yeast}
+\underline{DNA breakage buffer}\\
+\underline{TE}\\
+10 \si{\milli\Molar} Tris-HCl pH 7.5\\
+1 \si{\milli\Molar} EDTA pH 7.5\\
+
 \subsubsection{PCR}
-Extaq
-Q5
-colony PCR
-qPCR
+\underline{Colony PCR}\\
+\underline{PCR using Takara Extaq polymerase}\\
+\underline{PCR using NEB Q5 polymerase}\\
+\underline{qPCR using NEB Luna qPCR master mix}\\
 
 \begin{table}[htbp]
 \centering
