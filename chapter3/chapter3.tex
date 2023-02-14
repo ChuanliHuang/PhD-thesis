@@ -706,7 +706,7 @@ To collect samples, 1 \si{\milli\litre} of cell culture was centrifuged at 13000
 
 \begin{table}[htbp]
 \centering
-\caption{Primary antibodies for Immuno-fluorescence}
+\caption{Primary antibodies for Immunofluorescence}
 \label{tab:1stabIF}
 \begin{tabular}{llll}
 \hline
@@ -717,7 +717,7 @@ Mono $\alpha$-tubulin & Rat & 1:50 & Bio-Rad AbD Serotec \\
 
 \begin{table}[htbp]
 \centering
-\caption{Secondary antibodies for Immuno-fluorescence}
+\caption{Secondary antibodies for Immunofluorescence}
 \label{tab:2ndabIF}
 \begin{tabular}{llll}
 \hline
@@ -877,15 +877,28 @@ $\alpha$-rabbit HRP & Donkey & 1:20,000 & VWR GE healthcare NA934 \\
 
 For large SDS-PAGE gels, the procedures for western blotting were similar to small gels as described above, except semi-dry transfer was used. The transfer was set up in an Amersham TE70 transfer unit following the manufacturers' instructions. For canonical proteins, the gel was transferred to a 0.45 \si{\micro\metre} nitrocellulose membrane at 1 \si{\milli\ampere/\centi\metre^2} for 150 \si{\minute} at RT. For H2A-pS121, the gel was transferred to a 0.2 \si{\micro\metre} nitrocellulose membrane at 0.8 \si{\milli\ampere/\centi\metre^2} for 120 \si{\minute} at RT. 
 
-\subsubsection{Drop freezing cells with liquid nitrogen}
-\subsubsection{Grinding drop frozen cells}
-\subsubsection{Conjugating antibodies to protein G dynabeads} 
+\subsubsection{Conjugating $\alpha$-FLAG M2 antibodies to Protein G Dynabeads}
 
-\underline{0.1 \si{\Molar} Na-Phosphate buffer pH 7.0}\\
-58 \si{\milli\Molar} Na$_{2}$HPO$_{4}$\\
-42 \si{\milli\Molar} NaH$_{2}$PO$_{4}$\\
+\underline{0.1 \si{\Molar} Na-Phosphate buffer pH 7.0} \\
+58 \si{\milli\Molar} Na$_{2}$HPO$_{4}$ \\ 
+42 \si{\milli\Molar} NaH$_{2}$PO$_{4}$ \\ 
 
-\subsubsection{Immuno-precipitation}
+\underline{Cross-linking solution}\\
+20 \si{\milli\Molar} DMP \\
+0.2 \si{\Molar} triethanolamine \\
+
+\underline{PBST}\\
+13.7 \si{\milli\Molar} NaCl\\
+270 \si{\micro\Molar} KCl\\
+1 \si{\milli\Molar} Na$_{2}$PO$_{4}$\\
+176 \si{\micro\Molar} KH$_{2}$PO$_{4}$\\
+0.1 \% v/v Tween20\\
+
+For each 420 \si{\milli\gram} of proteins to be IPed, 500 \si{\micro\litre} of 20 \si{\milli\gram/\milli\litre} Protein G Dynabeads coupled to 50 \si{\micro\litre} of 1 \si{\milli\gram/\milli\litre} $\alpha$-FLAG M2 antibodies were used. Protein G Dynabeads were washed twice with 1 \si{\milli\litre} of 0.1 \si{\Molar} Na-Phosphate buffer pH 7.0 with rotational mixing at RT. The beads were then resuspended with $\alpha$-FLAG M2 antibodies and 0.1 \si{\Molar} Na-Phosphate buffer of the same volume, which was incubated at RT for 10-40 \si{\minute}. Beads conjugated with antibodies were then washed twice with 0.1 \si{\Molar} Na-Phosphate buffer containing 0.01 \% Tween 20 and then twice with 0.2 \si{\Molar} triethanolamine pH 8.2. Afterwards, the beads and antibodies were subjected to 1 \si{\milli\litre} of cross-linking solution and incubated with rotational mixing at RT for 30 \si{\minute}. The reaction was stopped by resuspending the beads in 1 \si{\milli\litre} of 50 \si{\milli\Molar} Tris-HCl pH 7.5 and incubating with rotational mixing at RT for 15 \si{\minute}. The beads were then washed three times with 1 \si{\milli\litre} of PBST and resuspended in PBST of the same volume as what the beads started with, which was placed at 4 \si{\celsius} for short-term storage. 
+
+\nomenclature{DMP}{DiMethyl Pimelimidat}
+
+\subsubsection{Large scale Immunoprecipitation}
 
 \underline{2000 x CLAAPE}\\
 10 \si{\milli\gram/\milli\litre} Chymostatin \\
@@ -899,7 +912,6 @@ For large SDS-PAGE gels, the procedures for western blotting were similar to sma
 20 \si{\milli\Molar} Na pyrophosphate\\
 40 \si{\milli\Molar} Na-$\beta$-glycerophosphate\\
 100 \si{\milli\Molar} NaF\\
-
 
 \underline{Buffer H 0.15}\\
 25 \si{\milli\Molar} Hepes-KOH pH 8.0\\
@@ -919,8 +931,20 @@ For large SDS-PAGE gels, the procedures for western blotting were similar to sma
 1 x phosphatase inhibitors\\
 Dissolved in Buffer H 0.15\\
 
+Cell growth
+Drop freezing cells with liquid nitrogen
+Grinding drop frozen cells
+thaw cells
+benzonase treatment
+IP
+wash1 
+wash2
+elute
 
 \subsubsection{Bradford assay}
+
+1 \si{\milli\litre} of 1x BioRad Bradford Reagent equilibrated to RT was added to each cuvette for the spectrophotometer. 1 \si{\micro\litre} of protein sample was added to the cuvette, which was vortexed and developed at RT for 5 \si{\minute}. Its OD$_{595}$ was compared to the standard curve made by measuring BSA at 0, 5, 10, 20 and 30 \si{\milli\gram/\milli\litre}. 
+
 \subsubsection{Silver stain}
 
 \underline{Drying solution} \\
@@ -929,8 +953,8 @@ Dissolved in Buffer H 0.15\\
 
 dry SDS-PAGE
 \subsubsection{Coomassie stain}
-\subsubsection{IP-MS}
-cell growth
+\subsubsection{Mass Spectrometry}
+
 in-gel digestion
 stage-tip
 phospho-enrichment
