@@ -477,7 +477,7 @@ Stock: 100 \si{\milli\gram/\milli\litre} in water \\
 Working concentration: 100 \si{\micro\gram/\milli\litre} 
 
 \nomenclature{LB}{Luria-Bertani}
-\nomenclature{SOC}{Super Optimal Broth with catabolite repression}
+\nomenclature{SOC}{Super Optimal broth with Catabolite repression}
 
 \subsubsection{Bacterial growth}
 \textit{E.coli} was grown with either solid or liquid media. For solid media, strains were plated on LB agar containing Ampicillin and placed at 37 \si{\celsius} overnight. For liquid media, strains were inoculated into LB media containing Ampicillin and incubated at 37 \si{\celsius} with shaking at 200 rpm overnight. 
@@ -1452,7 +1452,7 @@ Libraries constructed were diluted to 1 \si{\nano\Molar} with the EB buffer from
 
 \subsection{Computational methods}
 \subsubsection{Image analysis}
-ImageJ/ Fiji was used to analyse microscopy or western blotting images. For microscopy experiments involving counting, cells in focus throughout the entire experiment were selected for quantification based on brightfield to avoid bias. For microscopy experiments involving physical distance measurement, a straight line was drawn between the centres of the particles of interest. The scale was set at 4.5455 pixels/\si{\micro\metre} for Hamamatsu Orca Flash 4 V2 camera with 1 x 1 binning. For microscopy experiments involving fluorescence intensity measurement, An irregular-shaped ROI surrounding the signals to quantify was drawn by hand. The total intensity of ROI was denoted as $x_{1}$. The same ROI was then moved to a neighbourhood area to measure background intensity, and its total intensity was denoted as $x_{2}$. The background-subtracted fluorescence intensity $y$ is calculated as followed:
+ImageJ/ Fiji was used to analyse microscopy or western blotting images. For microscopy experiments involving counting, cells in focus throughout the entire experiment were selected for quantification based on brightfield to avoid bias. For microscopy experiments involving physical distance measurement, a straight line was drawn between the centres of the particles of interest. The scale was set at 4.5455 pixels/\si{\micro\metre} for Hamamatsu Orca Flash 4 V2 camera with 1 x 1 binning. For microscopy experiments involving fluorescence intensity measurement, An irregular-shaped ROI surrounding the signals to quantify was drawn by hand. The total intensity of ROI was denoted as $x_{1}$. The same ROI was then moved to a neighbourhood area to measure background the intensity, and its value was denoted as $x_{2}$. The background-subtracted fluorescence intensity $y$ is calculated as followed:
 \begin{align*}
     y = x_1 - x_2
 \end{align*}
@@ -1495,11 +1495,18 @@ chrXVI              & 555957         & 556073
 The Raw data, quality control reports and processed data of the H2A-pS121 ChIP-seq experiment (Figure~\ref{fig:ph2achipseq2nd}) are available on the Marston lab bioinformatics server (\url{https://bifx-core3.bio.ed.ac.uk/Results/Adele/Projects/Chuanli2022/H2A-pS121_ChIPSeq/}).
 
 \subsubsection{MS data analysis}
-Maxquant
-% The MaxQuant software platform v1.6.1.0 (Cox and Mann, 2008) was used to process raw files, and search was conducted against the Saccharomycescerevisiae (strain S288C) complete/reference proteome set of Saccharomyces Genome Database (released in June 2019), using the Andromeda search engine (Cox et al., 2011). The first search peptide tolerance was set to 20 ppm, and the main search peptide tolerance was set to 4.5 ppm. Isotope mass tolerance was 2 ppm and maximum charge of 7. A maximum of two missed cleavages were allowed. Fixed modifications, cysteine carbamidomethylation; variable modifications, oxidation of methionine, acetylation of lysine and the N-terminus, and phosphorylation of serine, threonine, and tyrosine. Label-free quantitation (LFQ) analysis was performed by using the MaxLFQ algorithm (Cox et al., 2014). False discovery rate was set to 1 \%. Flow-through sample data were used to identify Sgo1 interactors. DEP R package was used to analyze the LFQ data (Zhang et al., 2018). The R script used is accessible via GitHub: https://github.com/BXSu/JCB_mass_spec. Raw data are available on the PRIDE database http://www.ebi.ac.uk/pride, with the accession no. PXD019287.
-\subsubsection{Phospho-peptide analysis}
-Skyline
-% Flow-through sample data was used to identify Sgo1 interactors. LFQ data was processed using DEP R package (Zhang et al., 2018). Imputation was performed using “MinProb” function with default parameters. Phospho-enriched sample data was used to analyse Rec8 phosphopeptides, while the flow-through sample data was used to analyse Rec8 nonphosphopeptides. First, the signal intensity of each individual Rec8 peptide was measured using Skyline (MacLean et al., 2010), with the same variable and fixed modifications set as described above. The following procedure was then applied to both phospho- and nonphosphopeptides. First, a normalization factor, derived by measuring peptide intensities of Sgo1-bound Smc3, was applied. Second, as each Rec8 residue could have been detected multiple times (because of variable modifications or mis-cleaved peptides), a sum of intensities of all observed peptides containing each Rec8 residue was generated. The logarithm of the obtained number was then taken, and the log2 difference between of sum intensity between wild-type and mutant cells was plotted. Plots in Figure 5 (A and B) show an average ratio of log2(fold enrichment over wild type) of Rec8 nonphospho- (A) and phosphopeptides (B) per amino acid, generated by averaging the ratios presented in Figures S4B and S4C. Raw data are available via ProteomeXchange with identifier PXD012627.
+
+The raw data of the flow-through from phospho-enrichment was analysed by Christos Spanos form Wellcome Centre for Cell Biology Proteomics Facility. In brief, raw MS data were analysed by the MaxQuant software platform v1.6.1.0 \citep{Cox2008MaxQuantQuantification}. Andromeda search engine \citep{Cox2011Andromeda:Environment} was used to search against the \textit{Saccharomyces cerevisiae} S288C complete/ reference proteome from SGD. The following settings were used: First search peptide tolerance at 20 ppm; main search peptide tolerance at 4.5 ppm; isotope mass tolerance at 2 ppm; maximum charge at 7; maximum missed cleavages at 2; cysteine carbamidomethylation as fixed modifications; oxidation of methionine, acetylation of lysine and the N-terminus, and phosphorylation of serine, threonine, and tyrosine as variable modifications. MaxLFQ algorithm \citep{Cox2014AccurateMaxLFQ} was used for the LFQ analysis with a false discovery rate of 1 \%. Bioconductor DEP \citep{Zhang2018Proteome-wideUbIA-MS} was used to analyse the LFQ data. Imputation was performed using “MinProb” function with default parameters. 
+
+Skyline \citep{MacLean2010Skyline:Experiments} was used to analyse the raw data of the elute from phospho-enrichment, with the same settings for the Maxquant described above. The intensities of all observed Sgo1 peptides containing the same number of phosphorylated residues were summed up. The $log2$ difference in sum intensities between wild type and \textit{rts1}$\Delta$ was plotted (Figure~\ref{fig:sgo1phosphorts1d}).
+
+The processed LFQ data of the Sgo1 IP-MS experiment were available on the Marston lab server (\url{\\\\csce.datastore.ed.ac.uk\\csce\\biology\\groups\\marston\\Marston lab shared\\MS Data from Christos Spanos\\Chuanli_Huang}). 
+
+\nomenclature{SGD}{Saccharomyces Genome Database}
+\nomenclature{ppm}{parts per million}
+\nomenclature{LFQ}{Label-Free Quantitation}
+\nomenclature{DEP}{Differential Enrichment analysis of Proteomics data}
+
 \subsubsection{Hi-C data analysis}
 Hi-C data were analysed using the scripts written by Daniel Robertson. In brief, the raw data was processed as in the previous paper \citep{Paldi2020ConvergentPericentromeres}. The ratio and difference maps were generated with HicExplorer and the contacts vs distance plot was generated as described in the cooltools notebook (\url{https://cooltools.readthedocs.io/en/latest/notebooks/contacts_vs_distance.html}). 
 
