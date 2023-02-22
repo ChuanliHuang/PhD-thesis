@@ -1,14 +1,14 @@
 Introduction
 \subsection{The chromatin dynamics of CENP-A molecules}
+stably incorporated 
+  - observation
+  - transcription
+  - replication
 self-propagation over generations
   - observation
   - the positive feedback
   - CENP-B
   - transcription
-stably incorporated 
-  - observation
-  - transcription
-  - replication
 centromere enrichment but low density
   - the quantitative study
   - ectopic site eviction (replication, expression timing, PTM)
