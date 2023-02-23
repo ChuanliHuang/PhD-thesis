@@ -1,19 +1,20 @@
 Introduction
 \subsection{The chromatin dynamics of CENP-A molecules}
-stably incorporated 
-  - observation
-  - transcription
-  - replication
-self-propagation over generations
-  - observation
-  - the positive feedback
-  - CENP-B
-  - transcription
-centromere enrichment but low density
-  - the quantitative study
-  - ectopic site eviction (replication, expression timing, PTM)
-island pattern
-  - observation 
+% self-propagation over generations
+%   - observation
+%   - the positive feedback
+%   - CENP-B
+%   - deposition timing
+%   - transcription
+% stably incorporated 
+%   - observation
+%   - transcription
+%   - replication
+% centromere enrichment but low density
+%   - the quantitative study
+%   - ectopic site eviction (replication, expression timing, PTM)
+% island pattern
+%   - observation 
 
 \subsection{Questions}
 Is the bi-stability from positive feedback able to explain the distinct densities cen vs arm?
