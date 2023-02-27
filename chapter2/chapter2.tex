@@ -10,7 +10,7 @@ Similar to other epigenetic marks, the maintenance of CENP-A nucleosomes is chal
 
 Counter-intuitively, the majority of CENP-A nucleosomes are localised on chromosome arms \citep{Bodor2014}. This could be due to the random deposition of CENP-A caused by the large quantity and the promiscuity to general histone chaperons. Nevertheless, the centromeric enrichment is still over 50-fold higher than arms \citep{Bodor2014}. Apart from the isolation of CENP-A deposition from canonical histone proteins mentioned above, nucleosome eviction by replication, gene expression regulation and PTMs are used to improve the specificity of CENP-A at the centromere. Replication is the main mechanism to remove ectopic CENP-A nucleosomes \citep{Nechemia-Arbely2019, Wang2021PhosphorylationCycle}, with the centromeric ones being proposed to be protected by the CCAN \citep{Nechemia-Arbely2019}. In human and fission yeast cells, CENP-A transcription coincides with their respective deposition timings \citep{Shelby1997AssemblySites, Takahashi2000RequirementYeast, Aristizabal-Corrales2019CellFormation}. Moreover, it has been observed that the expression of CENP-A outside the normal time window would lead to ectopic incorporation in different organisms \citep{Aristizabal-Corrales2019CellFormation, Heun2006, Tomonaga2005CentromereAneuploidy, Au2008AlteredCerevisiae, Olszak2011, McGovern2012CentromereCancer, Athwal2015CENP-ACells, Shrestha2021, Moreno-Moreno2019TheCycle}. Among the various  PTM-based mechanisms for regulating CENP-A localisation, ubiquitin-mediated protein degradation is the most common one \citep{Stirpe2022}. In human \citep{Maehara2010CENP-AMitoses, Lomonte2001DegradationICP0}, \textit{Drosophila} \citep{Moreno-Moreno2019TheCycle, Bade2014TheManner} and budding yeast \citep{Ranjitkar2010AnDomain, Au2013AProteolysis, Mishra2015Pat1Ubiquitination, Zhou2021MolecularPsh1} cells, ubiquitination has been reported to remove CENP-A outside the centromeric regions. 
 
-Despite that extensive studies have been conducted on the molecular biology of centromere specification and propagation, our understanding of the system is compromised due to the absence of a mechanistic mathematical model. The different enrichment of CENP-A nucleosomes at centromeres and arms implicated the existence of two stable equilibrium states, or bi-stability, in the system. Positive feedback is known for its capability to generate bi-stability in biological systems \citep{Mitrophanov2008PositiveSystems, Ferrell2013FeedbackCycle}. It is tempting to hypothesise that the molecular mechanism of CENP-A deposition is sufficient to explain the difference in enrichment between centromeres and arms. Yet, the signal amplifier, or 'all or nothing', nature of positive feedback loops is in contrast to the low density of CENP-A nucleosomes at centromeres, where they only account for about 1 in 25 nucleosomes \citep{Bodor2014}. CENP-A further possesses intriguing features in terms of spatial localisation on the chromatin. Rather than distributed homogeneously, the CENP-A nucleosomes are visualised as distinct clusters on an extended chromatin fibre \citep{Blower2002ConservedHumans, Dunleavy2011H3.3Phase., Kyriacou2018}. It would be interesting to understand the mechanism behind this pattern formation. Therefore, this project aims to build a theoretical model describing the dynamics and spatial patterns of CENP-A, with the expectation to recapitulate the key characteristics of the system, including bi-stability, low density at the high steady state and the maintenance of island patterns. 
+Despite that extensive studies have been conducted on the molecular biology of centromere specification and propagation, our understanding of the system is compromised due to the absence of a mechanistic mathematical model. The different enrichment of CENP-A nucleosomes at centromeres and arms implicated the existence of two stable equilibrium states, or bi-stability, in the system. Positive feedback is known for its capability to generate bi-stability in biological systems \citep{Mitrophanov2008PositiveSystems, Ferrell2013FeedbackCycle}. It is tempting to hypothesise that the molecular mechanism of CENP-A deposition is sufficient to explain the difference in enrichment between centromeres and arms. Yet, the signal amplifier, or 'all or nothing', nature of positive feedback loops contrasts the low density of CENP-A nucleosomes at centromeres, where they only account for about 1 in 25 nucleosomes \citep{Bodor2014, Schittenhelm2010}. CENP-A further possesses intriguing features in terms of spatial localisation on the chromatin. Rather than distributed homogeneously, the CENP-A nucleosomes are visualised as distinct clusters on an extended chromatin fibre \citep{Blower2002ConservedHumans, Dunleavy2011H3.3Phase., Kyriacou2018}. It would be interesting to understand the mechanism behind this pattern formation. Therefore, this project aims to build a theoretical model describing the dynamics and spatial patterns of CENP-A, with the expectation to recapitulate the key characteristics of the system, including bi-stability, low density at the higher steady state and the maintenance of island patterns. 
 
 \nomenclature{CENP-A}{CENtromere Protein A}
 \nomenclature{CCAN}{Constitutive Centromere Associated Network}
@@ -19,5 +19,36 @@ Despite that extensive studies have been conducted on the molecular biology of c
 \nomenclature{FACT}{Facilitates Chromatin TranscripTion}
  
 \section{Methods}
+\subsection{The model}
+
+Inspired by the classic theoretical model for epigenetics \citep{Dodd2007, Micheelsen2010TheoryLandscapes}, we decided to use a CA-like, one-dimensional, rule-based stochastic model for the CENP-A system. As a starting point, we developed a basic model, where the molecular knowledge of CENP-A propagation and maintenance is described in its simplest manner. The assumptions used for the basic model are as follows: 
+
+(1) A certain number of sequentially placed nucleosomes composed of either canonical H3 or CENP-A nucleosomes was considered as the centromere. Because the lengths of centromeres vary largely among species and even between different chromosomes in the same species, we did not set a fixed value for the number of nucleosomes. As will be shown in the later section, this variable only provides a minor effect on the behaviours of the model. 
+
+(2) We assume no loss of CENP-A except dilution. 
+
+\nomenclature{CA}{Cellular Automata}
+
+% assumptions and explanations
+
+% General:
+% • Fixed number of nucleosomes at centromere (0 and 1)
+% • No CENP-A nucleosome loss except dilution
+% • At each cell cycle, CENP-A nucleosomes are first replenished and then diluted 
+% Replenishment:
+% H3 nucleosomes are converted to CENP-A nucleosomes due to existing CENP-A nucleosomes nearby 
+% Dilution:
+% • CENP-A nucleosomes are randomly distributed to daughter centromeres
+% • H3 nucleosomes take over all empty positions
+
+\subsection{Implementation}
+\subsubsection{Initialisation}
+\subsubsection{Replenishment}
+\subsubsection{Dilution}
 \section{Results}
+\subsection{The basic model exhibits two types of behaviour}
+\subsection{Mean-field approximation is able to qualitatively explains the simulation results}
+\subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
+\subsection{Arbitrary number control leads to the formation of few CENP-A clusters}
+\subsection{Spontaneous conversion can recapitulate the island pattern but not bi-stability}
 \section{Discussion}

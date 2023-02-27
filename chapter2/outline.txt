@@ -28,3 +28,32 @@ bi-stability (centromere enrichment over arms)
 low density (low absolute density)
 island pattern (islands)
 asymptotic behavior
+
+Method
+
+\subsection{The model}
+assumptions and explanations
+
+General:
+• Fixed number of nucleosomes at centromere (0 and 1)
+• No CENP-A nucleosome loss except dilution
+• At each cell cycle, CENP-A nucleosomes are first replenished and then diluted 
+Replenishment:
+H3 nucleosomes are converted to CENP-A nucleosomes due to existing CENP-A nucleosomes nearby 
+Dilution:
+• CENP-A nucleosomes are randomly distributed to daughter centromeres
+• H3 nucleosomes take over all empty positions
+
+\subsection{Implementation}
+Initialisation
+Replenishment
+Dilution
+
+
+Result
+
+2.3.1.	The basic model exhibits two types of behaviour
+2.3.2.	Mean-field approximation is able to qualitatively explains the simulation results
+2.3.3.	Global cooperative deposition generates bi-stability but cannot maintain a low density at the higher steady state
+2.3.4.	Arbitrary number control leads to the formation of few CENP-A clusters
+2.3.5.	Spontaneous conversion can recapitulate the island pattern but not bi-stability
