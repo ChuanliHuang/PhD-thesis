@@ -21,32 +21,84 @@ Despite that extensive studies have been conducted on the molecular biology of c
 \section{Methods}
 \subsection{The model}
 
-Inspired by the classic theoretical model for epigenetics \citep{Dodd2007, Micheelsen2010TheoryLandscapes}, we decided to use a CA-like, one-dimensional, rule-based stochastic model for the CENP-A system. As a starting point, we developed a basic model, where the molecular knowledge of CENP-A propagation and maintenance is described in its simplest manner. The assumptions used for the basic model are as follows: 
+Inspired by the classic theoretical model for epigenetics \citep{Dodd2007, Micheelsen2010TheoryLandscapes}, we decided to use a CA-like, 1D, rule-based stochastic model for the CENP-A system. As a starting point, we developed a basic model, where the molecular knowledge of CENP-A propagation and maintenance is described in its simplest manner. The assumptions used for the basic model are as follows: 
 
-(1) A certain number of sequentially placed nucleosomes composed of either canonical H3 or CENP-A nucleosomes was considered as the centromere. Because the lengths of centromeres vary largely among species and even between different chromosomes in the same species, we did not set a fixed value for the number of nucleosomes. As will be shown in the later section, this variable only provides a minor effect on the behaviours of the model. 
+(1) A certain number of sequentially placed nucleosomes composed of either canonical H3 or CENP-A nucleosomes was considered to represent the centromere. Because the lengths of centromeres vary largely among species and even between different chromosomes in the same species, we did not set a fixed value for the number of nucleosomes. As will be shown in the later section, this variable only provides a minor effect on the model's behaviours. Periodic boundary conditions were used to avoid potential artefacts from boundaries. 
 
-(2) We assume no loss of CENP-A except dilution. 
+(2) At each time step, CENP-A nucleosomes are first replenished and then diluted (Figure~\ref{fig:basicmodelschematics}B). This is because CENP-A is deposited at the interphase while diluted at the S phase in most species. The two processes will be referred to as 'replenishment' and 'dilution' in the following texts for convenience. We assume no loss of CENP-A except replicative dilution as the ultra-low turnover rate of CENP-A nucleosomes mentioned above. 
+
+(3) For replenishment, H3 nucleosomes were converted to CENP-A nucleosomes because of pre-existing CNEP-A nucleosomes in proximity (Figure~\ref{fig:basicmodelschematics}A). Notably, the positive feedback of CENP-A deposition was simplified as its local self-promoting property in this case. The detailed algorithm of this process will be described in the following implementation sub-section. 
+
+(4) For dilution, CENP-A nucleosomes were assumed to be randomly distributed to daughter centromeres as observed in wet-lab experiments (Figure~\ref{fig:basicmodelschematics}A). 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/the model.pdf}
+  \caption[Schematics of the basic model]{Schematics of the basic model. (A) Schematics of the interchange between CENP-A and H3 nucleosomes. CENP-A nucleosomes are converted to H3 nucleosomes due to replicative dilution. H3 nucleosomes are converted to CENP-A nucleosomes by replenishment, where pre-existing CENP-A nucleosome facilitates the conversion of H3 nucleosomes locally. (B) An example of the evolution of the basic model. The array of nucleosomes undergoes replenishment and dilution at each cell cycle. }
+  \label{fig:basicmodelschematics}
+\end{figure}
 
 \nomenclature{CA}{Cellular Automata}
-
-% assumptions and explanations
-
-% General:
-% • Fixed number of nucleosomes at centromere (0 and 1)
-% • No CENP-A nucleosome loss except dilution
-% • At each cell cycle, CENP-A nucleosomes are first replenished and then diluted 
-% Replenishment:
-% H3 nucleosomes are converted to CENP-A nucleosomes due to existing CENP-A nucleosomes nearby 
-% Dilution:
-% • CENP-A nucleosomes are randomly distributed to daughter centromeres
-% • H3 nucleosomes take over all empty positions
+\nomenclature{1D}{one-Dimensional}
 
 \subsection{Implementation}
+
+The model describes the centromere as a 1D array of a certain number, denoted by $NN$, of cells with two states, either 1, representing the CENP-A nucleosome or 0, representing the H3 nucleosome.
+
 \subsubsection{Initialisation}
+
+To unbiasedly initialize such an array, a stochastic approach is used. a 1D array of 0 was first created. Each 0 in the array then has a probability of the arbitrary initial CENP-A density, denoted by $\rho_{0}$, to be converted to 1. A typical array was exemplified in Figure~\ref{fig:array}. The density and spatial pattern of CENP-A are used as read-outs of the state of the  array. Density is calculated by dividing the sum of the array, which equals the number of 1s in the array, by the length of the array. As a mimicry of CENP-A imaging data from biological experiments, spatial pattern is visualized by plotting the array with 1 as white and 0 as black. \\
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/the array.pdf}
+  \caption[The example array]{The example array. The centromere is described as a finite 1D array composed of only 0 and 1, with 0 representing the H3 nucleosome and 1 representing the CENP-A nucleosome. The density of CENP-A is calculated by dividing the sum of the array by the length, or the number of cells, of the array. The spatial pattern of CENP-A distribution is visualised by colouring 1 as white and 0 as black. }
+  \label{fig:array}
+\end{figure}
+
 \subsubsection{Replenishment}
+
+As with other CA models, our model updates the state of a cell by a state-transition function that reads the states of neighbour cells. To describe the replenishment, where new CENP-A nucleosomes replace H3 nucleosomes due to pre-existing CENP-A and the CENP-A nucleosomes do not turn over, we set the state-transition function as such: 
+\begin{align*}
+    & P_{0\rightarrow 1}=\alpha\sum_{i=-n}^{n} x_if_i \\
+    & P_{1\rightarrow 0}=0 
+\end{align*}
+
+        
+where $\alpha$ is an arbitrary parameter denoting the loading efficiency, $n$ denotes the size of the neighbourhood, $x$ is the state of the cell $i$ and $f$ is the weight function, which is a Gaussian function with a mean of 0 and a standard deviation of n/3 ($f\sim Gaussian(\mu=0, \sigma=\frac{n}{3}$) used to model the assumption that the probability of interaction decreases with physical distance. 
+
+To enable more flexibility of replenishment, we allowed it to happen multiple rounds before dilution. The number of rounds was denoted by $rr$. 
+
 \subsubsection{Dilution}
+
+Ideally, one array should be divided into two daughter arrays during each dilution event. Yet, the number of arrays would grow exponentially with the simulation steps, as would the computational time required. To simulate the evolution of the array for more steps, only one of the daughter arrays was tracked. Hence, replicative dilution is modelled by the process where each 1 in the array has a probability of 0.5 to be converted to 0, which leads to the following state-transition function: 
+\begin{align*}
+    & P_{0\rightarrow 1}=0 \\
+    & P_{1\rightarrow 0}=0.5
+\end{align*}
+
+The parameters of the basic model were summarised in Table~\ref{tab:parameters}. \\
+
+\begin{table}[htbp]
+\centering
+\caption{The parameters of the basic model}
+\label{tab:parameters}
+\begin{tabular}{cl}
+\hline
+\textbf{Parameters} & \multicolumn{1}{c}{\textbf{Description}} \\ \hline
+$NN$                  & The number of nucleosomes                \\
+$\rho_{0}$               & The initial density of CENP-A            \\
+$\alpha$               & The  loading efficiency                  \\
+$n$                   & The size of neighbourhood                \\
+$rr$                  & The number of replenishment rounds      
+\end{tabular}
+\end{table}
+
 \section{Results}
 \subsection{The basic model exhibits two types of behaviour}
+
+
+
 \subsection{Mean-field approximation is able to qualitatively explains the simulation results}
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
 \subsection{Arbitrary number control leads to the formation of few CENP-A clusters}
