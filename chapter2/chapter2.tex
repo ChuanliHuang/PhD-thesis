@@ -52,7 +52,7 @@ To unbiasedly initialize such an array, a stochastic approach is used. a 1D arra
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/the array.pdf}
-  \caption[The example array]{The example array. The centromere is described as a finite 1D array composed of only 0 and 1, with 0 representing the H3 nucleosome and 1 representing the CENP-A nucleosome. The density of CENP-A is calculated by dividing the sum of the array by the length, or the number of cells, of the array. The spatial pattern of CENP-A distribution is visualised by colouring 1 as white and 0 as black. }
+  \caption[The implementation of the basic model]{The implementation of the basic model. The centromere is described as a finite 1D array composed of only 0 and 1, with 0 representing the H3 nucleosome and 1 representing the CENP-A nucleosome. The density of CENP-A is calculated by dividing the sum of the array by the length, or the number of cells, of the array. The spatial pattern of CENP-A distribution is visualised by colouring 1 as white and 0 as black. }
   \label{fig:array}
 \end{figure}
 
@@ -63,8 +63,6 @@ As with other CA models, our model updates the state of a cell by a state-transi
     & P_{0\rightarrow 1}=\alpha\sum_{i=-n}^{n} x_if_i \\
     & P_{1\rightarrow 0}=0 
 \end{align*}
-
-        
 where $\alpha$ is an arbitrary parameter denoting the loading efficiency, $n$ denotes the size of the neighbourhood, $x$ is the state of the cell $i$ and $f$ is the weight function, which is a Gaussian function with a mean of 0 and a standard deviation of n/3 ($f\sim Gaussian(\mu=0, \sigma=\frac{n}{3}$) used to model the assumption that the probability of interaction decreases with physical distance. 
 
 To enable more flexibility of replenishment, we allowed it to happen multiple rounds before dilution. The number of rounds was denoted by $rr$. 
@@ -76,7 +74,6 @@ Ideally, one array should be divided into two daughter arrays during each diluti
     & P_{0\rightarrow 1}=0 \\
     & P_{1\rightarrow 0}=0.5
 \end{align*}
-
 The parameters of the basic model were summarised in Table~\ref{tab:parameters}. \\
 
 \begin{table}[htbp]
@@ -90,7 +87,7 @@ $NN$                  & The number of nucleosomes                \\
 $\rho_{0}$               & The initial density of CENP-A            \\
 $\alpha$               & The  loading efficiency                  \\
 $n$                   & The size of neighbourhood                \\
-$rr$                  & The number of replenishment rounds      
+$rr$                  & The number of replenishment rounds      \\ \hline
 \end{tabular}
 \end{table}
 
@@ -100,25 +97,155 @@ $rr$                  & The number of replenishment rounds
 We started by experimenting with different combinations of parameters and classifying behaviours of the basic model based on CENP-A density evolution maps (Figure~\ref{fig:modelBehaviour}A and B left). A density evolution map presents how CENP-A density changes over time. In general, two types of behaviour were observed. First, the density eventually
 reaches 0 (Figure~\ref{fig:modelBehaviour}A). Due to the fact that new CENP-A nucleosomes require old CENP-A nucleosomes to be recruited, once the density reaches 0, it will stay at 0. We named this type of behaviour ‘dead’. The second type is where CENP-A density is fluctuating around a value less than 0.5 after a number of generations (Figure~\ref{fig:modelBehaviour}B). We called this type of behaviour ‘stabilized’. The maximal value of density cannot be greater than 0.5 because we update the array by first replenishing and then diluting it. Then we sought to visualise the evolution of the CENP-A spatial pattern of the two behaviours by stacking spatial patterns according to generation. We termed this plot spatial pattern kymograph (Figure~\ref{fig:modelBehaviour}A and B right). For the ‘dead’ type behaviour, CENP-A nucleosomes formed inheritable aggregates, or islands, which could diverge or be combined. But all the islands vanished eventually. For the ‘stabilized’ behaviour, the islands could be seen in the first several time steps. After that, the islands joined each other and formed random-like distribution of CENP-A. Given the auto-amplification property of CENP-A deposition, the existence of ‘stabilized’ behaviours, where CENP-A density can be stabilised before saturation, is surprising. We reasoned that this is because as the density of CENP-A nucleosome increases, the number of H3 nucleosomes decreases, leading to a reduced room for new CENP-A to be deposited. This counteracts auto-amplification and results in a steady state. 
 
-We next attempted to systematically view how model behaviours change with parameters. Due to the predictable positive effect on the CENP-A density of $rr$, I fixed it and ran simulations with different combinations of the loading efficiency $\alpha$ ranging from 0 to 1 with a step size of 0.02 and the range of local deposition $\sigma$ ranging from 0 to 10 with a step size of 0.2. Each simulation was conducted for 500 time steps and assigned to either ‘dead’ or ‘stabilised’ type based on whether the average density of the first 100 time steps is less or greater than the last 100 time steps. The result showed that the two behaviours fall into two separate phases (Figure~\ref{fig:modelBehaviour}C). Both $\alpha$ and $\sigma$ positively correlated to the ‘stabilized’ behaviour. Interestingly, the boundary between the two phases can roughly be described by a reciprocal function.
+We next attempted to systematically view how model behaviours change with parameters. Due to the predictable positive effect on the CENP-A density of $rr$, I fixed it and ran simulations with different combinations of the loading efficiency $\alpha$ ranging from 0 to 1 with a step size of 0.02 and the range of local deposition $\sigma$ ranging from 0 to 10 with a step size of 0.2. Each simulation was conducted for 500 time steps and assigned to either ‘dead’ or ‘stabilised’ type based on whether the average density of the first 100 time steps is less or greater than the last 100 time steps. The result showed that the two behaviours fall into two separate phases (Figure~\ref{fig:modelBehaviour}C). Both $\alpha$ and $\sigma$ were positively correlated to the ‘stabilized’ behaviour. Interestingly, the boundary between the two phases can roughly be described by a reciprocal function.
 
+To quantitatively visualise the transition from the 'dead' to 'stabilised' behaviour, we wanted to investigate how the asymptotic CENP-A nucleosome density responds to changes in $\alpha$. Therefore, I ran long simulations (10,000 time steps) of the model with $\alpha$ ranging from 0.4 to 1 with a step size of 0.01. The average of the last 2,000 time steps was used as the read-out of the asymptotic density. As shown in Figure~\ref{fig:modelBehaviour}D, the asymptotic density stayed at 0 and does not change with $\alpha$ at the beginning. After around $\alpha$=0.5, it started to increase according to $\alpha$ and formed a concave curve saturating at above 0.4. To better quantify the transition, I decided to simulate with longer time steps and finer resolution of $\alpha$. I then conducted simulations of 100,000 time steps and $\alpha$ ranging from 0.5 to 0.53 with a step size of 0.003. The result was nearly identical to the 10,000-step simulation with data points roughly on the same curve (Figure~\ref{fig:modelBehaviour}D). 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/model_behaviour.pdf}
-  \caption[Typical behaviours of the basic model.]{Typical behaviours of the basic model. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution map and spatial pattern kymographs of a representative ‘dead’ behaviour ($\alpha$=0.45). (B) The density evolution map and spatial pattern kymographs of a representative ‘stabilised’ behaviour ($\alpha$=0.7). (C) Phase diagram of the model behaviour as a function of $\alpha$ and $\sigma$. Black represents the ‘dead’ behaviour and white represents the ‘stabilised’ behaviour for a specific parameter set. (D) Bifurcation diagram of asymptotic density as a function of $\alpha$. 10 lineages were run for 10,000 (blue) or 100,000 time steps (orange) and the average density of the last 2,000 time steps was plotted as the asymptotic density. }
+  \caption[Typical behaviours of the basic model.]{Typical behaviours of the basic model. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution map and spatial pattern kymographs of a representative ‘dead’ behaviour ($\alpha$=0.45). (B) The density evolution map and spatial pattern kymographs of a representative ‘stabilised’ behaviour ($\alpha$=0.7). (C) Phase diagram of the model behaviour as a function of $\alpha$ and $\sigma$. Black represents the ‘dead’ behaviour and white represents the ‘stabilised’ behaviour for a specific parameter set. (D) Asymptotic density as a function of $\alpha$. 10 simulations were run for 10,000 (blue) or 100,000 time steps (orange) and the average density of the last 2,000 time steps was plotted as the asymptotic density. }
   \label{fig:modelBehaviour}
 \end{figure}
+
+We further tested if other factors might change the behaviours of the basic model. Generally, different simulations with the same parameter set generated qualitatively similar results (Figure~\ref{fig:parameterTest}A), suggesting that stochasticity is not important in determining the model behaviour. The number of nucleosomes also had little effect on the asymptotic density, though the smaller number showed a higher noise (Figure~\ref{fig:parameterTest}B). The initial value matters if the system has more than one steady state. To test it, I simulated the model from various initial densities. However, they all approached the same asymptotic value eventually (Figure~\ref{fig:parameterTest}C), indicating the model is likely to possess only one steady state. Note that the curves of high initial density appeared to be non-smooth in the first time step. This is because, independent of the initial value, they were all reduced to 0.5 after the first time step due to saturation. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/parameter_test.pdf}
-  \caption[The model behaviours are insensitive to stochasticity, nucleosome number and initial density.]{The model behaviours are insensitive to stochasticity, nucleosome number and initial density. The simulations were conducted at $NN$=500, $\rho_{0}$=0.02, $\alpha$=0.7, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution maps of different simulations of the representative ‘dead’ or 'stabilised' behaviour. 10 simulations were conducted for each behaviour, shown in different colours. (B) The density evolution map of the representative ‘stabilised' behaviour with different $NN$s. (C) The density evolution map of the representative ‘stabilised' behaviour with different $\rho_{0}$s. For each $\rho_{0}$, 100 simulations were conducted for 30 time steps. Each colour represents the average of 100 simulations. }
+  \caption[The model behaviours are insensitive to stochasticity, nucleosome number and initial density.]{The model behaviours are insensitive to stochasticity, nucleosome number and initial density. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\alpha$=0.7, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution maps of different simulations of the representative ‘dead’ or 'stabilised' behaviour. 10 simulations were conducted for each behaviour, shown in different colours. (B) The density evolution map of the representative ‘stabilised' behaviour with different $NN$s. (C) The density evolution map of the representative ‘stabilised' behaviour with different $\rho_{0}$s. For each $\rho_{0}$, 100 simulations with $NN$=200 were conducted for 30 time steps. Each colour represents the average of 100 simulations. }
   \label{fig:parameterTest}
 \end{figure}
 
-\subsection{Mean-field approximation is able to qualitatively explains the simulation results}
+In summary, the basic model (Figure~\ref{fig:basicmodelschematics}A) has two possible outcomes, with either all CENP-A nucleosomes being eventually lost or the density being maintained at a value much higher than that of the real biological systems. Moreover, in the second case, CENP-A nucleosome distribution is obviously different from the ‘islands’ pattern seen in extended chromatin experiments. Hence, we concluded that local deposition only is not sufficient to recapitulate the CENP-A dynamics \textit{in vivo}.
+
+\subsection{Mean-field approximation is able to qualitatively explain the simulation results}
+
+By simulating the old model and analyzing the results, we had a qualitative view of the basic model. To analyze the model
+quantitatively, I wanted to apply analytical methods. Given the similarity between our model to CA, I chose mean-field
+approximation as suggested by \citep{Sayama2013IntroductionSystems}. Instead of specific states of the system, mean-field approximation re-describes the dynamics of the system as how individual cells interact with the ’average state’ and how the ’average state’ itself changes over time. 
+
+As mentioned above, the CENP-A nucleosome was expressed as cell state 1 whereas the H3 nucleosome was expressed as cell state 0 for the convenience of calculation. After applying mean-field approximation, the system now only has one state variable $\rho_{t}$, the density of 1s at time step t. To monitor its evolution, one needs to enumerate all possible scenarios of individual CA cells interacting with $\rho_{t}$ and their probabilities (Table~\ref{tab:MFAscenariosBasic}). Here, I started with one round of replenishment for simplicity. I identified 4 possible scenarios:
+
+\begin{table}[htbp]
+\centering
+\caption{Possible scenarios of an individual cell in a one-round replenishment event}
+\label{tab:MFAscenariosBasic}
+\begin{tabular}{cccc}
+\hline
+\textbf{Scenario} & \textbf{Current state} & \textbf{Updated state} & \textbf{Probability} \\ \hline
+(1) & 1                        & 0                      & 0                    \\
+(2) & 1                        & 1                      & $\rho_{t}$                    \\
+(3) & 0                        & 1                      & $(1 - \rho_{t})P_{0\rightarrow 1}(\rho_{t})$     \\
+(4) & 0                        & 0                      & $(1 - \rho_{t})(1 - P_{0\rightarrow 1}(\rho_{t}))$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+(1) The cell state is 1 at time step t and will become 0 at time step t+1. The probability of finding a cell of 1 is simply $\rho_{t}$. But due to the assumption that CENP-A nucleosomes are not removed from the chromatin other than during dilution, the probability of this scenario is $\rho_{t} \times 0 = 0$. 
+
+(2) The cell state is 1 at time step t and will stay 1 at time step t+1. For the same reason as above, the probability of this scenario is $\rho_{t} \times 1 = \rho_{t}$. 
+
+(3) The cell state is 0 at time step t and will become 1 at time step t+1. Since the binary nature of cell state, the probability of finding a cell of 0 is $1 - \rho_{t}$. Then for this scenario to happen, one needs to consider the 0 to 1 state-transition function at $\rho_{t}$, which was denoted as $P_{0\rightarrow 1}(\rho_{t})$. Therefore, the probability of this scenario can be expressed as $(1 - \rho_{t})P_{0\rightarrow 1}(\rho_{t})$. 
+
+(4) The cell state is 0 at time step t and will stay 0 at time step t+1. The occurrence of this scenario is equivalent to 
+the fact that scenario (3) does not happen. Hence the probability of this scenario can be expressed as $(1 - \rho_{t})(1 - P_{0\rightarrow 1}(\rho_{t}))$.
+
+
+After one round of replenishment, the density 1s equals the sum of the updated state of each scenario weighted by its respective probability. Hence, the one-round replenish function R can be written as:
+\begin{equation}\label{eq:1}
+\begin{split}
+                R(\rho_{t})
+                &= 0 \times 0 + 1 \times \rho_{t} + 1 \times (1 - \rho_{t})P_{0\rightarrow 1}(\rho_{t}) \\
+                & + 0 \times (1 - \rho_{t})(1 - P_{0\rightarrow 1}(\rho_{t})) \\
+                &=\rho_{t} + (1 - \rho_{t})P_{0\rightarrow 1}(\rho_{t})
+\end{split}
+\end{equation}
+With the consideration that there is always a cell of 0 in the middle (position 0), the 0 to 1 state-transition function at $\rho_{t}$, $P_{0\rightarrow 1}(\rho_{t})$, can be calculated as follows: 
+\begin{equation}\label{eq:2}
+\begin{split}
+                P_{0\rightarrow 1}(\rho_{t})
+                &=\alpha(\rho_{t}f(-n)+\rho_{t}f(-n+1)\\
+                &\quad+\ldots+0\cdot f(0)+\ldots+\\
+                &\quad \rho_{t}f(n-1)+\rho_{t}f(n))\\
+                &=\alpha(1-f(0))\rho_{t}
+\end{split}
+\end{equation}
+Substitute $P_{0\rightarrow 1}(\rho_{t})$ in Equation~\ref{eq:1} with Equation~\ref{eq:2}, one can obtain:
+\begin{equation}\label{eq:3}
+                R(\rho_{t}) = \rho_{t} + (1 - \rho_{t})\alpha(1 - f(0))\rho_{t}
+\end{equation}
+By defining a new parameter $\omega = \alpha(1 - f(0))$, Equation~\ref{eq:3} becomes:
+\begin{equation}\label{eq:4}
+                R(\rho_{t}) = -\omega \rho_{t}^{2} + (1 + \omega) \rho_{t}
+\end{equation}
+The density of 1 at the next time step t+1 can then be calculated by implementing multiple rounds of replenishment as the recursion of function R and dilution as a halving of density:
+\begin{equation}\label{eq:5}
+                \rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2}
+\end{equation}
+Combining Equation~\ref{eq:4} and Equation~\ref{eq:5}, the mean-field approximation of the basic model can be expressed as:
+\begin{equation}\label{eq:6}
+\begin{split}
+            &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} \\
+            &R(\rho_{t}) = -\omega \rho_{t}^{2} + (1 + \omega) \rho_{t}
+\end{split}
+\end{equation}
+where $\omega = \alpha(1 - f(0))$. 
+
+With the mathematical formulation of the basic model, we were able to analyse how the model behaviour was determined. To identify the existence of steady states and understand their changes according to $\alpha$, I started with the iterative map, or Cobweb plot, of the mean-field approximation with $\alpha$ ranging from 0 to 1 (Figure~\ref{fig:meanFieldApproximation}A). The Cobweb plot showed $\rho_{t+1}$ as a function of $\rho_{t}$. Its intersections with $y=x$ were therefore the fixed points of the model. Their stability can be assessed by the first-order derivative $y'$ at that point. If $\lvert y' \rvert \le 1$, the fixed point is stable. As shown in the Cobweb plot, the system’s fixed point(s) depends on $\alpha$. Low $\alpha$ has only one stable fixed point at $\rho_{t}$=0 while it becomes unstable for higher $\alpha$. Meanwhile, a non-zero stable fixed point starts to appear. To systematically study the effect of $\alpha$ on the steady state(s) of the system, I constructed the bifurcation diagram, where the fixed densities were plotted as a function of $\alpha$ (Figure~\ref{fig:meanFieldApproximation}B). The bifurcation diagram indicated that the fixed density stayed at 0 and did not change with $\alpha$ at the beginning. However, after around $\alpha$=0.3, the fixed density started to become positively correlated to $\alpha$. In mathematical terminology, the system undergoes saddle-node bifurcation as $\alpha$ increases. Interestingly, contrary to the simulation results that the asymptotic density is either 0 or a much higher value, the non-zero stable fixed point by the mean-field approximation can be very close to 0. We reasoned that it might be because the systems with small fixed densities were prone to stochasticity that could lead to 0 density and they would stay at 0 once reached there. Thus, in simulations, small fixed densities were unable to be observed. Next, I wanted to compare the predicted fixed densities by mean-field approximation with the asymptotic densities from the simulations. As shown in Figure~\ref{fig:meanFieldApproximation}C, the prediction showed a similar trend as the simulation data, albeit there were quantitative differences. Therefore, I concluded that mean-field approximation is capable of qualitatively describing the system. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/mean-field_approximation.pdf}
+  \caption[Mean-field approximation of the basic model]{Mean-field approximation of the basic model. $rr$=3 was used if not otherwise stated. (A) Cobweb plot of the basic model. The mean-field approximations of the basic model with different $\alpha$s were shown as coloured curves. Their intersections with $y = x$ represent fixed points, which were indicated as black dots. (B) Bifurcation diagram of the basic model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line where as the unstable one was shown as the dotted line. (C) Comparison between the prediction of mean-field approximation and the simulation. The asymptotic densities were plotted as a function of $\alpha$. The stable branch of mean-field approximation was shown as the blue curve. The 10,000-step simulations were shown as orange dots.}
+  \label{fig:meanFieldApproximation}
+\end{figure}
+
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
+
+As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. 
+
+\begin{table}[htbp]
+\centering
+\caption{Possible scenarios of an individual cell in a one-round replenishment event}
+\label{tab:MFAscenariosCoop}
+\begin{tabular}{cccc}
+\hline
+\textbf{Scenario} & \textbf{Current state} & \textbf{Updated state} & \textbf{Probability} \\ \hline
+(1) & 1                        & 0                      & 0                    \\
+(2) & 1                        & 1                      & $\rho_{t}$                    \\
+(3) & 0                        & 1                      & $(1 - \rho_{t})\rho_{t}P_{0\rightarrow 1}(\rho_{t})$     \\
+(4) & 0                        & 0                      & $(1 - \rho_{t})(1 - \rho_{t}P_{0\rightarrow 1}(\rho_{t}))$ \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{equation}\label{eq:7}
+\begin{split}
+            &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} \\
+            &R(\rho_{t}) = -\omega \rho_{t}^{3} + \omega \rho_{t}^{2} + \rho_{t}
+\end{split}
+\end{equation}
+where $\omega = \alpha(1 - f(0))$. 
+
 \subsection{Arbitrary number control leads to the formation of few CENP-A clusters}
 \subsection{Spontaneous conversion can recapitulate the island pattern but not bi-stability}
+
+\begin{table}[htbp]
+\centering
+\caption{The additional parameter(s) of the spontaneous conversion model}
+\label{tab:parametersSpontaneousConversion}
+\begin{tabular}{cl}
+\hline
+\textbf{Parameters} & \multicolumn{1}{c}{\textbf{Description}} \\ \hline
+$\eta$                  & The rate of spontaneous conversion      \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{equation}\label{eq:8}
+\begin{split}
+            &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} + \eta \\
+            &R(\rho_{t}) = -\omega \rho_{t}^{2} + (1 + \omega) \rho_{t}
+\end{split}
+\end{equation}
+where $\omega = \alpha(1 - f(0))$. 
 \section{Discussion}
