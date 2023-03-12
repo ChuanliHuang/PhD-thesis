@@ -113,7 +113,7 @@ We further tested if other factors might change the behaviours of the basic mode
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/parameter_test.pdf}
-  \caption[The model behaviours are insensitive to stochasticity, nucleosome number and initial density.]{The model behaviours are insensitive to stochasticity, nucleosome number and initial density. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\alpha$=0.7, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution maps of different simulations of the representative ‘dead’ or 'stabilised' behaviour. 10 simulations were conducted for each behaviour, shown in different colours. (B) The density evolution map of the representative ‘stabilised' behaviour with different $NN$s. (C) The density evolution map of the representative ‘stabilised' behaviour with different $\rho_{0}$s. For each $\rho_{0}$, 100 simulations with $NN$=200 were conducted for 30 time steps. Each colour represents the average of 100 simulations. }
+  \caption[The model behaviours are insensitive to stochasticity, nucleosome number and initial density]{The model behaviours are insensitive to stochasticity, nucleosome number and initial density. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\alpha$=0.7, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution maps of different simulations of the representative ‘dead’ or 'stabilised' behaviour. 10 simulations were conducted for each behaviour, shown in different colours. (B) The density evolution map of the representative ‘stabilised' behaviour with different $NN$s. (C) The density evolution map of the representative ‘stabilised' behaviour with different $\rho_{0}$s. For each $\rho_{0}$, 100 simulations with $NN$=200 were conducted for 30 time steps. Each colour represents the average of 100 simulations. }
   \label{fig:parameterTest}
 \end{figure}
 
@@ -192,7 +192,7 @@ Combining Equation~\ref{eq:4} and Equation~\ref{eq:5}, the mean-field approximat
 \end{equation}
 where $\omega = \alpha(1 - f(0))$. 
 
-With the mathematical formulation of the basic model, we were able to analyse how the model behaviour was determined. To identify the existence of steady states and understand their changes according to $\alpha$, I started with the iterative map, or Cobweb plot, of the mean-field approximation with $\alpha$ ranging from 0 to 1 (Figure~\ref{fig:meanFieldApproximation}A). The Cobweb plot showed $\rho_{t+1}$ as a function of $\rho_{t}$. Its intersections with $y=x$ were therefore the fixed points of the model. Their stability can be assessed by the first-order derivative $y'$ at that point. If $\lvert y' \rvert \le 1$, the fixed point is stable. As shown in the Cobweb plot, the system’s fixed point(s) depends on $\alpha$. Low $\alpha$ has only one stable fixed point at $\rho_{t}$=0 while it becomes unstable for higher $\alpha$. Meanwhile, a non-zero stable fixed point starts to appear. To systematically study the effect of $\alpha$ on the steady state(s) of the system, I constructed the bifurcation diagram, where the fixed densities were plotted as a function of $\alpha$ (Figure~\ref{fig:meanFieldApproximation}B). The bifurcation diagram indicated that the fixed density stayed at 0 and did not change with $\alpha$ at the beginning. However, after around $\alpha$=0.3, the fixed density started to become positively correlated to $\alpha$. In mathematical terminology, the system undergoes saddle-node bifurcation as $\alpha$ increases. Interestingly, contrary to the simulation results that the asymptotic density is either 0 or a much higher value, the non-zero stable fixed point by the mean-field approximation can be very close to 0. We reasoned that it might be because the systems with small fixed densities were prone to stochasticity that could lead to 0 density and they would stay at 0 once reached there. Thus, in simulations, small fixed densities were unable to be observed. Next, I wanted to compare the predicted fixed densities by mean-field approximation with the asymptotic densities from the simulations. As shown in Figure~\ref{fig:meanFieldApproximation}C, the prediction showed a similar trend as the simulation data, albeit there were quantitative differences. Therefore, I concluded that mean-field approximation is capable of qualitatively describing the system. 
+With the mathematical formulation of the basic model, we were able to analyse how the model behaviour was determined. To identify the existence of steady states and understand their changes according to $\alpha$, I started with the iterative map, or Cobweb plot, of the mean-field approximation with $\alpha$ ranging from 0 to 1 (Figure~\ref{fig:meanFieldApproximation}A). The Cobweb plot showed $\rho_{t+1}$ as a function of $\rho_{t}$. Its intersections with $y=x$ were therefore the fixed points of the model. Their stability can be assessed by the first-order derivative $y'$ at that point. If $\lvert y' \rvert \le 1$, the fixed point is stable. As shown in the Cobweb plot, the system’s fixed point(s) depends on $\alpha$. Low $\alpha$ has only one stable fixed point at $\rho_{t}$=0 while it becomes unstable for higher $\alpha$. Meanwhile, a non-zero stable fixed point starts to appear. To systematically study the effect of $\alpha$ on the steady state(s) of the system, I constructed the bifurcation diagram, where the fixed densities were plotted as a function of $\alpha$ (Figure~\ref{fig:meanFieldApproximation}B). The bifurcation diagram indicated that the fixed density stayed at 0 and did not change with $\alpha$ at the beginning. However, after around $\alpha$=0.3, the fixed density started to become positively correlated to $\alpha$. From a mathematical point of view, the system undergoes transcritical bifurcation as $\alpha$ increases. Interestingly, contrary to the simulation results that the asymptotic density is either 0 or a much higher value, the non-zero stable fixed point by the mean-field approximation can be very close to 0. We reasoned that it might be because the systems with small fixed densities were prone to stochasticity that could lead to 0 density and they would stay at 0 once they reached there. Thus, in simulations, small fixed densities were unable to be observed. Next, I wanted to compare the predicted fixed densities by mean-field approximation with the asymptotic densities from the simulations. As shown in Figure~\ref{fig:meanFieldApproximation}C, the prediction showed a similar trend as the simulation data, albeit there were quantitative differences. Therefore, I concluded that mean-field approximation is capable of qualitatively describing the system. 
 
 \begin{figure}[htbp]
   \centering
@@ -204,6 +204,8 @@ With the mathematical formulation of the basic model, we were able to analyse ho
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
 
 As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. 
+
+\citep{Dodd2017}
 
 \begin{table}[htbp]
 \centering
@@ -227,7 +229,36 @@ As both behaviours of the basic model could not recapitulate CENP-A dynamics in 
 \end{equation}
 where $\omega = \alpha(1 - f(0))$. 
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/cooperativity.pdf}
+  \caption[]{}
+  \label{fig:coopSchematics}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/local_coop.pdf}
+  \caption[]{}
+  \label{fig:localCoop}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/global_coop.pdf}
+  \caption[]{}
+  \label{fig:globalCoop}
+\end{figure}
+
 \subsection{Arbitrary number control leads to the formation of few CENP-A clusters}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/number_conrol.pdf}
+  \caption[]{}
+  \label{fig:numberControl}
+\end{figure}
+
 \subsection{Spontaneous conversion can recapitulate the island pattern but not bi-stability}
 
 \begin{table}[htbp]
@@ -237,15 +268,23 @@ where $\omega = \alpha(1 - f(0))$.
 \begin{tabular}{cl}
 \hline
 \textbf{Parameters} & \multicolumn{1}{c}{\textbf{Description}} \\ \hline
-$\eta$                  & The rate of spontaneous conversion      \\ \hline
+$\eta$                  & H3 spontaneous conversion rate     \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{equation}\label{eq:8}
 \begin{split}
-            &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} + \eta \\
+            &\rho_{t+1} = \frac{(1 - \eta)R^{rr}(\rho_{t}) + \eta}{2}\\
             &R(\rho_{t}) = -\omega \rho_{t}^{2} + (1 + \omega) \rho_{t}
 \end{split}
 \end{equation}
 where $\omega = \alpha(1 - f(0))$. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/spontaneous_conversion.pdf}
+  \caption[]{}
+  \label{fig:spontaneousConversion}
+\end{figure}
+
 \section{Discussion}
