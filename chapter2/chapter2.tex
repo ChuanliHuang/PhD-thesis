@@ -129,7 +129,7 @@ As mentioned above, the CENP-A nucleosome was expressed as cell state 1 whereas 
 
 \begin{table}[htbp]
 \centering
-\caption{Possible scenarios of an individual cell in a one-round replenishment event}
+\caption{Possible scenarios of an individual cell in a one-round replenishment event of the basic model}
 \label{tab:MFAscenariosBasic}
 \begin{tabular}{cccc}
 \hline
@@ -197,19 +197,17 @@ With the mathematical formulation of the basic model, we were able to analyse ho
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/mean-field_approximation.pdf}
-  \caption[Mean-field approximation of the basic model]{Mean-field approximation of the basic model. $rr$=3 was used if not otherwise stated. (A) Cobweb plot of the basic model. The mean-field approximations of the basic model with different $\alpha$s were shown as coloured curves. Their intersections with $y = x$ represent fixed points, which were indicated as black dots. (B) Bifurcation diagram of the basic model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line where as the unstable one was shown as the dotted line. (C) Comparison between the prediction of mean-field approximation and the simulation. The asymptotic densities were plotted as a function of $\alpha$. The stable branch of mean-field approximation was shown as the blue curve. The 10,000-step simulations were shown as orange dots.}
+  \caption[Mean-field approximation of the basic model]{Mean-field approximation of the basic model. $rr$=3 was used if not otherwise stated. (A) Cobweb plot of the basic model. The mean-field approximations of the basic model with different $\alpha$s were shown as coloured curves. Their intersections with $y = x$ represent fixed points, which were indicated as black dots. (B) Bifurcation diagram of the basic model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) Comparison between the prediction of mean-field approximation and the simulation. The asymptotic densities were plotted as a function of $\alpha$. The stable branch of mean-field approximation was shown as the blue curve. The 10,000-step simulations were shown as orange dots.}
   \label{fig:meanFieldApproximation}
 \end{figure}
 
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
 
-As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. 
-
-\citep{Dodd2017}
+As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. It is well established that non-linearity in the positive feedback loop is required for bi-stability to occur in a 1D epigenetics model \citep{Dodd2007, Micheelsen2010TheoryLandscapes, Dodd2017}. Cooperativity, the requirement of more than one copy of the protein to function, is a possible mechanism of non-linearity for our model because it has been proposed that a CENP-C dimer binds two CENP-A nucleosomes simultaneously \citep{Walstein2021}. To introduce such cooperativity, I modified the deposition rule to that two pre-existing CENP-A nucleosomes are needed for the incorporation of a new CENP-A (Figure~\ref{fig:coopSchematics}A). In the mean-field analysis, the probability of each possible scenario changes accordingly (Table~\ref{tab:MFAscenariosCoop}). 
 
 \begin{table}[htbp]
 \centering
-\caption{Possible scenarios of an individual cell in a one-round replenishment event}
+\caption{Possible scenarios of an individual cell in a one-round replenishment event of the cooperative deposition model}
 \label{tab:MFAscenariosCoop}
 \begin{tabular}{cccc}
 \hline
@@ -221,6 +219,7 @@ As both behaviours of the basic model could not recapitulate CENP-A dynamics in 
 \end{tabular}
 \end{table}
 
+And the state-transition function becomes:
 \begin{equation}\label{eq:7}
 \begin{split}
             &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} \\
@@ -229,24 +228,29 @@ As both behaviours of the basic model could not recapitulate CENP-A dynamics in 
 \end{equation}
 where $\omega = \alpha(1 - f(0))$. 
 
+From the Cobweb plot, it can be seen that similar to the basic model, the curve only has one fixed point for small $\alpha$s. As $\alpha$ increases, the curvity of the function grows and results in the emergence of two additional fixed points. Analysing the slopes at the intersections indicated that the middle one is unstable whereas the other two are stable (Figure~\ref{fig:coopSchematics}B). The bifurcation diagram showed that this represents a saddle-node bifurcation (Figure~\ref{fig:coopSchematics}C). 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/cooperativity.pdf}
-  \caption[]{}
+  \caption[The schematics and mean-field approximation of the cooperative deposition model]{The schematics and mean-field approximation of the cooperative deposition model. (A) Schematics of the cooperative deposition model. (B) Cobweb plot of the cooperative deposition model. The mean-field approximations of the cooperative deposition model with different $\alpha$s were shown as coloured curves. The fixed points were indicated as black dots. (C) Bifurcation diagram of the cooperative deposition model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line.}
   \label{fig:coopSchematics}
 \end{figure}
+
+To verify the mean-field analysis, I wanted to simulate the model. In the first attempt, 
+Note that $rr$ higher than the basic had to be used to generate the non-zero steady state. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/local_coop.pdf}
-  \caption[]{}
+  \caption[Local cooperative deposition could not generate bi-stability]{Local cooperative deposition could not generate bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=7. (A) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from low initial density ($\rho_{0}=0.05$). (B) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from high initial density ($\rho_{0}=0.3$).}
   \label{fig:localCoop}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/global_coop.pdf}
-  \caption[]{}
+  \caption[Global cooperative deposition generated bi-stability]{Global cooperative deposition generated bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=5. (A) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from low initial density ($\rho_{0}=0.05$). (B) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from high initial density ($\rho_{0}=0.3$).}
   \label{fig:globalCoop}
 \end{figure}
 
@@ -255,7 +259,7 @@ where $\omega = \alpha(1 - f(0))$.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/number_conrol.pdf}
-  \caption[]{}
+  \caption[Arbitrary number control resulted in a pattern of one or two large islands]{Arbitrary number control resulted in a pattern of one or two large islands. (A) Cobweb plot of the arbitrary number control model. The mean-field approximations of the cooperative deposition model with different $\alpha$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=3, $\rho_{0}=0.02$, with a target density of 0.02. (D) The average number of islands of 10 simulations running for 2000 time steps. The error bar represents the standard deviation.}
   \label{fig:numberControl}
 \end{figure}
 
@@ -263,7 +267,7 @@ where $\omega = \alpha(1 - f(0))$.
 
 \begin{table}[htbp]
 \centering
-\caption{The additional parameter(s) of the spontaneous conversion model}
+\caption{Additional parameter(s) of the spontaneous conversion model}
 \label{tab:parametersSpontaneousConversion}
 \begin{tabular}{cl}
 \hline
@@ -283,8 +287,10 @@ where $\omega = \alpha(1 - f(0))$.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/spontaneous_conversion.pdf}
-  \caption[]{}
+  \caption[Spontaneous conversion was able to maintain the island pattern]{Spontaneous conversion was able to maintain the island pattern. (A) Cobweb plot of the spontaneous conversion model. The mean-field approximations of the cooperative deposition model with different $\eta$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\eta$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=1, $\rho_{0}=0.02$, $\eta$=0.005.}
   \label{fig:spontaneousConversion}
 \end{figure}
+
+\subsection{Adding threshold-based stabilisation to the spontaneous conversion model was able to produce bi-stability, low density and island pattern}
 
 \section{Discussion}

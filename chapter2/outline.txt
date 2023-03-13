@@ -57,3 +57,6 @@ Result
 2.3.3.	Global cooperative deposition generates bi-stability but cannot maintain a low density at the higher steady state
 2.3.4.	Arbitrary number control leads to the formation of few CENP-A clusters
 2.3.5.	Spontaneous conversion can recapitulate the island pattern but not bi-stability
+
+Discussion
+Higher order
