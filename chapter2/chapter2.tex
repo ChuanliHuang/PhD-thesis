@@ -203,7 +203,7 @@ With the mathematical formulation of the basic model, we were able to analyse ho
 
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
 
-As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. It is well established that non-linearity in the positive feedback loop is required for bi-stability to occur in a 1D epigenetics model \citep{Dodd2007, Micheelsen2010TheoryLandscapes, Dodd2017}. Cooperativity, the requirement of more than one copy of the protein to function, is a possible mechanism of non-linearity for our model because it has been proposed that a CENP-C dimer binds two CENP-A nucleosomes simultaneously \citep{Walstein2021}. To introduce such cooperativity, I modified the deposition rule to that two pre-existing CENP-A nucleosomes are needed for the incorporation of a new CENP-A (Figure~\ref{fig:coopSchematics}A). In the mean-field analysis, the probability of each possible scenario changes accordingly (Table~\ref{tab:MFAscenariosCoop}). 
+As both behaviours of the basic model could not recapitulate CENP-A dynamics in real biological systems, we decided to introduce new mechanisms to the system. It is well established that non-linearity in the positive feedback loop is required for bi-stability to occur in a 1D epigenetics model \citep{Dodd2007, Micheelsen2010TheoryLandscapes, Dodd2017}. Cooperativity, the requirement of more than one copy of the protein to function, is a possible mechanism of non-linearity for our model because it has been proposed that a CENP-C dimer binds two CENP-A nucleosomes simultaneously \citep{Walstein2021}. To introduce such cooperativity, I modified the deposition rule to that two pre-existing CENP-A nucleosomes are needed for the incorporation of a new CENP-A (Figure~\ref{fig:coopSchematics}A). The probability of each possible scenario during one round of replenishment changes accordingly (Table~\ref{tab:MFAscenariosCoop}). 
 
 \begin{table}[htbp]
 \centering
@@ -219,7 +219,7 @@ As both behaviours of the basic model could not recapitulate CENP-A dynamics in 
 \end{tabular}
 \end{table}
 
-And the state-transition function becomes:
+And the Mean-field approximation becomes:
 \begin{equation}\label{eq:7}
 \begin{split}
             &\rho_{t+1} = \frac{R^{rr}(\rho_{t})}{2} \\
@@ -237,33 +237,42 @@ From the Cobweb plot, it can be seen that similar to the basic model, the curve 
   \label{fig:coopSchematics}
 \end{figure}
 
-To verify the mean-field analysis, I wanted to simulate the model. In the first attempt, 
-Note that $rr$ higher than the basic had to be used to generate the non-zero steady state. 
+To verify the mean-field approximation, I implemented cooperativity in the simulation algorithm. On the first attempt, I kept the cooperativity local, which means both the two pre-existing CENP-A nucleosomes had to be within the neighbourhood of the nucleosome to transit. After testing various combinations of parameters, I found that the local cooperative deposition model possessed similar behaviours to the basic model in that the asymptotic density was maintained at either high values or 0, independent of the initial density $\rho_{0}$ (Figure~\ref{fig:localCoop}). Note that higher $rr$ had to be used in this case to generate the non-zero steady state. This is because the probability of depositing a new CENP-A is reduced when cooperativity is introduced. Contrary to the mean-field approximation, the local cooperative deposition model failed to generate bi-stability. However, it is in line with the conclusion by \cite{Dodd2007} that 'beyond-neighbour' interactions were required for bi-stability to occur in the 1D epigenetics model. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/local_coop.pdf}
-  \caption[Local cooperative deposition could not generate bi-stability]{Local cooperative deposition could not generate bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=7. (A) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from low initial density ($\rho_{0}=0.05$). (B) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from high initial density ($\rho_{0}=0.3$).}
+  \caption[Local cooperative deposition could not generate bi-stability]{Local cooperative deposition could not generate bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=7. (A) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from low initial density ($\rho_{0}$=0.05). (B) The density evolution map and spatial pattern kymographs of the local cooperative deposition model starting from high initial density ($\rho_{0}$=0.3).}
   \label{fig:localCoop}
 \end{figure}
+
+Therefore, on the second attempt, I implemented global cooperativity that only one of the two pre-existing CENP-A nucleosomes was need to be within the neighbourhood while the other one could be at any position. As expected, the global cooperative model was able to exhibit bi-stability. With the same parameter set, the asymptotic density of the model could be either 0 or at a high value, depending on the $\rho_{0}$. Consistent with the mean-field approximation, the asymptotic density of the 'upper state' could only be at values around 0.4, which is much higher than what is observed in biological systems \citep{Bodor2014}. The spatial distribution of CENP-A nucleosomes was also not comparable. Thus, I concluded that a 1D epigenetics model with cooperative deposition cannot recapitulate the CENP-A system we aimed to model. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/global_coop.pdf}
-  \caption[Global cooperative deposition generated bi-stability]{Global cooperative deposition generated bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=5. (A) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from low initial density ($\rho_{0}=0.05$). (B) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from high initial density ($\rho_{0}=0.3$).}
+  \caption[Global cooperative deposition generated bi-stability]{Global cooperative deposition generated bi-stability. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=5. (A) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from low initial density ($\rho_{0}$=0.05). (B) The density evolution map and spatial pattern kymographs of the global cooperative deposition model starting from high initial density ($\rho_{0}$=0.3).}
   \label{fig:globalCoop}
 \end{figure}
 
-\subsection{Arbitrary number control leads to the formation of few CENP-A clusters}
+\subsection{Arbitrary number control leads to the clustering of CENP-A nucleosomes}
+
+In \textit{Drosophila}, the amount of centromeric CENP-A has been found to negatively correlate with the duration of mitosis, which is when its CENP-A replenishment occurs. Moreover, shortened mitotic time window resulted in decreased centromeric CENP-A level \citep{Pauleau2019TheCells}. This brings the possibility that there might exist self-correcting mechanisms for CENP-A density at the centromere. Hence, we decided to introduce arbitrary number control to our basic model. 
+
+I set the threshold, or target density, at 0.02 as suggested in the human cells \citep{Bodor2014}. In mean-field approximation, similar to the basic model, low $\alpha$ values had only one fixed point at $\rho$=0 while it became unstable as $\alpha$ increased and a new non-zero stable fixed point emerged(Figure~\ref{fig:numberControl}A). The bifurcation diagram also indicated that it is a transcritical bifurcation (Figure~\ref{fig:numberControl}B). However, differently, $\rho$ of the fixed point was maintained at the target density 0.02, independent of $\alpha$. 
+
+To implement arbitrary number control in simulation, I set the replenishment strength to be negatively correlated with the number of CENP-A nucleosomes. To this end, I explored two different methods, either changing $\alpha$ or changing $rr$ according to density, and both of them gave similar results. The density evolution map indicated that arbitrary number control successfully stabilised CENP-A density around the target 0.02. Interestingly, from the kymograph, it can be seen that although multiple islands existed in the first few time steps, only very few, a single one for most of the time, were maintained throughout the simulation (Figure~\ref{fig:numberControl}C and D). This result is consistent with the established conclusion from the cell polarity determination research that auto-catalytic reaction and mass conservation lead to the formation of a single maximum \citep{Goryachev2020CompeteOutcomes, Goehring2012OrganelleComponents, Otsuji2007APolarity}. Nevertheless, I concluded that arbitrary number control was insufficient to explain the dynamics of the CENP-A system. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/number_conrol.pdf}
-  \caption[Arbitrary number control resulted in a pattern of one or two large islands]{Arbitrary number control resulted in a pattern of one or two large islands. (A) Cobweb plot of the arbitrary number control model. The mean-field approximations of the cooperative deposition model with different $\alpha$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=3, $\rho_{0}=0.02$, with a target density of 0.02. (D) The average number of islands of 10 simulations running for 2000 time steps. The error bar represents the standard deviation.}
+  \caption[Arbitrary number control resulted in a pattern of one or two large islands]{Arbitrary number control resulted in a pattern of one or two large islands. (A) Cobweb plot of the arbitrary number control model. The mean-field approximations of the arbitrary number control model with different $\alpha$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=3, $\rho_{0}$=0.02, with a target density of 0.02. (D) The average number of islands of 10 simulations running for 2000 time steps. The error bar represents the standard deviation.}
   \label{fig:numberControl}
 \end{figure}
 
 \subsection{Spontaneous conversion can recapitulate the island pattern but not bi-stability}
+
+Due to the fact that CENP-A nucleosomes can also be found on chromosome arms in low density \citep{Bodor2014}, there might exist random incorporation of CENP-A nucleosomes. To test this idea, we decided to explore the spontaneous conversion from canonical H3 nucleosomes to CENP-A nucleosomes in the basic model. A new parameter $\eta$ denoting the rate for this event to happen was introduced (Table~\ref{tab:parametersSpontaneousConversion}). 
 
 \begin{table}[htbp]
 \centering
@@ -276,6 +285,7 @@ $\eta$                  & H3 spontaneous conversion rate     \\ \hline
 \end{tabular}
 \end{table}
 
+As we arbitrarily set the timing of spontaneous conversion to be before dilution and after replenishment, the mean-field approximation then became: 
 \begin{equation}\label{eq:8}
 \begin{split}
             &\rho_{t+1} = \frac{(1 - \eta)R^{rr}(\rho_{t}) + \eta}{2}\\
@@ -284,13 +294,18 @@ $\eta$                  & H3 spontaneous conversion rate     \\ \hline
 \end{equation}
 where $\omega = \alpha(1 - f(0))$. 
 
+Intuitively, adding spontaneous conversion into the basic model would rescue the 'dead' type behaviour. To keep the density at a reasonably low value, I chose a parameter set that would have resulted in an asymptotic density of 0 if it were used for the basic model to make the Cobweb plot (Figure~\ref{fig:spontaneousConversion}A). There could only be one fixed but the value is positively correlated with $\eta$ (Figure~\ref{fig:spontaneousConversion}B). As expected, with properly adjusted $\eta$, the densities of the spontaneous conversion model could be maintained around the desired value of 0.02. Importantly, from the spatial pattern kymograph, the island pattern of CENP-A nucleosomes was able to persist throughout the simulation (Figure~\ref{fig:spontaneousConversion}C). However, as shown by the mean-field approximation, the spontaneous conversion model does not possess bi-stability. 
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/spontaneous_conversion.pdf}
-  \caption[Spontaneous conversion was able to maintain the island pattern]{Spontaneous conversion was able to maintain the island pattern. (A) Cobweb plot of the spontaneous conversion model. The mean-field approximations of the cooperative deposition model with different $\eta$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\eta$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=1, $\rho_{0}=0.02$, $\eta$=0.005.}
+  \caption[Spontaneous conversion was able to maintain the island pattern]{Spontaneous conversion was able to maintain the island pattern. (A) Cobweb plot of the spontaneous conversion model. The mean-field approximations of the spontaneous conversion model with different $\eta$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the spontaneous conversion model. The fixed densities were plotted as a function of $\eta$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the spontaneous conversion model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=1, $\rho_{0}$=0.02, $\eta$=0.005.}
   \label{fig:spontaneousConversion}
 \end{figure}
 
 \subsection{Adding threshold-based stabilisation to the spontaneous conversion model was able to produce bi-stability, low density and island pattern}
 
 \section{Discussion}
+Summary table!
+Any weak non-local mechanism will do
+Alternative direction -- 3D model
