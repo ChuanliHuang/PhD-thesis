@@ -305,7 +305,45 @@ Intuitively, adding spontaneous conversion into the basic model would rescue the
 
 \subsection{Adding threshold-based stabilisation to the spontaneous conversion model was able to produce bi-stability, low density and island pattern}
 
+Replication is the major 'sculpting' mechanism through which ectopic CENP-A nucleosomes are actively removed \citep{Nechemia-Arbely2019, Wang2021PhosphorylationCycle}. It has been proposed that CCAN is responsible for the protection of centromeric CENP-A and that its recruitment requires a critical local concentration of CENP-A \citep{Nechemia-Arbely2019, Bodor2014}. This led us to the idea of adding a threshold-based stabilisation mechanism to our model. Given the success of the spontaneous conversion model in recapitulating the low density and island pattern, I decided to introduce threshold-based stabilisation to the spontaneous conversion model. 
+
+As expected, introducing threshold-based stabilisation was able to create two stable fixed points on the Cobweb plot, indicating the potential to generate bi-stability (Figure~\ref{fig:doubleCobweb}A). Indeed. by simulating the model, two stably inherited states were observed from the density evolution map and spatial distribution kymograph, one with a lower density and more scattered CENP-A nucleosomes while the other one with a higher density and a more clustered distribution (Figure~\ref{fig:doubleCobweb}B). However, the two states inter-converted spontaneously with the parameter set tested, which is in contrast to the experimental data that neo-centromeres are rare \citep{Marshall2008Neocentromeres:Evolution}. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/doubleCobweb.pdf}
+  \caption[Adding threshold-based stabilisation to the spontaneous conversion model generated bi-stability but the steady states inter-converted spontaneously]{Adding threshold-based stabilisation to the spontaneous conversion model generated bi-stability but the steady states inter-converted spontaneously. (A) Cobweb plot of the threshold-based stabilisation model. The mean-field approximations of the threshold-based stabilisation model with $\alpha$=1, $\sigma$=3, $rr$=1, $\eta$=0.0025, sculpting threshold=0.0075 were shown. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) The density evolution map and spatial pattern kymographs of the threshold-based stabilisation model. The upper plot is the zoom-in of the white box in the lower plot. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=1, $\eta$=0.0025, sculpting threshold=0.0075. }
+  \label{fig:doubleCobweb}
+\end{figure}
+
+To reduce the stochasticity of the system, one possible method is to increase the size $NN$, as shown in Figure~\ref{fig:parameterTest}B. After changing $NN$ from 1000 to 5000, which is the average nucleosome number of human cells \citep{Bodor2014}, the threshold-based stabilisation model exhibited robust inheritance of the two states (Figure~\ref{fig:doubleLongArray}A and B). Therefore, I concluded that adding threshold-based stabilisation to the spontaneous conversion model was able to recapitulate the three goals of the CENP-A model, namely bi-stability, low density at the higher steady state and the maintenance of island patterns.
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter2/figures/doubleLongArray.pdf}
+  \caption[Increasing $NN$ stabilised the steady states]{Increasing $NN$ stabilised the steady states. The simulations were conducted at $NN$=5000, $\alpha$=1, $\sigma$=3, $rr$=1, $\eta$=0.0025, sculpting threshold=0.0075. (A) The density evolution map and spatial pattern kymographs of the threshold-based stabilisation model starting from high initial density ($\rho_{0}$=0.02). The bottom plot is the zoom-in of the white box in the upper plot. (B) The density evolution map and spatial pattern kymographs of the threshold-based stabilisation model starting from low initial density ($\rho_{0}$=0). The bottom plot is the zoom-in of the white box in the upper plot.}
+  \label{fig:doubleLongArray}
+\end{figure}
+
 \section{Discussion}
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of the models tested}
+\label{tab:summary}
+\begin{tabular}{lccc}
+\hline
+\multicolumn{1}{c}{\textbf{Model}}                        & \textbf{Bi-stability}   & \textbf{Low density} & \textbf{Island pattern} \\ \hline
+Basic                                                     & \ding{55} &          \ding{55}            &         \ding{55}                \\
+Global   cooperativity                                    &  \ding{51}                       &        \ding{55}              &           \ding{55}              \\
+Number   control                                          &          \ding{55}               &           \ding{51}           &      \ding{55}                   \\
+Spontaneous   conversion                                  &          \ding{55}               &          \ding{51}            &    \ding{51}                     \\
+\begin{tabular}[c]{@{}l@{}}Threshold-base stabilisation \\ + spontaneous conversion\end{tabular} &           \ding{51}              &           \ding{51}           &        \ding{51}                 \\ \hline
+\end{tabular}
+\end{table}
+
 Summary table!
 Any weak non-local mechanism will do
+Important to test KT forming threshold and how does it compare to the level of noise
 Alternative direction -- 3D model
