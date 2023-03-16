@@ -59,4 +59,20 @@ Result
 2.3.5.	Spontaneous conversion can recapitulate the island pattern but not bi-stability
 
 Discussion
-Higher order
+Summary table!
+B 
+Local deposition promotes island pattern but not sufficient to maintain it
+consistent with positive feedback nature
+G 
+Positive feedback, Cooperativity and Non-local interaction are required for bi-stability
+But the density is way higher than experimental data
+Unlikely to be the mechanism
+Alternative explanation would be 3D 
+ANC
+Active monitoring of CENP-A is unlikely 
+Striking similarity with the reaction diffusion model
+SC 
+Any weak non-local mechanism will do, such as long-range deposition
+TS+SC
+nn matters
+Important to test KT forming threshold and how does it compare to the level of noise

@@ -259,14 +259,19 @@ Therefore, on the second attempt, I implemented global cooperativity that only o
 
 In \textit{Drosophila}, the amount of centromeric CENP-A has been found to negatively correlate with the duration of mitosis, which is when its CENP-A replenishment occurs. Moreover, shortened mitotic time window resulted in decreased centromeric CENP-A level \citep{Pauleau2019TheCells}. This brings the possibility that there might exist self-correcting mechanisms for CENP-A density at the centromere. Hence, we decided to introduce arbitrary number control to our basic model. 
 
-I set the threshold, or target density, at 0.02 as suggested in the human cells \citep{Bodor2014}. In mean-field approximation, similar to the basic model, low $\alpha$ values had only one fixed point at $\rho$=0 while it became unstable as $\alpha$ increased and a new non-zero stable fixed point emerged(Figure~\ref{fig:numberControl}A). The bifurcation diagram also indicated that it is a transcritical bifurcation (Figure~\ref{fig:numberControl}B). However, differently, $\rho$ of the fixed point was maintained at the target density 0.02, independent of $\alpha$. 
-
-To implement arbitrary number control in simulation, I set the replenishment strength to be negatively correlated with the number of CENP-A nucleosomes. To this end, I explored two different methods, either changing $\alpha$ or changing $rr$ according to density, and both of them gave similar results. The density evolution map indicated that arbitrary number control successfully stabilised CENP-A density around the target 0.02. Interestingly, from the kymograph, it can be seen that although multiple islands existed in the first few time steps, only very few, a single one for most of the time, were maintained throughout the simulation (Figure~\ref{fig:numberControl}C and D). This result is consistent with the established conclusion from the cell polarity determination research that auto-catalytic reaction and mass conservation lead to the formation of a single maximum \citep{Goryachev2020CompeteOutcomes, Goehring2012OrganelleComponents, Otsuji2007APolarity}. Nevertheless, I concluded that arbitrary number control was insufficient to explain the dynamics of the CENP-A system. 
+To implement arbitrary number control in simulation, I wanted to set the replenishment strength to be negatively correlated with the number of CENP-A nucleosomes. To this end, I explored two different methods, either changing $\alpha$ or changing $rr$ according to density, and both of them gave similar results. The results of changing $\alpha$ are presented hereafter. In this method, $\alpha$ was described by the following equation (note that the target density $\rho_{target}$ had to be multiplied by two because of the dilution event):
+\begin{equation}\label{eq:8}
+\begin{split}
+        & \alpha = 0 \: (\rho > 2\rho_{target}) \\
+        & \alpha = 1 - \frac{\rho}{2\rho_{target}} \: (\rho \le 2\rho_{target})
+\end{split}
+\end{equation}
+To reflect the real biological system, I set $\rho_{target}$ at 0.02 as suggested in the human cells \citep{Bodor2014}. In mean-field approximation, similar to the basic model, two fixed points existed with the zero one being unstable and the non-zero one being stable. Consistent with our aim, the non-zero fixed point had a value of 0.02 (Figure~\ref{fig:numberControl}A). In the simulation, the density evolution map indicated that arbitrary number control successfully stabilised CENP-A density around the target 0.02. Interestingly, from the kymograph, it can be seen that although multiple islands existed in the first few time steps, only very few, a single one for most of the time, were maintained throughout the simulation (Figure~\ref{fig:numberControl}B and C). We reasoned that this was due to the fact that the total number of CENP-A nucleosomes was limited. The larger island had a higher chance of depositing new CENP-A nucleosomes nearby and therefore grew at the expense of the shrinkage of small ones. Nevertheless, I concluded that arbitrary number control was insufficient to explain the dynamics of the CENP-A system. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter2/figures/number_conrol.pdf}
-  \caption[Arbitrary number control resulted in a pattern of one or two large islands]{Arbitrary number control resulted in a pattern of one or two large islands. (A) Cobweb plot of the arbitrary number control model. The mean-field approximations of the arbitrary number control model with different $\alpha$s were shown as coloured curves. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) Bifurcation diagram of the arbitrary number control model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\alpha$=1, $\sigma$=3, $rr$=3, $\rho_{0}$=0.02, with a target density of 0.02. (D) The average number of islands of 10 simulations running for 2000 time steps. The error bar represents the standard deviation.}
+  \caption[Arbitrary number control resulted in a pattern of one or two large islands]{Arbitrary number control resulted in a pattern of one or two large islands. (A) Cobweb plot of the arbitrary number control model. The mean-field approximations of the arbitrary number control model with $\rho_{target}$=0.02 were shown. The fixed points were indicated as black dots. The bottom plot is the zoom-in of $\rho{t}$=0-0.1 and $\rho{t+1}$=0-0.1. (B) The density evolution map and spatial pattern kymographs of the arbitrary number control model. The simulations were conducted at $NN$=1000, $\sigma$=3, $rr$=3, $\rho_{0}$=0.02, $\rho_{target}$=0.02. (C) The average number of islands of 10 simulations after 2000 time steps. The error bar represents the standard deviation.}
   \label{fig:numberControl}
 \end{figure}
 
@@ -286,7 +291,7 @@ $\eta$                  & H3 spontaneous conversion rate     \\ \hline
 \end{table}
 
 As we arbitrarily set the timing of spontaneous conversion to be before dilution and after replenishment, the mean-field approximation then became: 
-\begin{equation}\label{eq:8}
+\begin{equation}\label{eq:9}
 \begin{split}
             &\rho_{t+1} = \frac{(1 - \eta)R^{rr}(\rho_{t}) + \eta}{2}\\
             &R(\rho_{t}) = -\omega \rho_{t}^{2} + (1 + \omega) \rho_{t}
@@ -328,22 +333,51 @@ To reduce the stochasticity of the system, one possible method is to increase th
 
 \section{Discussion}
 
+With the aim of recapitulating the three key characteristics of the establishment and maintenance of CENP-A nucleosomes, that is bi-stability, low density and island pattern, we started with a simplified rule-based CA-like model named the basic model. The basic model is a 1D string of either CENP-A or H3 nucleosomes. The update of such a model consisted of replenishment, where new CENP-A nucleosomes were incorporated locally with positive feedback, and dilution, where around half of the CENP-A were lost. The basic model failed to meet the characteristics we wanted to model. Hence, we explored different possible mechanisms and tested if they can change the model behaviours towards the goals set. The mechanisms and their outcomes are summarised in Table~\ref{tab:summary}. 
+
 \begin{table}[htbp]
 \centering
-\caption{Summary of the models tested}
+\caption{Summary of the behaviours of models tested}
 \label{tab:summary}
 \begin{tabular}{lccc}
 \hline
 \multicolumn{1}{c}{\textbf{Model}}                        & \textbf{Bi-stability}   & \textbf{Low density} & \textbf{Island pattern} \\ \hline
-Basic                                                     & \ding{55} &          \ding{55}            &         \ding{55}                \\
-Global   cooperativity                                    &  \ding{51}                       &        \ding{55}              &           \ding{55}              \\
-Number   control                                          &          \ding{55}               &           \ding{51}           &      \ding{55}                   \\
-Spontaneous   conversion                                  &          \ding{55}               &          \ding{51}            &    \ding{51}                     \\
-\begin{tabular}[c]{@{}l@{}}Threshold-base stabilisation \\ + spontaneous conversion\end{tabular} &           \ding{51}              &           \ding{51}           &        \ding{51}                 \\ \hline
+1. Basic                                                     & \ding{55} &          \ding{55}            &         \ding{55}                \\
+2. Global   cooperative deposition                                    &  \ding{51}                       &        \ding{55}              &           \ding{55}              \\
+3. Arbitrary number   control                                          &          \ding{55}               &           \ding{51}           &      \ding{55}                   \\
+4. Spontaneous   conversion                                  &          \ding{55}               &          \ding{51}            &    \ding{51}                     \\
+\begin{tabular}[c]{@{}l@{}}5. Threshold-base stabilisation \\ \;\;\;\;+ spontaneous conversion\end{tabular} &           \ding{51}              &           \ding{51}           &        \ding{51}                 \\ \hline
 \end{tabular}
 \end{table}
 
+\subsection{The basic model}
+
+Both the simulations and analytical methods suggested that the basic model has two possible behaviours depending on the parameters. One where CENP-A nucleosomes can form islands temporarily but lose them eventually and one where CENP-A nucleosomes quickly saturate the available space and stay in this state (Figure~\ref{fig:modelBehaviour}). Apparently, neither of the two behaviours resembled the experimental data on CENP-A dynamics. Despite that, Several implications could be drawn from the results. First, the mechanism of local deposition with positive feedback is capable of supporting the formation of the island pattern, although the maintenance of such a pattern needs additional help. Second, due to the nature of positive feedback, the density of CENP-A nucleosomes could only be at two extremes, either zero or near saturation. Third, the positive feedback alone is insufficient to give rise to bi-stability, consistent with previous conclusions \citep{Lewis1977ThresholdsDevelopment, Thomas2001MultistationarityBehavior, Ferrell2002Self-perpetuatingBistability, Smits2006PhenotypicRegulation., Dodd2007}. 
+
+\subsection{The global cooperative deposition model}
+
+\cite{Dodd2017} suggested that bi-stability in a 1D epigenetics model requires three elements, namely positive feedback, cooperativity and beyond-local interactions. Therefore, to obtain bi-stability in our model, I implemented global cooperative deposition in the basic model. Indeed, the model was able to exhibit two distinct steady states with the same set of parameters, both analytically (Figure~\ref{fig:coopSchematics}) and numerically (figure~\ref{fig:globalCoop}). However, the densities of CENP-A nucleosomes of the 'high' state were about ten-fold what was observed in biological systems. This indicated that the classical mechanistic explanation for bi-stability might not underlie the CENP-A system. Alternatively, it is possible that CENP-A nucleosomes cluster and induce centromere higher-order structure \textit{in vivo}, which had recently been supported both experimentally \citep{Zhou2022, Andronov2019} and theoretically \citep{Camara2021ASpecies}, raising the local effective density to a level that could be described by the classical mechanism of bi-stability. 
+
+\subsection{The arbitrary number control model}
+
+This result is consistent with the established conclusion from the cell polarity determination research that auto-catalytic reaction and mass conservation lead to the formation of a single maximum \citep{Goryachev2020CompeteOutcomes, Goehring2012OrganelleComponents, Otsuji2007APolarity}.
+
+\subsection{The spontaneous conversion model}
+\subsection{The threshold-based stabilisation and spontaneous conversion model}
+
 Summary table!
-Any weak non-local mechanism will do
+B 
+Local deposition promotes island pattern but not sufficient to maintain it
+consistent with positive feedback nature
+G 
+Positive feedback, Cooperativity and Non-local interaction are required for bi-stability
+But the density is way higher than experimental data
+Unlikely to be the mechanism
+Alternative explanation would be 3D 
+ANC
+Striking similarity with the reaction diffusion model
+SC 
+Any weak non-local mechanism will do, such as long-range deposition
+TS+SC
+nn matters
 Important to test KT forming threshold and how does it compare to the level of noise
-Alternative direction -- 3D model
