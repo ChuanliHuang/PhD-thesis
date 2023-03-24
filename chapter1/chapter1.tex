@@ -1,117 +1,22 @@
-\chapter{Some Simple Text}
+\chapter{Introduction}
+\section{Centromere is a specialised locus for chromosome segregation}
 
-\section{Using some `natbib' Citations}
+ The growth and reproduction of all living organisms rely on cell division. A challenge dividing cells face is delivering an intact genome to the daughter cell. Eukaryotes package their genomes into chromosomes, which must be replicated and segregated faithfully during each cell division. Severe diseases, such as cancer and miscarriage, could arise if chromosome segregation is compromised. 
+ 
+ Centromere is the specialised locus for chromosome segregation, where the chromosome is attached to and pulled by the spindle \citep{Westhorpe2015AMaintenance, McKinley2015TheFunction, Talbert2020WhatCentromere, Fukagawa2014}. First described by \cite{Flemming1882ZellsubstanzZelltheilung} as primary constriction, it is visualised as the intersection point of the iconic X shape mitotic chromosome under a microscope. Lack of centromere, or being acentric, leads to the loss of the chromosome during cell division. Although the appreciation of centromere function has been established since its discovery, the molecular feature underneath remained elusive due to the species-to-species variations and the complexity of players involved. \cite{Darlington1936TheEnquiry} therefore recommended defining the centromere in terms of the function rather than the form. Nevertheless, advances in molecular biology shed light on the form of centromere. In most species, the centromeric DNA sequence plays an important but not definitive role in centromere specification \citep{Hoffmann2020, Harrington1997FormationMicrochromosomes, Catania2015SequenceChromatin, Iwata-Otsubo2017, Kasinathan2018Non-B-FormCentromeres, Shukla2018CentromereCycle, Logsdon2019, Murillo-Pineda2020}. It is instead determined epigenetically by the histone H3 variant CENP-A \citep{Warburton1997ImmunolocalizationCentromeres, Vafa1997ChromatinPlate, Earnshaw1985ThreeChromosome, Liu2006MappingCells, Regnier2005CENP-ABubR1, Heun2006, Mendiburo2011, Barnhart2011, Logsdon2015}. The macromolecular protein complex consisting of around 100 subunits, kinetochore, is formed on the centromere to mediate the physical connection between the chromosome and spindle microtubules and act as a signalling hub to monitor the interaction \citep{Musacchio2017AFunction, McAinsh2022TheKinetochores, Cheeseman2014TheKinetochore, Hara2018KinetochoreExit}. Apart from the progress in the form, the mechanisms centromere executing the function have also been elucidated over the years. In the following sections, the form and function of the centromere will be described in more detail. 
 
-The following paragraph demonstrates some simple text with some citations. The
-command
-\begin{verbatim}
-\citep[see][]{bibtex:key}
-\end{verbatim}
-puts a citation in parathesis with the word `see' before the
-reference itself. The second optional `[~]' puts something after the reference,
-such as `chapter 3' as seen in the second citation in the paragraph. Also the
-command
-\begin{verbatim}
-\citet[]{bibtex:key}
-\end{verbatim}
-will produce an inline citation, i.e., not in parenthesis. Note that a blank
-line must be places between paragraphs in the raw latex, e.g.
-\begin{verbatim}
-Some text in first paragraph.
+\section{The form of centromere}
+\subsection{The genetics aspects}
+\subsection{The epigenetics aspects}
+\subsection{The kinetochore}
 
-Some text in second paragraph.
-\end{verbatim}
+Nomenclature confusion
 
-At the beginning of this \citep{Yu2011}, I'd like to add a reference by \citet{Afjeh:1986:JoFE}
-as it has a junior in it and it's good to \citep{Fachinetti2013} see how that formats \cite{Marston2004}. Pellentesque id
-mi sit amet mauris elementum \citep{Akiyoshi2004} sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis. Pellentesque iaculis orci a nisl scelerisque quis accumsan sem
-viverra. In nec risus dolor, vitae adipiscing erat
-\citep[see][]{Solomon:2007:CUP} pellentesque id mi sit amet mauris elementum
-sagittis eget at neque. Proin tincidunt sollicitudin sagittis. Pellentesque id
-mi sit amet mauris elementum sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis. Pellentesque iaculis orci a nisl scelerisque quis accumsan sem
-viverra. In nec risus dolor, vitae adipiscing erat
-\citep[see][]{Jaccard:2005:CUP} pellentesque iaculis orci a nisl scelerisque
-quis accumsan sem viverra. In nec risus dolor, vitae adipiscing erat.
-
-\section{Entering and Referencing a Figure}
-
-The next paragraph demostrates a reference to a figure and then a the figure
-itself. Note the standard layout for a figure is
-\begin{verbatim}
-\begin{figure}[htb] % htb is positional preference (here, top, bottom)
-  \centering
-  \includegraphics[width=some width]{filename without extension}
-  \caption{Caption Title}
-  \label{fig:label}
-\end{figure}.
-\end{verbatim}
-The reference to the figure is then provided by something like
-\begin{verbatim}
-figure~\ref{fig:label}.
-\end{verbatim}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id mi sit
-amet mauris elementum sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis. Pellentesque iaculis orci a nisl scelerisque quis accumsan sem
-viverra. In nec risus dolor, vitae adipiscing erat. Etiam ultrices leo eget arcu
-faucibus congue. Nullam eget iaculis mauris. Ut gravida rutrum nisl eget auctor.
-Donec sodales enim at massa porta nec mattis est dapibus. Nunc nec vehicula
-tellus. Quisque massa tellus, lobortis vel sodales sed, aliquet varius dui.
-Proin tincidunt sollicitudin sagittis. Figure~\ref{fig:bottomkutta} shows
-something unrelated to this paragraph, but neatly demonstrates how to stick a
-figure in and reference it.
-
-\begin{figure}[htb]
-  \centering
-  %% Because graphicspath was set in edengths.tex you only need to
-  %% supply the file name here, i.e. examplepicture (doesn't need the
-  %% extension) and not the full path. Just remember to add the path
-  %% to \graphicspath{{thispath/}{thatpath/}}
-  \includegraphics[width=0.3\textwidth]{bottomkutta}
-  \caption{Alternative orientations of the wake vortex sheet as it separates
-  from the trailing edge of the aerofoil.}
-  \label{fig:bottomkutta}
-\end{figure}
-
-\section{Quoting Something}
-
-The final paragraph in this chapter illustrates a quote. To do a quote
-simply use the enviroment
-\begin{verbatim}
-\begin{quote}
- The quote text.
-\end{quote}.
-\end{verbatim}
-Note that the edengths class forces quotes to single spacing as the thesis
-regulations demand this. Also, there is an inline citation in the next
-paragraph.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id mi sit
-amet mauris elementum sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis. Pellentesque \citet[2008]{CCC:2008} iaculis orci a nisl scelerisque
-quis accumsan sem viverra. In nec risus dolor, vitae adipiscing erat. Etiam
-ultrices leo eget arcu faucibus congue. Nullam eget iaculis mauris. Ut gravida
-rutrum nisl eget auctor. Donec sodales enim at massa porta nec mattis est
-dapibus. Nunc nec vehicula tellus. Quisque massa tellus, lobortis vel sodales
-sed, aliquet varius dui. Proin tincidunt sollicitudin sagittis. 
-\begin{quote}
- ``Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id mi
-sit amet mauris elementum sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis.''
-\end{quote}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id mi sit
-amet mauris elementum sagittis eget at neque. Quisque id sapien magna, et
-pharetra enim. Aenean congue turpis et libero faucibus vitae vulputate erat
-facilisis. Pellentesque iaculis orci a nisl scelerisque quis accumsan sem
-viverra. In nec risus dolor, vitae adipiscing erat. Etiam ultrices leo eget arcu
-faucibus congue. Nullam eget iaculis mauris. Ut gravida rutrum nisl eget auctor.
-Donec sodales enim at massa porta nec mattis est dapibus. Nunc nec vehicula
-tellus. Quisque massa tellus, lobortis vel sodales sed, aliquet varius dui.
-Proin tincidunt sollicitudin sagittis. 
+\section{The function of centromere}
+\subsection{Error-free kinetochore-microtubule attachment}
+\subsection{Robust peri-centromeric cohesion}
+\subsection{Advanced replication timing}
+\subsection{Initialising chromosome condensation}
+\section{Aims of this study}
+\subsection{Building a theoretical model for centromere spatial organisation and propagation}
+\subsection{Investigating the molecular mechanisms of tension-dependent re-localisation of shugoshin}
