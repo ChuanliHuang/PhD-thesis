@@ -76,3 +76,6 @@ Any weak non-local mechanism will do, such as long-range deposition
 TS+SC
 nn matters
 Important to test KT forming threshold and how does it compare to the level of noise
+
+Boundary
+In both horse and donkey, CENP-A domains of ~100 kb can occupy different sequences within the same satellite-free region, indicating CENP-A domains can “slide” along the chromosome within one generation to make distinct epialleles [143,145]. 
