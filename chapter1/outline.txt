@@ -29,13 +29,29 @@ kinetochore subassembly IV
 kt and peri-cen chromatin structure
 
 1.2.	Functions of centromere (Tanaka 2013)
-1.2.1.	Error-free attachment to KT; SAC and error correction (London 2014; Musacchio 2022; Lara-Gonzalez 2021))
+main purpose is to execute segregation without error
+promote capture (see other reviews)
+force resistance (see other papers)
+promote intrinsic bias towards bi-orientation
+SAC & error correction
+centromeric cohesion
+early replication (yeast and more?)
+chromosome condensation
+
+1.2.1.	SAC and error correction (London 2014; Musacchio 2022; Lara-Gonzalez 2021))
+helps attachment, avoid error (MT search and capture, corona; condensin)
+mediates attachment (force resistance)
+eliminate error if occurs (SAC)
 1.2.2.	Cohesion 
-1.2.3.	DNA replication
+centromere cohesion is important for proper segregation, both geometry and tension sensing
+mechanisms by which centromere ensure local cohesion differ among species
 1.2.4.	Chromosome condensation (Yves barral)
 1.3.	Aims of this study
 1.3.1.	Potential link between CENP-A spatial organization and tension sensing function (island->unit module KT->shape surrounding chromatin ->centromere spatial structure and mechanical property, use Hongtao Yu model as one possibility -> biochemical signalling->tension sensing)
 1.3.2.	Aim1: Building a theoretical model for centromere spatial organization and propagation
+
+The mechanisms by which cells control the number and position of CENP-A nucleosomes is unknown but likely important for the organization of centromeric chromatin in mitosis so that the kinetochore is properly oriented for microtubule capture.
+
 1.3.3.	Aim2: Investigating the molecular mechanisms of tension-dependent re-localization of shugoshin (include the reasons of using budding yeast)
 
 
