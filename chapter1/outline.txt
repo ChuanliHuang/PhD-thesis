@@ -48,6 +48,12 @@ mechanisms by which centromere ensure local cohesion differ among species
 1.2.4.	Chromosome condensation (Yves barral)
 1.3.	Aims of this study
 1.3.1.	Potential link between CENP-A spatial organization and tension sensing function (island->unit module KT->shape surrounding chromatin ->centromere spatial structure and mechanical property, use Hongtao Yu model as one possibility -> biochemical signalling->tension sensing)
+
+cenp-a interspersed with h3
+draw the analogy (Adele to hongtao yu)
+
+start from different aspects with different methodology and see if they can merge
+
 1.3.2.	Aim1: Building a theoretical model for centromere spatial organization and propagation
 
 The mechanisms by which cells control the number and position of CENP-A nucleosomes is unknown but likely important for the organization of centromeric chromatin in mitosis so that the kinetochore is properly oriented for microtubule capture.
