@@ -39,9 +39,13 @@ early replication (yeast and more?)
 chromosome condensation
 
 1.2.1.	SAC and error correction (London 2014; Musacchio 2022; Lara-Gonzalez 2021))
-helps attachment, avoid error (MT search and capture, corona; condensin)
-mediates attachment (force resistance)
-eliminate error if occurs (SAC)
+SAC
+    MMC production
+    APC inhibition
+tension sensing/ error correction
+    Direct stabilisation
+    Destabilisation by CPC
+    don't know how ec talks to SAC
 1.2.2.	Cohesion 
 centromere cohesion is important for proper segregation, both geometry and tension sensing
 mechanisms by which centromere ensure local cohesion differ among species
