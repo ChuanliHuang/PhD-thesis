@@ -47,9 +47,20 @@ tension sensing/ error correction
     Destabilisation by CPC
     don't know how ec talks to SAC
 1.2.2.	Cohesion 
-centromere cohesion is important for proper segregation, both geometry and tension sensing
+centromere cohesion is important for proper attachment, both geometry and tension sensing
+cohesin is enriched at the peri-cen
+centromere helps it
 mechanisms by which centromere ensure local cohesion differ among species
+yeast
+prophase pathway
 1.2.4.	Chromosome condensation (Yves barral)
+Chromosome condensation
+current model
+condensin structure mechanism unknown?
+generate positive supercoil (mechanism unknown, could be loop extrusion,  Chiral loop formation or Cross-linking, and also multimer)
+histone modifications (H3-pS3 by haspin kinase, H3-pS10 by Aurora B, H4-K16 de-acetylation by Hst2,  binding of H4 tail to H2A-H2B)
+centromere role and evidence (Wenda 2021)
+
 1.3.	Aims of this study
 1.3.1.	Potential link between CENP-A spatial organization and tension sensing function (island->unit module KT->shape surrounding chromatin ->centromere spatial structure and mechanical property, use Hongtao Yu model as one possibility -> biochemical signalling->tension sensing)
 
