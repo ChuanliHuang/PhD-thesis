@@ -67,11 +67,15 @@ centromere role and evidence (Wenda 2021)
 cenp-a interspersed with h3
 draw the analogy (Adele to hongtao yu)
 
+centromere: long history but a lot of enigma
 start from different aspects with different methodology and see if they can merge
+with the vague ambition that there might be a potential link
 
 1.3.2.	Aim1: Building a theoretical model for centromere spatial organization and propagation
 
 The mechanisms by which cells control the number and position of CENP-A nucleosomes is unknown but likely important for the organization of centromeric chromatin in mitosis so that the kinetochore is properly oriented for microtubule capture.
+
+Various models proposed but difficult to test directly, mathematical modelling provide an alternative
 
 1.3.3.	Aim2: Investigating the molecular mechanisms of tension-dependent re-localization of shugoshin (include the reasons of using budding yeast)
 
