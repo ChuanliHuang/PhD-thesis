@@ -1,10 +1,15 @@
+concluding the work
+This work studied the spatial organisation and dynamics of two important centromeric proteins
 
-Final discussion
-  no obvious link between CENP-A spatial organization and tension sensing
-  Big future directions of how centromeres and pericentromeres can be understood better by the types of approaches you had done in your PhD.
 
+no obvious link between CENP-A spatial organization and tension sensing
+  -seems to be intra-kt tension that is sensed
+  -final test 
+
+
+Big future directions of how centromeres and pericentromeres can be understood better by the types of approaches you had done in your PhD.
   -theory and experiment (pros and cons)
-  -imbalance of theory and experiment in  biology and its damaging results
+  -imbalance of theory and experiment in  biology and its damaging results (More theory is needed)
     -growth of literature full of data with weak interpretation
     -communication gap between experimentalists and theoreticians
     -work ethic: overly emphasise data collection over developing theory, rather than doing the right experiment, keep doing experiments blindly 
