@@ -3,9 +3,17 @@ This work studied the spatial organisation and dynamics of two important centrom
 
 
 no obvious link between CENP-A spatial organization and tension sensing
-  -seems to be intra-kt tension that is sensed
-  -final test 
 
+% Localise shugoshin properly (i.e. between CENP-A islands)
+% centromeric cohesin deposited by the kinetochore is important for the proper localisation of shugoshin, either through direct binding or chromatin structural organisation
+% cohesin-depleted cells have coarsely normal Sgo1 localisation and are still capable of sensing tension
+% possible test: shugoshin on extended chromatin
+
+% provide mechanical property
+% inter- vs intra- has long been debated
+% Sgo1 is likely a signal transducer rather than tension sensor
+
+% final test: manipulation of CENP-A spatial pattern -- in budding yeast, genetic engineer centromere, consecutive CDE sequences vs interspersed CDE sequences, see if tension sensing is affected. 
 
 Big future directions of how centromeres and pericentromeres can be understood better by the types of approaches you had done in your PhD.
   -theory and experiment (pros and cons)
