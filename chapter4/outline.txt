@@ -22,3 +22,31 @@ Big future directions of how centromeres and pericentromeres can be understood b
     -communication gap between experimentalists and theoreticians
     -work ethic: overly emphasise data collection over developing theory, rather than doing the right experiment, keep doing experiments blindly 
   -Incompatibility of theoretical and experimental work at the same time
+
+% Big future directions of how centromeres and pericentromeres can be understood better by the types of approaches you had done in your PhD.
+%   -theory and experiment (pros and cons)
+%   -imbalance of theory and experiment in  biology and its damaging results (More theory is needed)
+%     -growth of literature full of data with weak interpretation
+%     -communication gap between experimentalists and theoreticians
+%     -work ethic: overly emphasise data collection over developing theory, rather than doing the right experiment, keep doing experiments blindly 
+%   -Incompatibility of theoretical and experimental work at the same time
+
+% Benefits of Mathematical Modeling
+% Humans make models to make sense of the world—to organize information and provide predictability. In the biological sciences, models are commonly expressed using words or diagrams, which often suffer from a lack of preci- sion. Mathematics is the most precise language we have for describing the processes we think are happening and for comparing this with what we can observe. Even attempting to make a mathematical model helps to clarify ideas, define assumptions and identify missing information. A working mathemati- cal description is a potent tool, simplifying large amounts of information, providing precise predictions to aid further experimental tests, and allowing rapid exploration of the range of properties of the system to help understand design–function relationships. Importantly, a mathematical model also aids generalization of insights gained from one system to other systems.
+% However, the rigour of a mathematical model is no guarantee that it is correct. Models will always be based on incomplete and often incorrect knowledge. They should be judged by their usefulness—their ability to explain current knowledge and to guide the attainment of new knowledge.
+% Our Modeling Approach—Simplified Stochastic Simulations
+% There are many kinds of mathematical models (many examples are provided in this book). Our approach has been to use computer-based stochastic sim- ulations, which are a relatively “mathematics-light” way to add or remove possible processes and which naturally provide noise. The battle between a parameter-averse physicist (“We don’t need to put that in”) and a parameter- addicted biologist (“But we know it’s not that simple”) results in a compro- mise where complex processes are represented in simplified or idealized ways. Our hope is that this simplification exposes rather than obscures the funda- mentals of the system. Details are important, of course, but fundamentals are more important.
+
+% logic does not guarantee the truth unless the assumption is correct 
+
+% PubMed centromere + mathetmatical 172 results; centromere 23,205
+
+% different skills
+% highly specialised
+% Being able to conduct research work requires much more time investment than being able to understand the methodology 
+
+% different mindset (perhaps more fundamental)
+
+% be specialised in one and then collaborate
+
+% It is perhaps why experimental and theoretical work are usually separated in physics and chemistry. 

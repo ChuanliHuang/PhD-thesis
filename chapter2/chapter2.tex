@@ -90,6 +90,10 @@ $rr$                  & The number of replenishment rounds      \\ \hline
 \end{tabular}
 \end{table}
 
+\subsubsection{Code availability}
+
+The code generated for this project is available on \href{https://github.com/ChuanliHuang/project_cenp_a}{GitHub}. 
+
 \section{Results}
 \subsection{The basic model exhibits two types of behaviour}
 
@@ -345,7 +349,7 @@ With the aim of recapitulating the three key characteristics of the establishmen
 2. Global   cooperative deposition                                    &  \ding{51}                       &        \ding{55}              &           \ding{55}              \\
 3. Arbitrary number   control                                          &          \ding{55}               &           \ding{51}           &      \ding{55}                   \\
 4. Spontaneous   conversion                                  &          \ding{55}               &          \ding{51}            &    \ding{51}                     \\
-\begin{tabular}[c]{@{}l@{}}5. Threshold-base stabilisation \\ \;\;\;\;+ spontaneous conversion\end{tabular} &           \ding{51}              &           \ding{51}           &        \ding{51}                 \\ \hline
+\begin{tabular}[c]{@{}l@{}}5. Threshold-based stabilisation \\ \;\;\;\;+ spontaneous conversion\end{tabular} &           \ding{51}              &           \ding{51}           &        \ding{51}                 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -367,4 +371,4 @@ Random deposition of CENP-A into chromatin has been supported by different exper
 
 \subsection{The threshold-based stabilisation and spontaneous conversion model}
 
-Various methods are adopted by the cells to sculpt CENP-A distribution via evicting ectopic CENP-A nucleosomes \citep{Stirpe2022}. CCAN has been indicated to spare the centromeric CENP-A from sculpting \citep{Nechemia-Arbely2019}. Also, it has been proposed that a critical density of CENP-A nucleosomes is required for kinetochore formation \citep{Bodor2014}. Together, they suggested a threshold-based stabilisation mechanism, which could potentially generate bi-stability. To test this possibility, I implemented threshold-based stabilisation in the spontaneous conversion model (Figure~\ref{fig:doubleCobweb}), given the desired behaviours it provided. Indeed, this model did show bi-stability and could recapitulate all the three characteristics we aimed for. For the model to be true, it is important to first experimentally verify the assumption that the formation of kinetochore does require a critical number of CENP-A nucleosomes within a certain range of chromatin. Besides, the model requires this value to be higher than the level of random CENP-A incorporation, which is estimated to be about \num{8e-4} \citep{Bodor2014}. It would be informational to compare the two numbers. It was also found in the simulation that the robustness of steady states depends on the total number of nucleosomes modelled. This predicted that the chromosome with a shorter centromere would have a higher chance of neo-centromere formation. It would be interesting to test whether it is the case in real biological systems. 
+Various methods are adopted by the cells to sculpt CENP-A distribution via evicting ectopic CENP-A nucleosomes \citep{Stirpe2022}. CCAN has been indicated to spare the centromeric CENP-A from sculpting \citep{Nechemia-Arbely2019}. Also, it has been proposed that a critical density of CENP-A nucleosomes is required for kinetochore formation \citep{Bodor2014}. Together, they suggested a threshold-based stabilisation mechanism, which could potentially generate bi-stability. To test this possibility, I implemented threshold-based stabilisation in the spontaneous conversion model (Figure~\ref{fig:doubleCobweb}), given the desired behaviours it provided. Indeed, this model did show bi-stability and could recapitulate all the three characteristics we aimed for. For the model to be true, it is important to first experimentally verify the assumption that the formation of kinetochore does require a critical number of CENP-A nucleosomes within a certain range of chromatin. Besides, the model requires this value to be higher than the level of random CENP-A incorporation, which is estimated to be about \num{8e-4} \citep{Bodor2014}. It would be informational to compare the two numbers. Furthermore, the molecular mechanisms for threshold-based stabilisation are needed to improve the model, which is currently arbitrary on this. Finally, it was also found in the simulation that the robustness of steady states depends on the total number of nucleosomes modelled. This predicted that the chromosome with a shorter centromere would have a higher chance of neo-centromere formation. It would be interesting to test whether it is the case in real biological systems. 
