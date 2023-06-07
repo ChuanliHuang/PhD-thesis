@@ -110,6 +110,7 @@ To quantitatively visualise the transition from the 'dead' to 'stabilised' behav
   \caption[Typical behaviours of the basic model.]{Typical behaviours of the basic model. The simulations were conducted at $NN$=1000, $\rho_{0}$=0.02, $\sigma$=3, $rr$=3 if not otherwise stated. (A) The density evolution map and spatial pattern kymographs of a representative ‘dead’ behaviour ($\alpha$=0.45). (B) The density evolution map and spatial pattern kymographs of a representative ‘stabilised’ behaviour ($\alpha$=0.7). (C) Phase diagram of the model behaviour as a function of $\alpha$ and $\sigma$. Black represents the ‘dead’ behaviour and white represents the ‘stabilised’ behaviour for a specific parameter set. (D) Asymptotic density as a function of $\alpha$. 10 simulations were run for 10,000 (blue) or 100,000 time steps (orange) and the average density of the last 2,000 time steps was plotted as the asymptotic density. }
   \label{fig:modelBehaviour}
 \end{figure}
+\newpage
 
 We further tested if other factors might change the behaviours of the basic model. Generally, different simulations with the same parameter set generated qualitatively similar results (Figure~\ref{fig:parameterTest}A), suggesting that stochasticity is not important in determining the model behaviour. The number of nucleosomes also had little effect on the asymptotic density, though the smaller number showed a higher noise (Figure~\ref{fig:parameterTest}B). The initial value matters if the system has more than one steady state. To test it, I simulated the model from various initial densities. However, they all approached the same asymptotic value eventually (Figure~\ref{fig:parameterTest}C), indicating the model is likely to possess only one steady state. Note that the curves of high initial density appeared to be non-smooth in the first time step. This is because, independent of the initial value, they were all reduced to 0.5 after the first time step due to saturation. 
 
@@ -121,6 +122,7 @@ We further tested if other factors might change the behaviours of the basic mode
 \end{figure}
 
 In summary, the basic model (Figure~\ref{fig:basicmodelschematics}A) has two possible outcomes, with either all CENP-A nucleosomes being eventually lost or the density being maintained at a value much higher than that of the real biological systems. Moreover, in the second case, CENP-A nucleosome distribution is obviously different from the ‘islands’ pattern seen in extended chromatin experiments. Hence, we concluded that local deposition only is not sufficient to recapitulate the CENP-A dynamics \textit{in vivo}.
+\newpage
 
 \subsection{Mean-field approximation is able to qualitatively explain the simulation results}
 
@@ -203,6 +205,7 @@ With the mathematical formulation of the basic model, we were able to analyse ho
   \caption[Mean-field approximation of the basic model]{Mean-field approximation of the basic model. $rr$=3 was used if not otherwise stated. (A) Cobweb plot of the basic model. The mean-field approximations of the basic model with different $\alpha$s were shown as coloured curves. Their intersections with $y = x$ represent fixed points, which were indicated as black dots. (B) Bifurcation diagram of the basic model. The fixed densities were plotted as a function of $\alpha$. The stable branch was shown as the solid line, whereas the unstable one was shown as the dotted line. (C) Comparison between the prediction of mean-field approximation and the simulation. The asymptotic densities were plotted as a function of $\alpha$. The stable branch of mean-field approximation was shown as the blue curve. The 10,000-step simulations were shown as orange dots.}
   \label{fig:meanFieldApproximation}
 \end{figure}
+\newpage
 
 \subsection{Global cooperative deposition generates bi-stability but cannot maintain the higher steady state at a low density}
 
