@@ -54,7 +54,7 @@ To test this idea, I first wanted to measure FRET between Bub1 and nucleosomes. 
 
 As an alternative approach, I decided to directly measure the distance between Bub1 and peri-centromeric borders, which is expected to increase by tension. To this end, I labelled one peri-centromeric border of chromosome I using the Tet-On system, with a \textit{tetO} array on the locus of interest and \textit{TetR-tdTomato} under a constitutive promoter. Cells bearing \textit{BUB1-mNG pMET-CDC20} and the labelled peri-centromeric border of chromosome I were synchronised in G1 and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release (Figure~\ref{fig:periCEN}A). Bub1-mNG appears as one focus as cells enter the S phase, indicated by the appearance of small buds. This is due to centromere clustering in budding yeast \citep{Taddei2012StructureNucleus}. All kinetochores are seen together as one dot under the imaging conditions I used. Bub1-mNG then splits into two foci due to sister kinetochores separating by tension. On the other hand, TetR-tdTomato stays as one focus from the beginning of imaging. Occasionally, it splits into two foci after the separation of Bub1-mNG foci (Figure~\ref{fig:periCEN}B). The distance between Bub1-mNG and TetR-tdTomato focus $L$ was measured. After the separation of Bub1-mNG, there could be two $L$s in one cell. I arbitrarily named the shorter one as $L_{1}$ and the longer one as $L_{2}$. The inter-kinetochore distance measured from the distance between Bub1-mNG dots was used as the indicator of tension. Before Bub1-mNG separation, $L$ ranges from 0.01 to 1.19 \si{\micro\metre} with a median of 0.32 \si{\micro\metre}. After Bub1-mNG separation, $L_{1}$ and $L_{2}$ together gave a data set showing a slight increase, ranging from 0.01 to 1.24 \si{\micro\metre} with a median of 0.40 \si{\micro\metre}. However, if analysed individually, $L_{1}$ is not correlated with the inter-kinetochore distance ($R^2 = 0.03$) although $L_{2}$ shows a moderate correlation ($R^2 = 0.59$) (Figure~\ref{fig:periCEN}C).This result suggests that the distance between one of the Bub1-mNG foci and the peri-centromere border is independent of tension, arguing against the hypothesis of Bub1 being pulled further away from its substrates at the peri-centromere. Whereas the other Bub1-mNG focus does become further, favouring the hypothesis. Therefore, whether tension increases the distance between the kinetochore-localised Bub1 and the peri-centromere borders is inconclusive. 
 %  
-% \hfill \break
+% 
 
 \begin{figure}[htbp]
   \centering
@@ -67,10 +67,10 @@ As an alternative approach, I decided to directly measure the distance between B
     \centering
     \contcaption {The shorter distance between Bub1 and peri-centromere is independent of the inter-kinetochore distance. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montage of representative time-lapse imaging. (C) Scatter plot showing the relation of Bub1-to-peri-centromere distance and inter-kinetochore distance. N=30 cells were followed over time and quantified for $L$ (the distance before Bub1-mNG separation), $L_{1}$ (the shorter distance after Bub1-mNG separation) and $L_{2}$ (the longer distance after Bub1-mNG separation), which are presented in green, orange and blue, respectively. The line with the same colour represents the model of simple linear regression. }
 \end{figure}
-\newpage
 
-\hfill \break
-\newpage
+
+
+
 
 \nomenclature{mNG}{mNeonGreen}
 
@@ -84,7 +84,7 @@ During data analysis of the previous experiment, I noticed a reduction in fluore
   \caption[Kinetochore-localised Bub1 is reduced upon bi-orientation]{Kinetochore-localised Bub1 is reduced upon bi-orientation. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montage of representative time-lapse imaging. (C) N=30 cells were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Left panel: mean background-subtracted fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Right panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. }
   \label{fig:bub1mtw1}
 \end{figure} 
-\newpage
+
 
 I then sought to test whether the reduction in Bub1 kinetochore localisation is due to protein degradation or re-localisation. Human Bub1 is degraded by APC/C in anaphase \citep{Qi2007KEN-box-dependentComplex/cyclosome} but it is not known whether it is the case in budding yeast. Hence, I performed a synchronised mitotic time course experiment followed by western blotting to check Bub1 protein expression. Cells bearing \textit{BUB1-6HA} were synchronised in G1 and released into rich media. $\alpha$ factor was added 60 \si{\minute} after the release to arrest cells in the next G1 (Figure~\ref{fig:bub1timecourse}A). Samples were collected every 15 minutes except the one at the 15th minute. Tubulin IF was used to visualise the morphology of the spindle for judging the progression of the cell cycle. The short thick one was classified as the metaphase spindle while the elongated thin one was classified as the anaphase spindle \citep{Su2021SumoylationAnaphase}. At 75 \si{\minute} after G1 release, over 80\% of cells were in metaphase while most cells were in anaphase at 90 and 105 \si{\minute} (Figure~\ref{fig:bub1timecourse}B). Western blotting with anti-HA antibody showed Bub1 protein level reached its apex at 90 \si{\minute} and started to decrease since 105 \si{\minute} (Figure~\ref{fig:bub1timecourse}C), suggesting Bub1 is degraded in late anaphase in budding yeast. Therefore, protein degradation could not explain reduced Bub1 kinetochore localisation in metaphase in the previous experiment. Interestingly, Bub1 experienced changes in electrophoretic mobility at the early stage of the cell cycle, indicating its phosphorylation status might be actively regulated. As this is beyond the scope of my project, this was not investigated further. 
 
@@ -94,7 +94,7 @@ I then sought to test whether the reduction in Bub1 kinetochore localisation is 
   \caption[Bub1 is not degraded until anaphase]{Bub1 is not degraded until anaphase. (A) Schematics of experimental procedures. Cells were synchronised in G1 using $\alpha$ factor and released into rich media. $\alpha$ factor was added 60 \si{\minute} after the release to arrest cells in the next G1. Samples were collected every 15 minutes except the one at the 15th minute. A representative experiment of two repeats is shown. (B) The proportion of cells with metaphase or anaphase spindle over time by tubulin IF. (C) Western blotting with anti-HA antibody to detect Bub1 protein. Pgk1 was used as the loading control. }
   \label{fig:bub1timecourse}
 \end{figure} 
-\newpage
+
 
 The experiments above suggest that Bub1 is re-localised from the kinetochore upon bi-orientation. Given that both tension and kinetochore-microtubule attachment are established in this case, it is unknown whether tension is required for Bub1 de-localisation besides attachment. To abolish tension without disrupting attachment, I decided to disable sister chromatid cohesion by depleting the kleisin subunit Scc1 of the cohesin complex. Cells from Figure~\ref{fig:bub1mtw1} with or without additional \textit{pMET-SCC1} construct were synchronised in G1. Methionine was added 45 \si{\minute} before releasing to pre-clear Scc1. Live-cell imaging was performed to quantify kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance (Figure~\ref{fig:bub1metscc1}A). As expected, the \textit{pMET-SCC1} strain exhibited increased inter-kinetochore distance ($\sim$2.5 \si{\micro\metre} towards the end of the experiment) compared to the wild type ($\sim$1.5 \si{\micro\metre} towards the end of the experiment), indicating a reduction in sister chromatid cohesion. Unlike the wild type, the signal of kinetochore Bub1-mNG is maintained at a similar value after 60 \si{\minute} from G1 release in the \textit{pMET-SCC1} strain (Figure~\ref{fig:bub1metscc1}B and C), suggesting Bub1 is not removed from the kinetochore in the absence of tension while no additional disruption was applied on attachment. To rule out potential artefacts from \textit{pMET-SCC1} causing an increase in Bub1 expression, I used western blotting to check the Bub1 protein expression level in the wild type and the \textit{pMET-SCC1} strain arrested in metaphase by methionine depletion. No obvious difference was observed (Figure~\ref{fig:bub1metscc1}D). Hence, the kinetochore localisation of Bub1 is reduced by tension. 
 
@@ -110,9 +110,9 @@ The experiments above suggest that Bub1 is re-localised from the kinetochore upo
     \contcaption{Tension is required for Bub1 re-localisation from the kinetochore. (A) Schematics of experimental procedures. \textit{pMET-CDC20} cells with or without additional \textit{pMET-SCC1} construct were synchronised in G1 using $\alpha$ factor. Methionine was added 45 \si{\minute} before releasing to pre-clear Scc1. They are then released into methionine-containing media. Time-lapse live-cell imaging was performed from the time of the G1 release. A representative experiment of two repeats is shown. (B) Montage of representative time-lapse imaging. Cartoons on the left indicate the status of sister chromatids. (C) N=30 cells for each strain were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Left panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Right panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. The wild type is shown in blue and \textit{pMET-SCC1} is shown in orange. (D) Western blotting with anti-HA antibody to detect Bub1 protein. Kar2 was used as the loading control. }
 \end{figure}
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \subsection{Bub1 removal is sufficient for rapid de-localisation of Sgo1}
 
@@ -134,9 +134,9 @@ The experiments above suggest that Bub1 is re-localised from the kinetochore upo
   \contcaption{Sgo1 is de-localised promptly upon Bub1 depletion in the absence of tension. (A) Schematics of experimental procedures. Cells were synchronised in G1 by $\alpha$ factor and then released into nocodazole-containing media for a metaphase arrest without tension. 2 \si{\hour} into the release, DMSO (-NAA) or auxin NAA (+NAA) was added as control or to induce Bub1-3V5-AID depletion. Time-lapse live-cell imaging was performed immediately afterwards. (B) Schematics of experimental concept. (C) Montage of representative time-lapse imaging. (D) Survival analysis of the duration of focused Sgo1-EGFP signal. N=100 cells for each strain, sampled from three independent repeats, were followed over time and quantified for the duration of the Sgo1-EGFP signal being focused. Solid lines are Kaplan-Meier survival estimates. The shaded area in the same colour is the 95\% confidence limit of the estimate. (E) Western blotting with anti-V5 antibody to detect Bub1 protein. Kar2 was used as the loading control.}
 \end{figure} 
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \subsection{Bub1 re-localisation is earlier than Sgo1 re-localisation}
 
@@ -156,9 +156,9 @@ The data so far have suggested a model where Bub1 and Sgo1 re-localise sequentia
   \contcaption{Bub1 is re-localised earlier than Sgo1. (A) Schematics of the experimental procedure. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montage of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Left panel: mean fluorescence intensity of Bub1-mNG at the kinetochore and percentage of cells with Sgo1 foci as a function of time. Right panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. The \textit{BUB1-mNG} strain is shown in blue and the \textit{SGO1-EGFP} strain is shown in orange.}
 \end{figure} 
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \subsection{The continued presence of Bub1 is required to maintain H2A-pS121}
 
@@ -171,7 +171,7 @@ Our simple model argues that the phosphorylation status of the key substrate(s) 
   \label{fig:abtest}
 \end{figure} 
 
-\newpage
+
 
 To test whether H2A is indeed de-phosphorylated at S121 upon Bub1 depletion, I conducted western blotting on samples from the experiment of Figure~\ref{fig:bub1aid} (Figure~\ref{fig:ph2abub1aid}A). The specific band is maintained within the scope of the experiment in -NAA samples. In contrast, it is reduced in +NAA samples in spite of the increase in the intensity of the non-specific band above (Figure~\ref{fig:ph2abub1aid}C), suggesting that H2A-pS121 is being de-phosphorylated due to Bub1 depletion. Hence, the continued presence of Bub1 is required to maintain H2A-pS121, favouring the simple model and the idea that H2A-pS121 is the key substrate. Due to the non-ideal specificity of the antibody over unphosphorylated H2A-S121, it is difficult to interpret the kinetics of the de-phosphorylation. 
 
@@ -182,7 +182,7 @@ To test whether H2A is indeed de-phosphorylated at S121 upon Bub1 depletion, I c
   \label{fig:ph2abub1aid}
 \end{figure} 
 
-\newpage
+
 
 \subsection{Total cellular H2A-pS121 level is independent of tension}
 \label{subsec:totalph2aindten}
@@ -205,7 +205,7 @@ To validate this unexpected result, I turned to a different approach where H2A-p
   \label{fig:ph2atimecourse}
 \end{figure}
 
-\newpage
+
 
 \subsection{Tension re-distributes H2A-pS121 from the centromere to the chromosome arm}
 
@@ -220,38 +220,36 @@ First, I carried out a test ChIP-qPCR to determine whether the antibody can be u
   \label{fig:ph2atestchipqpcr}
 \end{figure}
 
-\newpage
+
 
 Next, I conducted a formal H2A-pS121 ChIP-seq experiment. To be able to compare signals between samples, a wet calibration method was used, where the genome from another species, fission yeast in this case, was mixed with the budding yeast genome as the internal control \citep{Hu2015BiologicalChIP-seq}. Wild type cells were arrested in metaphase with or without tension (Figure~\ref{fig:ph2achipseqchecking}A). Tubulin IF indicated that they have good synchronisation. 98\% cells from the tension sample displayed metaphase spindle while none of the cells from the no tension sample showed a spindle (Figure~\ref{fig:ph2achipseqchecking}B). Western blotting was used to examine the level of H2A-pS121 in the two samples. Consistent with the previous results (Subsection~\ref{subsec:totalph2aindten}), both samples showed comparable band intensities (Figure~\ref{fig:ph2achipseqchecking}C). ChIP-processed samples were further checked by qPCR for the enrichment of budding and fission yeast's loci to ensure quality. Similar to the test qPCR, the no tension sample showed high signals at the centromere and peri-centromere but not on the chromosome arm. Consistent with the idea that tension might affect the localisation of H2A-pS121, the tension sample had low signals at all three loci (Figure~\ref{fig:ph2achipseqchecking}D). The amount of fission yeast cells used for calibration is the same between samples. Therefore, it is expected that both of them should give equal enrichment at a given locus. Indeed, the signals were comparable between samples at the centromere core and outer repeat of fission yeast (Figure~\ref{fig:ph2achipseqchecking}E). 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/checking.pdf}
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A ChIP-seq checking.pdf}
   \caption[Quality control of calibrated H2A-pS121 ChIP-seq]{Quality control of calibrated H2A-pS121 ChIP-seq. (A) Schematics of experimental procedures. Cells were synchronised in G1 by $\alpha$ factor and then released into methionine- or nocodazole-containing media for a metaphase arrest with or without tension. Methionine or nocodazole was re-added at 1 \si{\hour} after the release to ensure arrest. Samples were collected at 2 \si{\hour}. (B) Spindle morphology count by tubulin IF. (C) Western blotting with anti-H2A-pS121 antibody to detect the phosphorylation status of H2A. Pgk1 was used as the loading control. (D) H2A-pS121 ChIP-qPCR at the chromosome IV centromere, chromosome arm and peri-centromere of \textit{S.cerevisiae}. (E) H2A-pS121 ChIP-qPCR at chromosome I centromere core and outer repeat of \textit{S.pombe}. }
   \label{fig:ph2achipseqchecking}
 \end{figure}
 
-\newpage
 
-With quality control conducted, I proceeded with the ChIP samples and set up sequencing. The enrichment profile of a representative chromosome, chromosome IV, is shown in Figure~\ref{fig:ph2achipseq2nd}A. H2A-pS121 has a bell-shaped distribution at the centromere in both the tension and no tension sample. However, quantitatively, consistent with the result from qPCR, the signals were massively reduced in the tension sample. In contrast, on the chromosome arm, the signals were higher for the tension sample, supporting the hypothesis. This is confirmed by the pile-up of all 16 chromosomes. At centromeres, the signals of the tension sample were about a quarter of that of the no tension sample, whereas, on the arms, the former showed a roughly one-fold increase from the latter (Figure~\ref{fig:ph2achipseq2nd}B). To provide a more quantitative view, I categorised sequencing reads as either at centromeres or on the chromosome arms. Although the total number was similar, only 18\% of reads were assigned to the centromeres in the tension sample while the number is 63\% in the no tension sample (Figure~\ref{fig:ph2achipseq2nd}C). Hence, I concluded that the establishment of tension caused a re-distribution of H2A-pS121 from the centromere to the chromosome arm. 
 
-% 
+With quality control conducted, I proceeded with the ChIP samples and set up sequencing. The enrichment profile of a representative chromosome, chromosome IV, is shown in Figure~\ref{fig:ph2achipse}A. H2A-pS121 has a bell-shaped distribution at the centromere in both the tension and no tension sample. However, quantitatively, consistent with the result from qPCR, the signals were massively reduced in the tension sample. In contrast, on the chromosome arm, the signals were higher for the tension sample, supporting the hypothesis. This is confirmed by the pile-up of all 16 chromosomes. At centromeres, the signals of the tension sample were about a quarter of that of the no tension sample, whereas, on the arms, the former showed a roughly one-fold increase from the latter (Figure~\ref{fig:ph2achipse}B). To provide a more quantitative view, I categorised sequencing reads as either at centromeres or on the chromosome arms. Although the total number was similar, only 18\% of reads were assigned to the centromeres in the tension sample while the number is 63\% in the no tension sample (Figure~\ref{fig:ph2achipse}C). Hence, I concluded that the establishment of tension caused a re-distribution of H2A-pS121 from the centromere to the chromosome arm. 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A ChIP-seq_1st.pdf}
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A ChIP-seq.pdf}
+  \caption[H2A-pS121 is re-distributed from centromere to chromosome arm upon the establishment of tension]{H2A-pS121 is re-distributed from centromere to chromosome arm upon the establishment of tension (Continued on the following page). }
+  \label{fig:ph2achipse}
 \end{figure}
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/pH2A ChIP-seq_2nd.pdf}
-  \caption[H2A-pS121 is re-distributed from centromere to chromosome arm upon the establishment of tension]{H2A-pS121 is re-distributed from centromere to chromosome arm upon the establishment of tension. (A) Calibrated H2A-pS121 ChIP-seq profiles of cells arrested in metaphase with or without tension and their difference (tension - no tension) at the 50kb region around the centromere of chromosome IV (upper left), a 50kb region on the left arm of chromosome IV (upper right) and the entire chromosome IV (bottom left). The overlapped profiles are shown in the bottom right. (B) Pile-up of centromeres and chromosome arms. Left: the 50kb regions around the centromeres of all 16 chromosomes. Right: the 50kb regions around chromosome arms (80kb left to the centromere) of all 16 chromosomes. (C) The number of sequencing reads assigned to centromeres (the 50kb-region flanking the core centromere) or chromosome arms in each sample. }
-  \label{fig:ph2achipseq2nd}
+    \centering
+    \contcaption{H2A-pS121 is re-distributed from centromere to chromosome arm upon the establishment of tension. (A) Calibrated H2A-pS121 ChIP-seq profiles of cells arrested in metaphase with or without tension and their difference (tension - no tension) at the 50kb region around the centromere of chromosome IV (upper left), a 50kb region on the left arm of chromosome IV (upper right) and the entire chromosome IV (bottom left). The overlapped profiles are shown in the bottom right. (B) Pile-up of centromeres and chromosome arms. Left: the 50kb regions around the centromeres of all 16 chromosomes. Right: the 50kb regions around chromosome arms (80kb left to the centromere) of all 16 chromosomes. (C) The number of sequencing reads assigned to centromeres (the 50kb-region flanking the core centromere) or chromosome arms in each sample. }
 \end{figure}
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \subsection{Sgo1 cannot be concentrated at the peri-centromere in H2A phospho-mimic mutant}
 
@@ -264,29 +262,43 @@ The re-distribution of H2A-pS121 upon tension points to a possibility that it tr
   \label{fig:h2as121dseq}
 \end{figure}
 
-\newpage
+
 
 To test whether Sgo1 localisation is altered in H2A phospho-mimic mutants, I re-constructed the strain and repeated the Sgo1-6HA ChIP-qPCR experiment by \cite{Nerusheva2014}. The standard cell harvesting procedure comparing tension with no tension conditions was performed on no tag, wild type, H2A-S121A, as a negative control, and H2A-S121D (Figure~\ref{fig:sgo1chiph2amutants}A). Tubulin IF indicated synchronised metaphase arrest in the tension samples and an absence of spindle in the no tension samples (Figure~\ref{fig:sgo1chiph2amutants}B). Western blotting showed comparable Sgo1 expression in wild type, H2A-S121A and H2A-S121D but not in no tag (Figure~\ref{fig:sgo1chiph2amutants}C). Samples then underwent ChIP processing and qPCR was used to determine the enrichment at the chromosome arm, peri-centromere and centromere of chromosome IV (Figure~\ref{fig:sgo1chiph2amutants}D). As expected, Sgo1 exhibited increased association with chromatin at the centromeric/ peri-centromeric region but not on the arm in wild type without tension. However, the increase was abolished in H2A-S121A or H2A-S121D, suggesting that Sgo1 cannot be enriched at peri-centromere even in the absence of tension (Figure~\ref{fig:sgo1chiph2amutants}E). This result could be interpreted as that the phospho-mimic mutant resembles the scenario with established tension in Sgo1 localisation, thus supporting the hypothesis that the re-distribution of H2A-pS121 triggers the re-localisation of Sgo1. Nevertheless, I could not rule out the possibility that the D mutation in H2A does not recapitulate the phosphorylated form. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 in H2A mutants ChIP.pdf}
-  \caption[Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant]{Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. Cells were synchronised in G1 by $\alpha$ factor and then released into methionine- or nocodazole-containing media for a metaphase arrest with or without tension. Methionine or nocodazole was re-added at 1 \si{\hour} after the release to ensure arrest. Samples were collected at 2 \si{\hour}. Three repeats were performed for the experiment. (B) Spindle morphology count by tubulin IF. (C) Western blotting with anti-HA antibody to detect the expression level of Sgo1-6HA. Pgk1 was used as the loading control. (D) Schematics showing the locations of loci used for the ChIP-qPCR experiment. (E) Sgo1-6HA ChIP-qPCR on the chromosome arm, the peri-centromere and the core centromere of chromosome IV. The mean of three repeats is shown, with the error bar representing the standard error. The two-tailed independent t-test is used to calculate statistical significance. (*) P<0.05; (ns) not significant.}
+  \caption[Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant]{Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant (Continued on the following page).}
   \label{fig:sgo1chiph2amutants}
 \end{figure}
 
-\newpage
+\begin{figure}[htbp]
+    \centering
+    \contcaption{Sgo1 association with chromatin remains low regardless of tension in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. Cells were synchronised in G1 by $\alpha$ factor and then released into methionine- or nocodazole-containing media for a metaphase arrest with or without tension. Methionine or nocodazole was re-added at 1 \si{\hour} after the release to ensure arrest. Samples were collected at 2 \si{\hour}. Three repeats were performed for the experiment. (B) Spindle morphology count by tubulin IF. (C) Western blotting with anti-HA antibody to detect the expression level of Sgo1-6HA. Pgk1 was used as the loading control. (D) Schematics showing the locations of loci used for the ChIP-qPCR experiment. (E) Sgo1-6HA ChIP-qPCR on the chromosome arm, the peri-centromere and the core centromere of chromosome IV. The mean of three repeats is shown, with the error bar representing the standard error. The two-tailed independent t-test is used to calculate statistical significance. (*) P<0.05; (ns) not significant.}
+\end{figure}
+
+
+
+
 
 Due to the apparent contradiction with the previous result, I sought to validate the result with microscopy. Therefore, I constructed H2A mutants bearing genetic constructs for imaging, \textit{SGO1-EGFP MTW1-tdTomato}. Cells were imaged following the standard approach of synchronised G1 to metaphase live-cell imaging (Figure~\ref{fig:sgo1imagingh2amutants}A). Unlike wild type, where Sgo1-EGFP appeared as foci at least once in the cell cycle, both of the H2A phospho-mutants could only show Sgo1-EGFP as a 'cloud' signal (Figure~\ref{fig:sgo1imagingh2amutants}B and C). Again, this 'cloud' signal resembles what it looks like in wild type after the establishment of tension, judged by the separation of kinetochore foci. Western blotting showed similar Sgo1 expression levels in the three strains used, ruling out the possibility that the loss of Sgo1-EGFP foci is because of reduced protein abundance (Figure~\ref{fig:sgo1imagingh2amutants}D). Therefore, I concluded that Sgo1 cannot be concentrated at the peri-centromere in H2A phospho-mimic mutant. 
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 in H2A mutants imaging.pdf}
-  \caption[Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant]{Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montage of representative time-lapse imaging. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Pgk1 was used as the loading control.}
+  \caption[Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant]{Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant (Continued on the following page).}
   \label{fig:sgo1imagingh2amutants}
 \end{figure}
 
-\newpage
+\begin{figure}[htbp]
+    \centering
+    \contcaption{Sgo1 peri-centromere enrichment is abolished in H2A phospho-mimic mutant. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montage of representative time-lapse imaging. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. (D) Western blotting on cells arrested in metaphase without tension using anti-GFP antibody to detect the expression level of Sgo1-EGFP. Pgk1 was used as the loading control.}
+\end{figure}
+
+
+
+
 
 \subsection{\textit{sgo1$\Delta$} suppresses the growth defect of PP1 temperature-sensitive mutants at their restrictive temperatures}
 
@@ -303,7 +315,7 @@ To verify this result, I wanted to test if \textit{bub1$\Delta$K} mutant, which 
   \label{fig:growthassay}
 \end{figure}
 
-\newpage
+
 
 \nomenclature{PP1}{Protein Phosphatase 1}
 
@@ -337,7 +349,7 @@ To verify the result, I also conducted the imaging experiment in \textit{glc7-10
   \label{fig:sgo1glc710}
 \end{figure}
 
-\newpage
+
 
 \subsection{Putative PP1 binding motifs of Sgo1 are not required for Sgo1 re-localisation}
 
@@ -355,9 +367,9 @@ Interestingly, the budding yeast Sgo1 protein sequence contains the consensus PP
     \contcaption{Neither timely re-localisation nor the function of Sgo1 requires its putative PP1 binding sites. (A) Linear schematics of budding yeast Sgo1 protein. Putative PP1 binding motifs SILK and RSVSF are located at amino acid positions 59-62 and 556-560, respectively. (B) Schematics of the imaging experiment. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. A representative experiment of three repeats is shown. (C) Quantification of the time of Sgo1-EGFP signal being visualised as foci. The Mann–Whitney U test was used to calculate statistical significance. (*) P<0.05; (ns) not significant. (D) Spot assay testing the benomyl sensitivity of the strains. Five-fold serial dilutions of indicated strains spotted on rich medium with 0 or 10 \si{\micro\gram/\milli\litre} benomyl.}
 \end{figure}
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \subsection{PP1-inactivation-caused retention of Sgo1 depends on Bub1}
 
@@ -370,7 +382,7 @@ Next, I wondered whether PP1 directly counteracts Bub1 in terms of Sgo1 localisa
   \label{fig:bub1aidglc712}
 \end{figure}
 
-\newpage
+
 
 \subsection{PP1 is required for Bub1 re-localisation}
 
@@ -379,11 +391,16 @@ Next, I wondered whether PP1 directly counteracts Bub1 in terms of Sgo1 localisa
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter3/figures/Bub1 glc7-12.pdf}
-  \caption[Kinetochore-localised Bub1 is maintained upon PP1 inactivation]{Kinetochore-localised Bub1 is maintained upon PP1 inactivation. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Cells were shifted to 34 \si{\celsius} and time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Top panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Bottom panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) Western blotting on cells arrested in metaphase without tension using anti-HA antibody to detect the expression level of Bub1-6HA. Kar2 was used as the loading control.}
+  \caption[Kinetochore-localised Bub1 is maintained upon PP1 inactivation]{Kinetochore-localised Bub1 is maintained upon PP1 inactivation (Continued on the following page).}
   \label{fig:bub1glc712}
 \end{figure}
 
-\newpage
+\begin{figure}
+    \centering
+    \contcaption{Kinetochore-localised Bub1 is maintained upon PP1 inactivation. (A) Schematics of experimental procedures. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Cells were shifted to 34 \si{\celsius} and time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified for kinetochore Bub1-mNG fluorescence intensity and inter-kinetochore distance. Top panel: mean fluorescence intensity of Bub1-mNG at the kinetochore as a function of time. The error bar represents the standard error. Bottom panel: Median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) Western blotting on cells arrested in metaphase without tension using anti-HA antibody to detect the expression level of Bub1-6HA. Kar2 was used as the loading control.}
+\end{figure}
+
+
 
 \subsection{PP2A-Rts1 might regulate Sgo1 phosphorylation}
 
@@ -411,9 +428,9 @@ To test the hypothesis, I started by asking whether the phosphorylation status o
     \contcaption{IP-MS detected changes in Sgo1 phosphorylation in the absence of Rts1. (A) Cartoon of Sgo1-PP2A interaction (revised from \cite{Xu2009StructureInteraction}). (B) Schematics of the Sgo1 IP-MS experiment. Sgo1-6HIS-3FLAG was immuno-precipitated from wild type or \textit{rts1$\Delta$} cells arrested in metaphase without tension by benomyl. Immuno-precipitated proteins were then digested by trypsin, subjected to phospho-enrichment and identified by MS. Skyline was used to analyse the phosphorylation status of peptides. (C) Relative intensities of phosphorylated Sgo1 peptides between wild type and \textit{rts1$\Delta$}. Each bar indicates a single Sgo1 peptide with amino acids of Sgo1 indicated on the x-axis. mono-, di- and tri-phosphorylated forms of the same peptide are indicated by blue, orange and green bars, respectively. Amino acid residues potentially more phosphorylated in \textit{rts1$\Delta$} are indicated in red and those potentially less phosphorylated are indicated in green. }
 \end{figure}
 
-\newpage
-\hfill \break
-\newpage
+
+
+
 
 \nomenclature{IP}{ImmunoPrecipitation}
 
@@ -430,7 +447,7 @@ Since the aim of the project is to understand the mechanism of Sgo1 localisation
   \label{fig:sgo1phosphomutants}
 \end{figure}
 
-\newpage
+
 
 \subsection{PP2A-Rts1 is required for timely sister kinetochore separation}
 
@@ -439,20 +456,23 @@ On the contrary to the phospho-mutants, \textit{rts1$\Delta$} did show a 20-\si{
 As mentioned before, Sgo1 association with the peri-centromere chromatin was increased in \textit{rts1$\Delta$} in the absence of tension by ChIP-qPCR. Apart from its original aim, this imaging experiment also provided an opportunity to alternatively test the finding. Hence, I quantified the fluorescence intensities of Sgo1-EGFP foci for the wild type and \textit{rts1$\Delta$} while tension was not established. Surprisingly, there was no significant difference observed (Figure~\ref{fig:sgo1rts1mutants}D). One possible explanation is that, albeit the total amount remains similar, the turnover rate of peri-centromeric Sgo1 might be reduced in \textit{rts1$\Delta$}, resulting in increased ChIP signal. 
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 rts1 mutants.pdf}
-  \caption[PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere]{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere (Continued on the following page). }
-  \label{fig:sgo1rts1mutants}
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 rts1 mutants_1st.pdf}
 \end{figure}
 
 \begin{figure}[htbp]
-    \centering
-    \contcaption{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. (A) Schematics of the imaging experiment. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1-EGFP foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) N=10 cells for the wild type and \textit{rts1$\Delta$} were quantified for the highest fluorescence intensities of Sgo1-EGFP foci among all frames. The two-tailed independent t-test was used to calculate statistical significance. (ns) not significant.}
+  \centering
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 rts1 mutants_2nd.pdf}
+  \caption[PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere]{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. (A) Schematics of the imaging experiment. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1-EGFP foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) N=10 cells for the wild type and \textit{rts1$\Delta$} were quantified for the highest fluorescence intensities of Sgo1-EGFP foci among all frames. The two-tailed independent t-test was used to calculate statistical significance. (ns) not significant. }
+  \label{fig:sgo1rts1mutants}
 \end{figure}
 
-\newpage
-\hfill \break
-\newpage
+% \begin{figure}[htbp]
+%     \centering
+%     \contcaption{PP2A-Rts1 is required for timely sister kinetochore separation but not for reducing Sgo1 level at peri-centromere. (A) Schematics of the imaging experiment. Cells bearing \textit{pMET-CDC20} were synchronised in G1 using $\alpha$ factor and released into methionine-containing media for a metaphase arrest with tension. Time-lapse live-cell imaging was performed from the time of the G1 release. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. Top panel: the percentage of cells with Sgo1-EGFP foci was shown as a function of time. Bottom panel: median inter-kinetochore distance as a function of time. Individual data points are shown as dots. (D) N=10 cells for the wild type and \textit{rts1$\Delta$} were quantified for the highest fluorescence intensities of Sgo1-EGFP foci among all frames. The two-tailed independent t-test was used to calculate statistical significance. (ns) not significant.}
+% \end{figure}
+
+
 
 \subsection{Tension induces mild chromosome condensation}
 
@@ -467,7 +487,7 @@ Our previous finding of the re-distribution of H2A-pS121 and possibly Sgo1 from 
   \label{fig:Hi-C+-tension}
 \end{figure}
 
-\newpage
+
 
 \subsection{Cohesin is not required for the concentration of Sgo1 at centromere-proximal location}
 
@@ -485,20 +505,16 @@ To solve the enigma, I sought to investigate the localisation of Sgo1 upon cohes
 To ensure the efficacy of cohesin depletion, I further conducted a mitotic time-course experiment using the \textit{pMET-SCC1} strain in the presence and absence of methionine, followed by western blotting to measure the expression level of Scc1. Spindle IF was used to determine the stages of the cell cycle (Figure~\ref{fig:sgo1metscc1}D). Albeit the sub-optimal synchronisation (Figure~\ref{fig:sgo1metscc1}E), it can still be seen that cells went through metaphase and anaphase in the absence of methionine, whereas they were arrested in metaphase when methionine was added. As expected, without methionine, the Scc1 level first increased over time after G1 release but started to decrease upon anaphase onset, accompanied by the emergence of the band at lower molecular weight, which represents the cleaved products \citep{Alexandru2001PhosphorylationYeast}. In the presence of methionine, the lack of the band representing cleaved products agreed with the metaphase arrest indicated by the spindle IF (Figure~\ref{fig:sgo1metscc1}E). Importantly, at the same exposure time, the Scc1 signal is largely reduced compared to no Scc1 depletion but still remained visible, suggesting an incomplete depletion (Figure~\ref{fig:sgo1metscc1}D). Therefore, I could not rule out the possibility that residual cohesin is sufficient to support the concentration of Sgo1-EGFP at centromere proximity. 
 
 \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 pMET-SCC1_1st.pdf}
+\end{figure}
+
+\begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 pMET-SCC1.pdf}
-  \caption[Sgo1 remains concentrated proximal to the centromere upon cohesin depletion]{Sgo1 remains concentrated proximal to the centromere upon cohesin depletion (Continued on the following page). }
+  \includegraphics[width=0.9\textwidth]{chapter3/figures/Sgo1 pMET-SCC1_2nd.pdf}
+  \caption[Sgo1 remains concentrated proximal to the centromere upon cohesin depletion]{Sgo1 remains concentrated proximal to the centromere upon cohesin depletion. (A) Schematics of experimental procedures. \textit{pMET-CDC20} cells with or without additional \textit{pMET-SCC1} construct were synchronised in G1 using $\alpha$ factor. Methionine was added 45 \si{\minute} before releasing to pre-clear Scc1. They are then released into methionine-containing media. Time-lapse live-cell imaging was performed from the time of the G1 release. A representative experiment of two repeats is shown. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. (D) Western blotting on Scc1-myc18 using anti-myc antibody. G1 synchronised cells were released into methionine-containing or -depleted media. Samples were collected every 15 minutes except the one at the 15th minute. Pgk1 was used as the loading control. (E) The proportion of cells with metaphase or anaphase spindle over time by tubulin IF. }
   \label{fig:sgo1metscc1}
 \end{figure}
-
-\begin{figure}
-    \centering
-    \contcaption{Sgo1 remains concentrated proximal to the centromere upon cohesin depletion. (A) Schematics of experimental procedures. \textit{pMET-CDC20} cells with or without additional \textit{pMET-SCC1} construct were synchronised in G1 using $\alpha$ factor. Methionine was added 45 \si{\minute} before releasing to pre-clear Scc1. They are then released into methionine-containing media. Time-lapse live-cell imaging was performed from the time of the G1 release. A representative experiment of two repeats is shown. (B) Montages of representative time-lapse imaging. (C) N=30 cells for each strain were followed over time and quantified. The percentage of cells with Sgo1-EGFP foci was shown as a function of time. (D) Western blotting on Scc1-myc18 using anti-myc antibody. G1 synchronised cells were released into methionine-containing or -depleted media. Samples were collected every 15 minutes except the one at the 15th minute. Pgk1 was used as the loading control. (E) The proportion of cells with metaphase or anaphase spindle over time by tubulin IF.}
-\end{figure}
-
-\newpage
-\hfill \break
-\newpage
 
 \nomenclature{qPCR}{quantitative Polymerase Chain Reaction}
 \nomenclature{RPM}{Reads Per Million}
@@ -510,7 +526,7 @@ Tension-dependent re-localisation of Sgo1 has been observed in various species a
 
 The observations that Bub1 remains at the kinetochore after the establishment of tension \citep{Bokros2021YeastAnaphase, Nerusheva2014} and that contacts between the core centromere and the peri-centromere borders are reduced by tension \citep{Paldi2020ConvergentPericentromeres} led us to the hypothesis that tension could regulate local Bub1 activity by pulling kinetochore-localised Bub1 from its substrate(s) at the peri-centromere borders. However, the \textit{tetO} arrays at one peri-centromere border stayed a similar distance to one of the Bub1-mNG foci regardless of the tension, making it difficult to draw a conclusion on this hypothesis (Figure~\ref{fig:periCEN}). Instead, it was noticed that the fluorescence intensity of Bub1 foci experienced a sharp decrease coinciding with the separation of sister kinetochores, suggesting the kinetochore localisation of Bub1 might be regulated by tension (Figure~\ref{fig:bub1mtw1}). This raised an alternative explanation that tension could de-localise Bub1 from the kinetochore and hence it is physically separated from its peri-centromeric substrate(s). A following experiment revealed that Bub1-mNG foci maintained their intensity when tension is abolished by cohesin depletion, indicating tension is indeed required for Bub1 de-localisation on top of kinetochore-microtubule attachment (Figure~\ref{fig:bub1metscc1}). The sufficiency of Bub1 removal for Sgo1 de-localisation was demonstrated by the prompt dispersal of Sgo1-EGFP foci upon Bub1 depletion (Figure~\ref{fig:bub1aid}). Moreover, with similar cell cycle progression, indicated by the inter-kinetochore distance, cells bearing \textit{Bub1-EGFP} had their fluorescence foci dimmed 15 \si{\minute} earlier than the ones bearing \textit{SGO1-EGFP}, suggesting Bub1 de-localisation happens before Sgo1 de-localisation (Figure~\ref{fig:bub1sgo1}). Though the experiment would be more solid if Bub1 and Sgo1 were tagged with fluorescence proteins of different colours, similar maturation time and sufficient brightness, in a single strain. Nevertheless, the experiments above pointed to the conclusion that the de-localisation of Bub1 from the kinetochore by tension is upstream Sgo1 tension-dependent re-localisation. 
 
-Due to its well-established role in Shugoshin localisation in various species and the fact that it is a substrate of Bub1, it is tempting to hypothesise that the phospho-regulation of H2A-S121 is the key to tension-dependent re-localisation of Sgo1. To test this idea, generated custom-made phospho-specific antibodies. It was found that this phosphorylation was quickly reduced when Bub1 is depleted, which fits the predicted behaviour of the substrate by the simple model (Figure~\ref{fig:ph2abub1aid}). In further support of the hypothesis, albeit the total H2A-pS121 remained at similar levels in the presence or absence of tension, ChIP-seq revealed distinct distributions over the genome, with the phosphorylation being more spread along the chromosome arms upon tension whereas more enriched at centromeres in the tension-less condition (Figure~\ref{fig:ph2achipseq2nd}). This re-distribution corresponds well with the re-localisation of Sgo1, making H2A-S121 plausible to be the substrate in the simple model. However, the notion is in contradiction with the results by \cite{Nerusheva2014} that Sgo1 can still be localised to the peri-centromere in the H2A phospho-mimic mutant H2A-S121D in a Bub1-dependent manner. It was then noticed a likely strain confusion in those experiments (Figure~\ref{fig:h2as121dseq}). ChIP-qPCR experiment with re-constructed strains showed a low association of Sgo1 with peri-centromeric chromatin in the phospho-mimic mutant, indicating that Sgo1 cannot be concentrated if the H2A phosphorylation is homogeneously distributed over the genome, which emphasised the importance of the spatial regulation of H2A-pS121 to Sgo1 localisation (Figure~\ref{fig:sgo1chiph2amutants}). The conclusion is further confirmed by the results from an imaging experiment, where Sgo1-EGFP did not form any focus in the H2A phospho-mimic mutant (Figure~\ref{fig:sgo1imagingh2amutants}). Therefore, I concluded that the re-distribution of H2A-pS121 is likely to underlie the re-localisation of Sgo1. 
+Due to its well-established role in Shugoshin localisation in various species and the fact that it is a substrate of Bub1, it is tempting to hypothesise that the phospho-regulation of H2A-S121 is the key to tension-dependent re-localisation of Sgo1. To test this idea, generated custom-made phospho-specific antibodies. It was found that this phosphorylation was quickly reduced when Bub1 is depleted, which fits the predicted behaviour of the substrate by the simple model (Figure~\ref{fig:ph2abub1aid}). In further support of the hypothesis, albeit the total H2A-pS121 remained at similar levels in the presence or absence of tension, ChIP-seq revealed distinct distributions over the genome, with the phosphorylation being more spread along the chromosome arms upon tension whereas more enriched at centromeres in the tension-less condition (Figure~\ref{fig:ph2achipse}). This re-distribution corresponds well with the re-localisation of Sgo1, making H2A-S121 plausible to be the substrate in the simple model. However, the notion is in contradiction with the results by \cite{Nerusheva2014} that Sgo1 can still be localised to the peri-centromere in the H2A phospho-mimic mutant H2A-S121D in a Bub1-dependent manner. It was then noticed a likely strain confusion in those experiments (Figure~\ref{fig:h2as121dseq}). ChIP-qPCR experiment with re-constructed strains showed a low association of Sgo1 with peri-centromeric chromatin in the phospho-mimic mutant, indicating that Sgo1 cannot be concentrated if the H2A phosphorylation is homogeneously distributed over the genome, which emphasised the importance of the spatial regulation of H2A-pS121 to Sgo1 localisation (Figure~\ref{fig:sgo1chiph2amutants}). The conclusion is further confirmed by the results from an imaging experiment, where Sgo1-EGFP did not form any focus in the H2A phospho-mimic mutant (Figure~\ref{fig:sgo1imagingh2amutants}). Therefore, I concluded that the re-distribution of H2A-pS121 is likely to underlie the re-localisation of Sgo1. 
 
 Regarding the phosphatase counteracting Bub1 to de-phosphorylate H2A-pS121, we hypothesised PP1 and PP2A-Rts1 as potential candidates. Interestingly, \textit{GLC7}, the gene encoding the PP1 catalytic subunit, showed genetic interaction with \textit{SGO1}, indicated by that \textit{sgo1$\Delta$} is able to suppress the temperature sensitivity of \textit{glc7-10} and \textit{glc7-12} mutant (Figure~\ref{fig:growthassay}). Microscopy then revealed that Sgo1-EGFP foci did not vanish even though enough tension had been generated in those mutants, showing that PP1 is required for the re-localisation of Sgo1 (Figure~\ref{fig:sgo1glc712} and Figure~\ref{fig:sgo1glc710}). Nevertheless, Bub1 depletion after Sgo1 had been localised still caused quick dispersal of Sgo1-EGFP foci despite PP1 being inactivated, suggesting that the requirement of PP1 for Sgo1 de-localisation is unlikely due to direct counteracting of Bub1 activity (Figure~\ref{fig:bub1aidglc712}). Due to the complexity of this experiment, an easier method would be simply monitoring H2A-pS121 in the same condition by western blotting. It was later found that the kinetochore fluorescence intensity of Bub1-mNG was maintained upon PP1 inactivation, showing PP1 being also required for Bub1 de-localisation (Figure~\ref{fig:bub1glc712}). Hence, it is likely that PP1 is required for Sgo1 re-localisation due to its role in de-localising Bub1. Rts1 has been shown to decrease Sgo1 association with peri-centromeric chromatin in the absence of tension \citep{Nerusheva2014}. However, the fluorescence intensity of Sgo1-EGFP foci in \textit{rts1$\Delta$} was not significantly different from that of the wild type, arguing an opposite interpretation. Furthermore, Sgo1-EGFP was de-localised at a similar inter-kinetochore distance with the wild type in \textit{rts1$\Delta$}, indicating PP2A-Rts1 is not required for the sensitivity of Sgo1 localisation to tension (Figure~\ref{fig:sgo1rts1mutants}). Thus, whether PP2A-Rts1 is the phosphatase de-phosphorylating H2A-pS121 was not further investigated. In conclusion, neither PP1 nor PP2A-Rts1 appears to be the phosphatase predicted by the simple model, though it could be complicated by possible redundancy, where more than one phosphatase can de-phosphorylate H2A-pS121. 
 
@@ -564,6 +580,7 @@ To test the possibility, methods with higher resolution, such as ChIP-seq, shoul
 Shugoshin has been reported to be phospho-regulated in various species \citep{Llano2008Shugoshin-2Mice, Tanno2010, Rattani2013Sgol2Oocytes, Pouwels2007ShugoshinPlk1, Kawashima2007, Lee2014RegulationPhosphorylation, Liu2013, Liu2013a, Clarke2005, Resnick2006INCENPDrosophila, Nogueira2014, Yahya2020}. As a phosphatase that interacts with Shugoshin, PP2A-B56 might regulate its phosphorylation. In support of the hypothesis, Sgo1 IP-MS in \textit{rts1$\Delta$} showed an altered Sgo1 phosphorylation, with amino acid 418-433 increased whereas amino acid 484-494 decreased. 
 
 Different work could be carried out to follow up on this preliminary result. Due to not being in direct relevance to this study, whether these regions are truly phosphorylated and regulated by PP2A-Rts1 remained untested. Phospho-specific antibodies might be considered for this purpose. If they are verified, it is then important to understand their functional relevance. Given the major function of Shugoshin, one could start with screening for defects in chromosome segregation in point mutants of potential phospho-sites in the regions mentioned above. It is surprising that in the absence of PP2A-Rts1, Sgo1 had reduced phosphorylation at amino acid 484-494. It would be intriguing to understand the underlying mechanism. One possibility is PP2A-Rts1 might up-regulate the activity of the kinase(s) phosphorylating Sgo1. Alternatively, PP2A-Rts1 binding to Sgo1 could physically mask the region. Albeit the conventional opinion that PP2A-Rts1 binds Sgo1 at its coiled-coil domain, this hypothesis is supported by the recent finding in human cells that Sgo1 has additional interacting surface(s) with PP2A-B56. 
+
 
 
 \section{Materials and methods}
@@ -1614,7 +1631,7 @@ chrXVI              & 555957         & 556073
 \end{tabular}
 \end{table}
 
-The Raw data, quality control reports and processed data of the H2A-pS121 ChIP-seq experiment (Figure~\ref{fig:ph2achipseq2nd}) are available on the \href{https://bifx-core3.bio.ed.ac.uk/Results/Adele/Projects/Chuanli2022/H2A-pS121_ChIPSeq/}{Marston lab bioinformatics server}.
+The Raw data, quality control reports and processed data of the H2A-pS121 ChIP-seq experiment (Figure~\ref{fig:ph2achipse}) are available on the \href{https://bifx-core3.bio.ed.ac.uk/Results/Adele/Projects/Chuanli2022/H2A-pS121_ChIPSeq/}{Marston lab bioinformatics server}.
 
 \subsubsection{MS data analysis}
 
