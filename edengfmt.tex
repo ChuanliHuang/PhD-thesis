@@ -212,7 +212,11 @@
   \sethead%
       [\thepage]%
       []%
-      [\ifthechapter{\chaptertitle}{\MakeUppercase{\chaptertitle}}]%
+      % [\ifthechapter{\chaptertitle}{\MakeUppercase{\chaptertitle}}]%
+      [      {\ifthesection{\toptitlemarks\thesection{.}\space}%
+          {\ifthechapter{\thechapter{.}\space}{}}%
+       \ifthesection{\toptitlemarks\sectiontitle}%
+          {\ifthechapter{\chaptertitle}{\MakeUppercase{\chaptertitle}}}}]% to make headers the same between odd and even pages
       {\ifthesection{\toptitlemarks\thesection{.}\space}%
           {\ifthechapter{\thechapter{.}\space}{}}%
        \ifthesection{\toptitlemarks\sectiontitle}%
